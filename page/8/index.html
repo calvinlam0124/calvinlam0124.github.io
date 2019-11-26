@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>CALS NOTE</title>
+  <meta name="viewport" content="width=device-width">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="CALS NOTE">
+<meta property="og:url" content="http://blog.technicalfever.com/page/8/index.html">
+<meta property="og:site_name" content="CALS NOTE">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CALS NOTE">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-112333390-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+<script>
+window['_fs_debug'] = false;
+window['_fs_host'] = 'fullstory.com';
+window['_fs_org'] = 'AAHCC';
+window['_fs_namespace'] = 'FS';
+(function(m,n,e,t,l,o,g,y){
+    if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+    g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+    o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+    y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+    g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+    y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
+    g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+    g.clearUserCookie=function(){};
+})(window,document,window['_fs_namespace'],'script','user');
+</script>
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">CALS NOTE</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li><li><a href="/Cheatsheets/">Cheatsheets</a></li><li><a href="/atom.xml">rss</a></li><li><a href="/About">About</a></li><li><a href="https://lumiere000.github.io/blog">Friends</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.technicalfever.com"></form>
+	</div>
+</header>
+    <div id="main">
+      
+  
+    <article id="blog-Verify-SHA-256-checksum" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/02/Verify-SHA-256-checksum/" class="article-date">
+  <time datetime="2018-01-02T07:44:54.000Z" itemprop="datePublished">2018-01-02</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/02/Verify-SHA-256-checksum/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/02/Verify-SHA-256-checksum/">Verify checksum file</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/cli.jpg" alt="Cli"></p>
+<h3 id="SHA-256"><a href="#SHA-256" class="headerlink" title="SHA-256"></a>SHA-256</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Create checksum file</span></span><br><span class="line">shasum -a 256 file.ext &gt; file.ext.sha256sum</span><br><span class="line"><span class="comment"># file content: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  file.ext</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Verify checksum </span></span><br><span class="line">shasum -c file.ext.sha256sum</span><br><span class="line"><span class="comment"># output: file.ext: OK</span></span><br></pre></td></tr></table></figure>
+<h3 id="SHA-1"><a href="#SHA-1" class="headerlink" title="SHA-1"></a>SHA-1</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">shasum file.ext &gt; file.ext.sha1sum</span><br><span class="line">shasum file.ext.sha1sum</span><br></pre></td></tr></table></figure>
+<h3 id="MD5"><a href="#MD5" class="headerlink" title="MD5"></a>MD5</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">md5 file.ext &gt; file.ext.md5sum</span><br><span class="line">md5 -c file.ext.md5sum</span><br></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Checksum/">Checksum</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Md5/">Md5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Security/">Security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sha/">Sha</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Sparse-file" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/02/Sparse-file/" class="article-date">
+  <time datetime="2018-01-02T05:45:52.000Z" itemprop="datePublished">2018-01-02</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/02/Sparse-file/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/02/Sparse-file/">Sparse file</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/cli.jpg" alt="Cli"></p>
+<h3 id="Creation"><a href="#Creation" class="headerlink" title="Creation"></a>Creation</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Mac OS / Unix</span></span><br><span class="line">dd of=Stone.sparse bs=10g seek=1 count=0</span><br><span class="line"></span><br><span class="line"><span class="comment"># Linux</span></span><br><span class="line">fallocate -l fallocate -l 10G Stone.sparse</span><br><span class="line"></span><br><span class="line"><span class="comment">#</span></span><br><span class="line">truncate -s 10G Stone.sparse</span><br></pre></td></tr></table></figure>
+<h3 id="Use-case"><a href="#Use-case" class="headerlink" title="Use case"></a>Use case</h3><p>You can delete a disk space holder when you disk out of space. So you should create it when you config a server.</p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h3><p><a href="http://geek.serverpit.com/2017-12-21-fallocate.html" target="_blank" rel="noopener">http://geek.serverpit.com/2017-12-21-fallocate.html</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cli/">Cli</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Filesystem/">Filesystem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac/">Mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Spaceholder/">Spaceholder</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Stone/">Stone</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SysOps/">SysOps</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Learning-Roadmap-2018" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/02/Learning-Roadmap-2018/" class="article-date">
+  <time datetime="2018-01-02T03:35:19.000Z" itemprop="datePublished">2018-01-02</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/02/Learning-Roadmap-2018/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/02/Learning-Roadmap-2018/">Learning Roadmap 2018</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<h3 id="Its-my-expect-study-materials"><a href="#Its-my-expect-study-materials" class="headerlink" title="Its my expect study materials"></a>Its my expect study materials</h3><ul>
+<li>NoSQL</li>
+<li>NodeJS</li>
+<li>Deep learning</li>
+<li>Encryption concept</li>
+<li><a href="https://vuejs.org/v2/guide/" target="_blank" rel="noopener">Vue.js</a></li>
+<li><a href="http://graphql.org/learn/" target="_blank" rel="noopener">GraphQL</a> - must to do 2018</li>
+<li><a href="https://storybook.js.org/" target="_blank" rel="noopener">Storybook</a> - The UI Development Environment</li>
+<li><a href="https://github.com/gatsbyjs/gatsby" target="_blank" rel="noopener">Gatsby</a> - build app from Markdown to static page</li>
+<li>Mobile App <a href="https://egghead.io/courses/react-native-fundamentals" target="_blank" rel="noopener">React Native</a></li>
+<li>Desktop App <a href="https://medium.freecodecamp.org/how-to-build-your-first-app-with-electron-41ebdb796930" target="_blank" rel="noopener">Electron</a></li>
+<li><a href="http://webassembly.org/" target="_blank" rel="noopener">Web Assembly</a></li>
+<li><a href="https://developers.google.com/web/progressive-web-apps/" target="_blank" rel="noopener">Progressive Web Apps</a> - web service worker, storage, cache</li>
+</ul>
+<h2 id="Addional"><a href="#Addional" class="headerlink" title="Addional"></a>Addional</h2><ul>
+<li><a href="https://learnnextjs.com/" target="_blank" rel="noopener">Next.js</a> - for React developer</li>
+<li><a href="https://popmotion.io/learn/get-started/" target="_blank" rel="noopener">Popmotion</a> - JS Animation</li>
+<li><a href="https://github.com/prettier/prettier" target="_blank" rel="noopener">Prettier</a> - A code beaufier</li>
+</ul>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2018/">2018</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Learning/">Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Roadmap/">Roadmap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tech/">Tech</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Cronjob" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/02/Cronjob/" class="article-date">
+  <time datetime="2018-01-02T02:46:10.000Z" itemprop="datePublished">2018-01-02</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/02/Cronjob/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/02/Cronjob/">Cronjob Cheatsheet</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"># crontab</span><br><span class="line"># min, hour, day, month, day_of_week, command</span><br><span class="line"></span><br><span class="line"># every 5 mins</span><br><span class="line">*/5 * * * * /path/to/myscript.sh</span><br><span class="line"></span><br><span class="line"># 0,2,4 mins</span><br><span class="line">0,2,4 * * * * /path/to/myscript.sh</span><br><span class="line"></span><br><span class="line"># 1-10 mins</span><br><span class="line">1-10 * * * * /path/to/myscript.sh</span><br><span class="line"></span><br><span class="line"># hourly</span><br><span class="line">@hourly /path/to/myscript.sh</span><br><span class="line">0 * * * * /path/to/myscript.sh</span><br><span class="line"></span><br><span class="line"># startup</span><br><span class="line">@reboot /path/to/myscript.sh</span><br></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cheatsheet/">Cheatsheet</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cron/">Cron</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cronjob/">Cronjob</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-OWASP-top-10-2017-A3" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/12/31/OWASP-top-10-2017-A3/" class="article-date">
+  <time datetime="2017-12-31T15:16:08.000Z" itemprop="datePublished">2017-12-31</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2017/12/31/OWASP-top-10-2017-A3/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/12/31/OWASP-top-10-2017-A3/">OWASP top 10, 2017 - A3 Sensitive Data Exposure</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/owasp.jpg" alt="OWASP"></p>
+<h3 id="Prevention"><a href="#Prevention" class="headerlink" title="Prevention"></a>Prevention</h3><ul>
+<li><strong>DONT</strong> store sensitive data unnecessarily</li>
+<li>Make sure to encrypt all sensitive dataa</li>
+<li>Enforce encryption when data transit</li>
+<li>Disable caching</li>
+<li>Strong slated hashig (Argon2, scrypt, bcrypt, PBKDF2)</li>
+</ul>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Encrypt/">Encrypt</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OWASP/">OWASP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Security/">Security</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-OWASP-top-10-2017-A2-Broken-Authentication" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/12/31/OWASP-top-10-2017-A2-Broken-Authentication/" class="article-date">
+  <time datetime="2017-12-31T15:05:16.000Z" itemprop="datePublished">2017-12-31</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2017/12/31/OWASP-top-10-2017-A2-Broken-Authentication/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/12/31/OWASP-top-10-2017-A2-Broken-Authentication/">OWASP top 10, 2017 - A2 Broken Authentication</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/owasp.jpg" alt="OWSAP"></p>
+<h3 id="Scenario"><a href="#Scenario" class="headerlink" title="Scenario"></a>Scenario</h3><p>Common attack, use of <a href="https://github.com/danielmiessler/SecLists" target="_blank" rel="noopener">lists of known passwords</a>.</p>
+<h3 id="Prevention"><a href="#Prevention" class="headerlink" title="Prevention"></a>Prevention</h3><ul>
+<li>Implement weak-password checks</li>
+<li>Limit failed login attempts</li>
+</ul>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Authentication/">Authentication</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OWASP/">OWASP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Security/">Security</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-OWASP-top-10-2017" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/12/31/OWASP-top-10-2017/" class="article-date">
+  <time datetime="2017-12-31T14:25:11.000Z" itemprop="datePublished">2017-12-31</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2017/12/31/OWASP-top-10-2017/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/12/31/OWASP-top-10-2017/">OWASP top 10, 2017 - A1 Injection</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/owasp.jpg" alt="OWSAP"></p>
+<h3 id="Senario"><a href="#Senario" class="headerlink" title="Senario"></a>Senario</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">// your code:</span></span><br><span class="line">$sql = <span class="string">"SELECT * FROM `Accounts` WHERE `customer_id` = '"</span> . $_GET[<span class="string">'id'</span>] .<span class="string">"'"</span> ;</span><br><span class="line">$result = sql_exec($sql);</span><br><span class="line"></span><br><span class="line"><span class="comment">// attacher access your site as below:</span></span><br><span class="line">http:<span class="comment">//example.com/app/accountView?id=' or '1'='1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// your server will exec:</span></span><br><span class="line">SELECT * FROM `Accounts` WHERE `customer_id` = <span class="string">''</span> <span class="keyword">or</span> <span class="string">'1'</span>=<span class="string">'1'</span></span><br></pre></td></tr></table></figure>
+<h3 id="Prevention"><a href="#Prevention" class="headerlink" title="Prevention"></a>Prevention</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Query Parameterization</span></span><br><span class="line">$sql = <span class="string">"SELECT * FROM `Accounts` WHERE `customer_id` = :int_id"</span>;</span><br><span class="line">$statement = $dbh-&gt;prepare($sql);</span><br><span class="line">$statement-&gt;bindParam(<span class="string">'int_id'</span>, $_GET[<span class="string">'id'</span>]);</span><br><span class="line">$statement-&gt;execute();</span><br></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Injection/">Injection</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OWASP/">OWASP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SQL/">SQL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Security/">Security</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-Chrome-headless-mode" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/12/29/Chrome-headless-mode/" class="article-date">
+  <time datetime="2017-12-29T09:36:20.000Z" itemprop="datePublished">2017-12-29</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2017/12/29/Chrome-headless-mode/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/12/29/Chrome-headless-mode/">Chrome headless mode</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/chrome.jpg" alt="Chrome"></p>
+<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Chrome version 59+</p>
+<h3 id="command-alias-or-edit-bash-profile"><a href="#command-alias-or-edit-bash-profile" class="headerlink" title="command alias (or edit .bash_profile)"></a>command alias (or edit <code>.bash_profile</code>)</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> chrome=<span class="string">"/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --headless --disable-gpu"</span></span><br></pre></td></tr></table></figure>
+<h3 id="print-website-to-pdf"><a href="#print-website-to-pdf" class="headerlink" title="print website to pdf"></a>print website to pdf</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chrome --<span class="built_in">print</span>-to-pdf https://httpbin.org</span><br></pre></td></tr></table></figure>
+<h3 id="print-website-to-png"><a href="#print-website-to-png" class="headerlink" title="print website to png"></a>print website to png</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chrome --screenshot https://httpbin.org</span><br><span class="line">chrome --screenshot --window-size=1280,1696 https://httpbin.org</span><br></pre></td></tr></table></figure>
+<h3 id="REPL-mode-read-eval-print-loop-samething-like-javascript-console"><a href="#REPL-mode-read-eval-print-loop-samething-like-javascript-console" class="headerlink" title="REPL mode (read-eval-print loop) - samething like javascript console"></a>REPL mode (read-eval-print loop) - samething like javascript console</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">chrome --repl https://httpbin.org</span><br><span class="line"></span><br><span class="line">&gt;&gt; window.innerHeight</span><br><span class="line">&#123;<span class="string">"result"</span>:&#123;<span class="string">"description"</span>:<span class="string">"600"</span>,<span class="string">"type"</span>:<span class="string">"number"</span>,<span class="string">"value"</span>:600&#125;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://developers.google.com/web/updates/2017/04/headless-chrome" target="_blank" rel="noopener">https://developers.google.com/web/updates/2017/04/headless-chrome</a><br><a href="https://en.wikipedia.org/wiki/Headless_browser" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Headless_browser</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Browser/">Browser</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Chrome/">Chrome</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Headless/">Headless</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MacOS/">MacOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Script/">Script</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-Install-python3-and-pip3" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/12/29/Install-python3-and-pip3/" class="article-date">
+  <time datetime="2017-12-29T08:02:19.000Z" itemprop="datePublished">2017-12-29</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2017/12/29/Install-python3-and-pip3/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/12/29/Install-python3-and-pip3/">Install python3 and pip3</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/python.jpg" alt="Python"></p>
+<h1 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h1><h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get install build-essential</span><br><span class="line">apt-get install zlib1g-dev (optional)</span><br></pre></td></tr></table></figure>
+<h3 id="Install-python2-7"><a href="#Install-python2-7" class="headerlink" title="Install python2.7"></a>Install python2.7</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br><span class="line">apt-get install python</span><br><span class="line">apt-get install python-pip</span><br><span class="line">pip install --upgrade pip</span><br></pre></td></tr></table></figure>
+<h3 id="Install-python3"><a href="#Install-python3" class="headerlink" title="Install python3+"></a>Install python3+</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt-get install python3</span><br><span class="line">apt-get install python3-pip</span><br><span class="line">pip3 install --upgrade pip</span><br></pre></td></tr></table></figure>
+<h3 id="Install-python-library-yaml"><a href="#Install-python-library-yaml" class="headerlink" title="Install python library - yaml"></a>Install python library - yaml</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install python3-yaml</span><br></pre></td></tr></table></figure>
+<h1 id="CentOS"><a href="#CentOS" class="headerlink" title="CentOS"></a>CentOS</h1><h3 id="Requirement-1"><a href="#Requirement-1" class="headerlink" title="Requirement"></a>Requirement</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yum groupinstall <span class="string">'Development Tools'</span></span><br><span class="line">yum install zlib-devel</span><br><span class="line">yum install zlib (optional)</span><br><span class="line">yum install wget (optional)</span><br></pre></td></tr></table></figure>
+<h3 id="Install-python2-7-1"><a href="#Install-python2-7-1" class="headerlink" title="Install python2.7"></a>Install python2.7</h3><p><strong>build-in python 2.7</strong></p>
+<h3 id="Install-python3-6"><a href="#Install-python3-6" class="headerlink" title="Install python3.6"></a>Install python3.6</h3><p><strong>yum official repositories support up-to 3.4</strong><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install python34</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">curl -O https://www.python.org/ftp/python/3.6.0/Python-3.6.0.tgz</span><br><span class="line">wget --no-check-certificate https://www.python.org/ftp/python/3.6.0/Python-3.6.0.tgz (optional)</span><br><span class="line">tar -xzvf Python-3.6.0.tgz</span><br><span class="line"><span class="built_in">cd</span> Python-3.6.0</span><br><span class="line">./configure --prefix=/usr/<span class="built_in">local</span>/python3</span><br><span class="line">make</span><br><span class="line">make install</span><br><span class="line">ln -s /usr/<span class="built_in">local</span>/python3/bin/python3 /usr/bin/python3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">wget --no-check-certificate https://github.com/pypa/pip/archive/9.0.1.tar.gz</span><br><span class="line">tar -zvxf 9.0.1.tar.gz</span><br><span class="line"><span class="built_in">cd</span> pip-9.0.1</span><br><span class="line">python3 setup.py install</span><br><span class="line">ln -s /usr/<span class="built_in">local</span>/python3/bin/pip /usr/bin/pip3</span><br><span class="line">pip install --upgrade pip</span><br></pre></td></tr></table></figure>
+<h3 id="Install-python-plugin-pyyaml"><a href="#Install-python-plugin-pyyaml" class="headerlink" title="Install python plugin - pyyaml"></a>Install python plugin - pyyaml</h3><p><strong>Since pip only support HTTPS source</strong><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget https://pypi.python.org/packages/4a/85/db5a2df477072b2902b0eb892feb37d88ac635d36245a72a6a69b23b383a/PyYAML-3.12.tar.gz<span class="comment">#md5=4c129761b661d181ebf7ff4eb2d79950</span></span><br><span class="line">tar -zxvf PyYAML-3.12.tar.gz</span><br><span class="line"><span class="built_in">cd</span> PyYAML-3.12/</span><br><span class="line">python3 setup.py install</span><br></pre></td></tr></table></figure></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Centos/">Centos</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Pip3/">Pip3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python3/">Python3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SysOps/">SysOps</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-Docker-Cheatsheet" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/12/29/Docker-Cheatsheet/" class="article-date">
+  <time datetime="2017-12-29T07:50:26.000Z" itemprop="datePublished">2017-12-29</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2017/12/29/Docker-Cheatsheet/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/12/29/Docker-Cheatsheet/">Docker Cheatsheet</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/docker.jpg" alt="Docker"></p>
+<h3 id="Pull-to-local-server"><a href="#Pull-to-local-server" class="headerlink" title="Pull to local server"></a>Pull to local server</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Linux dis</span></span><br><span class="line">docker pull ubuntu</span><br><span class="line">docker pull centos</span><br><span class="line">docker pull kalilinux/kali-linux-docker</span><br><span class="line"></span><br><span class="line"><span class="comment"># programming</span></span><br><span class="line">docker pull node</span><br><span class="line">docker pull golang</span><br><span class="line">docker pull jupyter/notebook</span><br><span class="line">docker pull tomcat</span><br><span class="line"></span><br><span class="line"><span class="comment"># db</span></span><br><span class="line">docker run -p 8888:8080 adminer</span><br></pre></td></tr></table></figure>
+<h3 id="Plain-container"><a href="#Plain-container" class="headerlink" title="Plain container"></a>Plain container</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker run -t -i ubuntu bash</span><br><span class="line">docker run -t -i centos bash</span><br><span class="line">docker run -t -i kalilinux/kali-linux-docker bash</span><br></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cheatsheet/">Cheatsheet</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/7/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/9/">Next &raquo;</a>
+    </nav>
+  
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:blog.technicalfever.com">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">CALS NOTE</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2019 Calvin Lam<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+<script>
+  var disqus_shortname = 'cals-note';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

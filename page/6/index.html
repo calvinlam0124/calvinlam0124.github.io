@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>CALS NOTE</title>
+  <meta name="viewport" content="width=device-width">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="CALS NOTE">
+<meta property="og:url" content="http://blog.technicalfever.com/page/6/index.html">
+<meta property="og:site_name" content="CALS NOTE">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CALS NOTE">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-112333390-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+<script>
+window['_fs_debug'] = false;
+window['_fs_host'] = 'fullstory.com';
+window['_fs_org'] = 'AAHCC';
+window['_fs_namespace'] = 'FS';
+(function(m,n,e,t,l,o,g,y){
+    if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+    g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+    o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+    y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+    g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+    y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
+    g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+    g.clearUserCookie=function(){};
+})(window,document,window['_fs_namespace'],'script','user');
+</script>
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">CALS NOTE</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li><li><a href="/Cheatsheets/">Cheatsheets</a></li><li><a href="/atom.xml">rss</a></li><li><a href="/About">About</a></li><li><a href="https://lumiere000.github.io/blog">Friends</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.technicalfever.com"></form>
+	</div>
+</header>
+    <div id="main">
+      
+  
+    <article id="blog-Chrome-Console-Cheatsheet" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/30/Chrome-Console-Cheatsheet/" class="article-date">
+  <time datetime="2018-01-30T03:02:10.000Z" itemprop="datePublished">2018-01-30</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/30/Chrome-Console-Cheatsheet/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/30/Chrome-Console-Cheatsheet/">Chrome Console Cheatsheet</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/web.jpg" alt="Web"></p>
+<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"># Show object or value</span><br><span class="line"><span class="built_in">window</span>.console</span><br><span class="line"></span><br><span class="line"># Log the value</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Hellow '</span> + str_world);</span><br><span class="line"><span class="built_in">console</span>.warn(<span class="string">'yellow exquotation mark'</span>)</span><br><span class="line"><span class="built_in">console</span>.error(<span class="string">'red cross error'</span>);</span><br><span class="line"></span><br><span class="line"># Show object details</span><br><span class="line"><span class="built_in">console</span>.dir(<span class="built_in">window</span>)</span><br><span class="line"></span><br><span class="line"># Assertion</span><br><span class="line"><span class="built_in">console</span>.assert(<span class="literal">true</span> &amp;&amp; fasle)</span><br><span class="line"></span><br><span class="line"># Clear</span><br><span class="line"><span class="built_in">console</span>.clear()</span><br><span class="line"></span><br><span class="line"># Table</span><br><span class="line"><span class="built_in">console</span>.table( [&#123;<span class="attr">col1</span>: <span class="string">"00"</span>, <span class="attr">col2</span>: <span class="string">"01"</span>&#125;, &#123;<span class="attr">col1</span>:<span class="string">"10"</span>, <span class="attr">col2</span>:<span class="string">"11"</span>&#125;] );</span><br><span class="line"></span><br><span class="line"># Time</span><br><span class="line"><span class="built_in">console</span>.time(<span class="string">'timeTag'</span>);</span><br><span class="line">doSomething();</span><br><span class="line"><span class="built_in">console</span>.timeEnd(<span class="string">'timeTag'</span>);</span><br><span class="line"></span><br><span class="line"># Group</span><br><span class="line"><span class="built_in">console</span>.group(<span class="string">'functionDebuging'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'log'</span>);</span><br><span class="line"><span class="built_in">console</span>.groupEnd(<span class="string">'functionDebuging'</span>);</span><br></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cheatsheet/">Cheatsheet</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Chrome/">Chrome</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Console/">Console</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Capture-all-of-your-http-connection" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/30/Capture-all-of-your-http-connection/" class="article-date">
+  <time datetime="2018-01-30T02:20:07.000Z" itemprop="datePublished">2018-01-30</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/30/Capture-all-of-your-http-connection/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/30/Capture-all-of-your-http-connection/">Capture all of your http connection</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/web.jpg" alt="Web"></p>
+<h3 id="mitmproxy"><a href="#mitmproxy" class="headerlink" title="mitmproxy"></a>mitmproxy</h3><p>Use and abuse of a hackable SSL-capable man-in-the-middle proxy. Command line friendly.</p>
+<h3 id="Server-Installnation"><a href="#Server-Installnation" class="headerlink" title="Server Installnation"></a>Server Installnation</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pull the image </span></span><br><span class="line">docker pull mitmproxy/mitmproxy</span><br><span class="line"></span><br><span class="line"><span class="comment"># ~/.mitmproxy locate your certs that you need to install to your client</span></span><br><span class="line"><span class="comment"># 8080 port </span></span><br><span class="line">docker run --rm -it -v ~/.mitmproxy:/home/mitmproxy/.mitmproxy -p 8080:8080 mitmproxy/mitmproxy</span><br></pre></td></tr></table></figure>
+<h3 id="Test-through-curl"><a href="#Test-through-curl" class="headerlink" title="Test through curl"></a>Test through curl</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># http connect to example</span></span><br><span class="line">http_proxy=http://localhost:8080/ curl http://example.com/</span><br><span class="line"></span><br><span class="line"><span class="comment"># https connect to example</span></span><br><span class="line">https_proxy=http://localhost:8080/ curl -k https://example.com/</span><br><span class="line"></span><br><span class="line"><span class="comment"># Go back to your docker console your will get the previous connections</span></span><br></pre></td></tr></table></figure>
+<h3 id="iPHone-Client-Setup"><a href="#iPHone-Client-Setup" class="headerlink" title="iPHone Client Setup"></a>iPHone Client Setup</h3><p><a href="http://jasdev.me/intercepting-ios-traffic" target="_blank" rel="noopener">http://jasdev.me/intercepting-ios-traffic</a> (<strong>PLEASE FORGET YOUR NETWORK AND JOIN AGAIN WITH PROXY SETTING</strong> if you are using wifi)</p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://github.com/mitmproxy/mitmproxy" target="_blank" rel="noopener">https://github.com/mitmproxy/mitmproxy</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Curl/">Curl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Http/">Http</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Https/">Https</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MITM/">MITM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OWASP/">OWASP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Proxy/">Proxy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ReverseEnginerring/">ReverseEnginerring</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Security/">Security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Javascript-package-manager-from-NPM-to-YARM" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/26/Javascript-package-manager-from-NPM-to-YARM/" class="article-date">
+  <time datetime="2018-01-26T09:27:32.000Z" itemprop="datePublished">2018-01-26</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/26/Javascript-package-manager-from-NPM-to-YARM/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/26/Javascript-package-manager-from-NPM-to-YARM/">Javascript package manager from NPM to YARM</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/node.jpg" alt="Node"></p>
+<h3 id="Yarn"><a href="#Yarn" class="headerlink" title="Yarn"></a>Yarn</h3><p>Faster package manager than <code>npm</code>. Its fully support npm function. You can replace it.</p>
+<h3 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># used 9.3s</span></span><br><span class="line">npm install [package-name]</span><br><span class="line"></span><br><span class="line"><span class="comment"># used 1.3s</span></span><br><span class="line">yarn install [package-name]</span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://github.com/appleboy/npm-vs-yarn" target="_blank" rel="noopener">https://github.com/appleboy/npm-vs-yarn</a><br><a href="https://yarnpkg.com/lang/en/docs/migrating-from-npm/" target="_blank" rel="noopener">https://yarnpkg.com/lang/en/docs/migrating-from-npm/</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Npm/">Npm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Packagemanager/">Packagemanager</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Yarm/">Yarm</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Direct-query-a-specific-dns" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/26/Direct-query-a-specific-dns/" class="article-date">
+  <time datetime="2018-01-26T08:17:58.000Z" itemprop="datePublished">2018-01-26</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/26/Direct-query-a-specific-dns/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/26/Direct-query-a-specific-dns/">Direct query a specific dns</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/cli.jpg" alt="CLI"></p>
+<h3 id="nslookup"><a href="#nslookup" class="headerlink" title="nslookup"></a>nslookup</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># query</span></span><br><span class="line">nslookup your.target.tld any.dns.server.ltd</span><br><span class="line"></span><br><span class="line"><span class="comment"># run interactively</span></span><br><span class="line">nslookup</span><br><span class="line">&gt; server any.dns.server.ltd</span><br><span class="line">&gt; your.target.tld</span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://linux.die.net/man/1/nslookup" target="_blank" rel="noopener">https://linux.die.net/man/1/nslookup</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cli/">Cli</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Dns/">Dns</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nslookup/">Nslookup</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-MySQL-and-Docker-for-development" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/26/MySQL-and-Docker-for-development/" class="article-date">
+  <time datetime="2018-01-26T05:55:35.000Z" itemprop="datePublished">2018-01-26</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/26/MySQL-and-Docker-for-development/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/26/MySQL-and-Docker-for-development/">MySQL and Docker for development</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/docker.jpg" alt="Docker"></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># download mysql image</span></span><br><span class="line">docker pull mysql</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create a container that named localhost-mysql (root/111111)</span></span><br><span class="line">docker run --name localhost-mysql -p 3306:3306 -v /Users/workspace/mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=111111 -d mysql</span><br><span class="line"></span><br><span class="line"><span class="comment"># connect to db whatever</span></span><br><span class="line">mysql -u root -p 111111 localhost</span><br></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cheatsheet/">Cheatsheet</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mysql/">Mysql</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Command-line-message-of-the-day" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/24/Command-line-message-of-the-day/" class="article-date">
+  <time datetime="2018-01-24T14:52:44.000Z" itemprop="datePublished">2018-01-24</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/24/Command-line-message-of-the-day/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/24/Command-line-message-of-the-day/">Command line startup message</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/cli.jpg" alt="Cli"></p>
+<h3 id="MOTD-message-of-the-day"><a href="#MOTD-message-of-the-day" class="headerlink" title="MOTD - message of the day"></a>MOTD - message of the day</h3><p>Its default installed and autorun on any *nix system. It will not execute any command just <code>cat</code> the file content.<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/motd</span><br><span class="line"></span><br><span class="line"><span class="comment"># re-launch you terminal</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://tools.ietf.org/html/rfc2812#page-25" target="_blank" rel="noopener">https://tools.ietf.org/html/rfc2812#page-25</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cli/">Cli</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Macos/">Macos</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Motd/">Motd</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Rfc/">Rfc</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-Measure-your-network-speed" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/24/Measure-your-network-speed/" class="article-date">
+  <time datetime="2018-01-24T14:40:46.000Z" itemprop="datePublished">2018-01-24</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/24/Measure-your-network-speed/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/24/Measure-your-network-speed/">Measure your network speed</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/cli.jpg" alt="Cli"></p>
+<h3 id="iPerf"><a href="#iPerf" class="headerlink" title="iPerf"></a>iPerf</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># installation (for both server and client)</span></span><br><span class="line">apt-get install iperf3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># server side (server up)</span></span><br><span class="line">iperf3 -s</span><br><span class="line"></span><br><span class="line"><span class="comment"># client side (make test)</span></span><br><span class="line">iperf3 -c server.localhost</span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://iperf.fr/iperf-download.php#more-recent" target="_blank" rel="noopener">https://iperf.fr/iperf-download.php#more-recent</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cli/">Cli</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Iperf/">Iperf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Macos/">Macos</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Network/">Network</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Exploring-the-Physical-Web" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/12/Exploring-the-Physical-Web/" class="article-date">
+  <time datetime="2018-01-12T01:52:29.000Z" itemprop="datePublished">2018-01-12</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/12/Exploring-the-Physical-Web/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/12/Exploring-the-Physical-Web/">Exploring the Physical Web</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/physical_web.jpg" alt="Physical Web"></p>
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>Objects around you that are part of the Physical Web send Bluetooth signals to your phone. When you’re in range, you’ll see a list of suggested webpages.</p>
+<h3 id="Client-side"><a href="#Client-side" class="headerlink" title="Client side"></a>Client side</h3><p>You can run the client app on your smart phone that will through bluetooth to scan any objects nearby you. And list out the URLs. (hints: I found a Brother’s printer on the app)<br><a href="https://itunes.apple.com/us/app/physical-web/id927653608?mt=8" target="_blank" rel="noopener">iOS app store</a><br><a href="https://play.google.com/store/apps/details?id=physical_web.org.physicalweb&amp;hl=en" target="_blank" rel="noopener">Android</a></p>
+<h3 id="Server-side"><a href="#Server-side" class="headerlink" title="Server side"></a>Server side</h3><p>You can build you only Physical Web in few steps really quick.<br><a href="https://apkpure.com/beacon-toy/com.uriio" target="_blank" rel="noopener">https://apkpure.com/beacon-toy/com.uriio</a></p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://google.github.io/physical-web/" target="_blank" rel="noopener">https://google.github.io/physical-web/</a><br><a href="https://github.com/google/physical-web" target="_blank" rel="noopener">https://github.com/google/physical-web</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Exploration/">Exploration</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Google/">Google</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Iot/">Iot</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Physicalweb/">Physicalweb</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Setup-SMART-on-ubuntu-server" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/11/Setup-SMART-on-ubuntu-server/" class="article-date">
+  <time datetime="2018-01-11T06:03:15.000Z" itemprop="datePublished">2018-01-11</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/11/Setup-SMART-on-ubuntu-server/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/11/Setup-SMART-on-ubuntu-server/">Setup SMART on ubuntu server</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/ubuntu.jpg" alt="Ubuntu"></p>
+<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install smartmontools</span><br></pre></td></tr></table></figure>
+<h3 id="Configuation"><a href="#Configuation" class="headerlink" title="Configuation"></a>Configuation</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/default/smartmontools</span><br><span class="line"><span class="comment"># file content</span></span><br><span class="line">enable_smart=<span class="string">"/dev/sda /dev/sdb"</span></span><br><span class="line">start_smartd=yes</span><br><span class="line">smartd_opts=<span class="string">"--interval=1800"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cat  /etc/smartd.conf</span><br><span class="line"><span class="comment"># file content</span></span><br><span class="line">DEVICESCAN -d removable -n standby -m root -M <span class="built_in">exec</span> /usr/share/smartmontools/smartd-runner</span><br><span class="line">/dev/sda -a -o on -S on -s (S/../.././02|L/../../6/03)</span><br><span class="line">/dev/sda -H -l error -l selftest -t -I 194</span><br><span class="line">/dev/sda -H -C 0 -U 0 -m calvin@test.com.tld</span><br></pre></td></tr></table></figure>
+<h3 id="Start-Service"><a href="#Start-Service" class="headerlink" title="Start Service"></a>Start Service</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/smartd start</span><br><span class="line">systemctl <span class="built_in">enable</span> smartd</span><br></pre></td></tr></table></figure>
+<h3 id="Log"><a href="#Log" class="headerlink" title="Log"></a>Log</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /var/<span class="built_in">log</span>/syslog</span><br></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Engine/">Engine</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Harddisk/">Harddisk</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Installation/">Installation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Smart/">Smart</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Docker-mem-limit-error" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/10/Docker-mem-limit-error/" class="article-date">
+  <time datetime="2018-01-10T03:50:52.000Z" itemprop="datePublished">2018-01-10</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/10/Docker-mem-limit-error/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/10/Docker-mem-limit-error/">Docker compose error (mem_limit)</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/docker.jpg" alt="Docker"></p>
+<h3 id="Senario"><a href="#Senario" class="headerlink" title="Senario"></a>Senario</h3><p>When you try to run container with <code>./docker-compose.yml</code> file, you will get below error message.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;docker-compose&quot;, line 6, in &lt;module&gt;</span><br><span class="line">  File &quot;compose/cli/main.py&quot;, line 71, in main</span><br><span class="line">  File &quot;compose/cli/main.py&quot;, line 121, in perform_command</span><br><span class="line">  File &quot;compose/cli/command.py&quot;, line 37, in project_from_options</span><br><span class="line">  File &quot;compose/cli/command.py&quot;, line 91, in get_project</span><br><span class="line">  File &quot;compose/config/config.py&quot;, line 375, in load</span><br><span class="line">  File &quot;compose/config/config.py&quot;, line 506, in process_config_file</span><br><span class="line">  File &quot;compose/config/config.py&quot;, line 497, in interpolate_config_section</span><br><span class="line">  File &quot;compose/config/interpolation.py&quot;, line 44, in interpolate_environment_variables</span><br><span class="line">  File &quot;compose/config/interpolation.py&quot;, line 44, in &lt;genexpr&gt;</span><br><span class="line">  File &quot;compose/config/interpolation.py&quot;, line 39, in process_item</span><br><span class="line">  File &quot;compose/config/interpolation.py&quot;, line 39, in &lt;genexpr&gt;</span><br><span class="line">  File &quot;compose/config/interpolation.py&quot;, line 54, in interpolate_value</span><br><span class="line">  File &quot;compose/config/interpolation.py&quot;, line 74, in recursive_interpolate</span><br><span class="line">  File &quot;compose/config/interpolation.py&quot;, line 74, in &lt;genexpr&gt;</span><br><span class="line">  File &quot;compose/config/interpolation.py&quot;, line 70, in recursive_interpolate</span><br><span class="line">  File &quot;compose/config/interpolation.py&quot;, line 184, in convert</span><br><span class="line">  File &quot;compose/config/interpolation.py&quot;, line 141, in to_int</span><br><span class="line">ValueError: invalid literal for int() with base 0: &apos;512m&apos;</span><br><span class="line">Failed to execute script docker-compose</span><br></pre></td></tr></table></figure></p>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>The value of <code>mem_limit</code> no more supported with recent docker-compose (1.18.0)</p>
+<h3 id="Hot-fix"><a href="#Hot-fix" class="headerlink" title="Hot-fix"></a>Hot-fix</h3><p>Just edit your <code>docker-compose.yml</code> and remove <code>mem_limit</code> lines. The best soloution should be replace as <code>RESOURCES</code>.<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># backup your file</span></span><br><span class="line">cp -a docker-compose.yml docker-compose.yml.bak</span><br><span class="line"></span><br><span class="line"><span class="comment"># trim mem_limit</span></span><br><span class="line">cat docker-compose.yml.bak |grep -v <span class="string">"mem_limit"</span> &gt; docker-compose.yml</span><br><span class="line"></span><br><span class="line"><span class="comment"># then run again</span></span><br><span class="line">docker-compose up</span><br></pre></td></tr></table></figure></p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://support.zabbix.com/browse/ZBX-13224" target="_blank" rel="noopener">https://support.zabbix.com/browse/ZBX-13224</a><br><a href="https://docs.docker.com/compose/compose-file/#resources" target="_blank" rel="noopener">https://docs.docker.com/compose/compose-file/#resources</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Compose/">Compose</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Error/">Error</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Fix/">Fix</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/5/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/7/">Next &raquo;</a>
+    </nav>
+  
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:blog.technicalfever.com">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">CALS NOTE</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2019 Calvin Lam<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+<script>
+  var disqus_shortname = 'cals-note';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

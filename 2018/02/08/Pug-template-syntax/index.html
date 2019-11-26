@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Pug template syntax | CALS NOTE</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Basic Elementpug1a(class=&apos;button&apos; href=&apos;google.com&apos;) Google html1&amp;lt;a class=&quot;button&quot; href=&quot;google.com&quot;&amp;gt;Google&amp;lt;/a&amp;gt; HTMLinputpug12345678910doctype htmlhtml(lang=&quot;en&quot;)  head    title= pageTitl">
+<meta name="keywords" content="Cheatsheet,Web,Javascript,Node,Development,Template,Pug">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pug template syntax">
+<meta property="og:url" content="http://blog.technicalfever.com/2018/02/08/Pug-template-syntax/index.html">
+<meta property="og:site_name" content="CALS NOTE">
+<meta property="og:description" content="Basic Elementpug1a(class=&apos;button&apos; href=&apos;google.com&apos;) Google html1&amp;lt;a class=&quot;button&quot; href=&quot;google.com&quot;&amp;gt;Google&amp;lt;/a&amp;gt; HTMLinputpug12345678910doctype htmlhtml(lang=&quot;en&quot;)  head    title= pageTitl">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://blog.technicalfever.com/images/pug.jpg">
+<meta property="og:updated_time" content="2019-11-26T02:23:19.882Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Pug template syntax">
+<meta name="twitter:description" content="Basic Elementpug1a(class=&apos;button&apos; href=&apos;google.com&apos;) Google html1&amp;lt;a class=&quot;button&quot; href=&quot;google.com&quot;&amp;gt;Google&amp;lt;/a&amp;gt; HTMLinputpug12345678910doctype htmlhtml(lang=&quot;en&quot;)  head    title= pageTitl">
+<meta name="twitter:image" content="http://blog.technicalfever.com/images/pug.jpg">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-112333390-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+<script>
+window['_fs_debug'] = false;
+window['_fs_host'] = 'fullstory.com';
+window['_fs_org'] = 'AAHCC';
+window['_fs_namespace'] = 'FS';
+(function(m,n,e,t,l,o,g,y){
+    if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+    g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+    o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+    y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+    g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+    y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
+    g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+    g.clearUserCookie=function(){};
+})(window,document,window['_fs_namespace'],'script','user');
+</script>
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">CALS NOTE</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li><li><a href="/Cheatsheets/">Cheatsheets</a></li><li><a href="/atom.xml">rss</a></li><li><a href="/About">About</a></li><li><a href="https://lumiere000.github.io/blog">Friends</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.technicalfever.com"></form>
+	</div>
+</header>
+    <div id="main">
+      <article id="blog-Pug-template-syntax" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/02/08/Pug-template-syntax/" class="article-date">
+  <time datetime="2018-02-08T04:08:34.000Z" itemprop="datePublished">2018-02-08</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/02/08/Pug-template-syntax/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 class="article-title entry-title" itemprop="name">
+      Pug template syntax
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/pug.jpg" alt="Pug"></p>
+<h3 id="Basic-Element"><a href="#Basic-Element" class="headerlink" title="Basic Element"></a>Basic Element</h3><p>pug<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a(class=<span class="string">'button'</span> href=<span class="string">'google.com'</span>) Google</span><br></pre></td></tr></table></figure></p>
+<p>html<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a class=<span class="string">"button"</span> href=<span class="string">"google.com"</span>&gt;Google&lt;/a&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><p>input<br>pug<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">doctype html</span><br><span class="line">html(lang=<span class="string">"en"</span>)</span><br><span class="line">  head</span><br><span class="line">    title= pageTitle</span><br><span class="line">    link(href=<span class="string">'https://unpkg.com/sakura.css/css/sakura.css'</span>, rel=<span class="string">'stylesheet'</span>)</span><br><span class="line">  body</span><br><span class="line">    h1 Pug - node template engine</span><br><span class="line">    <span class="comment">#container.col</span></span><br><span class="line">      Pug is a terse and simple templating language with a</span><br><span class="line">      strong focus on performance and powerful features.</span><br></pre></td></tr></table></figure></p>
+<p>html<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;title&gt;Pug&lt;/title&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;h1&gt;Pug - node template engine&lt;/h1&gt;</span><br><span class="line">    &lt;div id=<span class="string">"container"</span> class=<span class="string">"col"</span>&gt;</span><br><span class="line">      &lt;p&gt;Pug is a terse and simple templating language with a strong focus on performance and powerful features.&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Varriable"><a href="#Varriable" class="headerlink" title="Varriable"></a>Varriable</h3><p>pug<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">url = <span class="string">'https://example.com/'</span></span><br><span class="line">a(href=url) Another link</span><br></pre></td></tr></table></figure></p>
+<p>html<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=<span class="string">"https://example.com/"</span>&gt;Another link&lt;/a&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Escape"><a href="#Escape" class="headerlink" title="Escape"></a>Escape</h3><p>pug<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">div(data=<span class="string">"&lt;hello_world&gt;"</span>)</span><br></pre></td></tr></table></figure></p>
+<p>html<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div data=<span class="string">"&amp;lt;hello_world&amp;gt;"</span>&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Inline-style-css"><a href="#Inline-style-css" class="headerlink" title="Inline style css"></a>Inline style css</h3><p>pug<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a(style=&#123;color: <span class="string">'red'</span>, background: <span class="string">'green'</span>&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>html<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a style=<span class="string">"color:red;background:green;"</span>&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Mixin-function"><a href="#Mixin-function" class="headerlink" title="Mixin (function)"></a>Mixin (function)</h3><p>pug<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mixin list(id, ...items)</span><br><span class="line">  ul(id=id)</span><br><span class="line">    each item <span class="keyword">in</span> items</span><br><span class="line">      li= item</span><br><span class="line"></span><br><span class="line">+list(<span class="string">'my-list'</span>, 1, 2, 3, 4)</span><br></pre></td></tr></table></figure></p>
+<p>html<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"my-list"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>4<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="Cli"><a href="#Cli" class="headerlink" title="Cli"></a>Cli</h3><p><a href="/2018/02/08/Pug-template-syntax/">pug-cli</a></p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://pugjs.org/api/getting-started.html" target="_blank" rel="noopener">https://pugjs.org/api/getting-started.html</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cheatsheet/">Cheatsheet</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Development/">Development</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Pug/">Pug</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Template/">Template</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+    
+<nav id="article-nav">
+  
+    <a href="/2018/02/08/Pug-Cli-Cheatsheet/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Pug Cli Cheatsheet
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/02/08/Node-js-template-engine-quick-search/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          Node js template engine quick search
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:blog.technicalfever.com">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">CALS NOTE</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2019 Calvin Lam<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+<script>
+  var disqus_shortname = 'cals-note';
+  
+  var disqus_url = 'http://blog.technicalfever.com/2018/02/08/Pug-template-syntax/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

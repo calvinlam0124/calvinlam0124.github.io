@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Bad Sector and MySQL innodb | CALS NOTE</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="StdErrThats shown on screen1234WARNING: Your hard drive is failingDevice: /dev/sda [SAT], 8 Currently unreadable (pending) sectorsWARNING: Your hard drive is failingDevice: /dev/sda [SAT], 8 Offline">
+<meta name="keywords" content="MySQL,Maria,Harddisk,Smart,Stderr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bad Sector and MySQL innodb">
+<meta property="og:url" content="http://blog.technicalfever.com/2018/01/09/Bad-Sector-and-MySQL-innodb/index.html">
+<meta property="og:site_name" content="CALS NOTE">
+<meta property="og:description" content="StdErrThats shown on screen1234WARNING: Your hard drive is failingDevice: /dev/sda [SAT], 8 Currently unreadable (pending) sectorsWARNING: Your hard drive is failingDevice: /dev/sda [SAT], 8 Offline">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://blog.technicalfever.com/images/mysql.jpg">
+<meta property="og:updated_time" content="2019-11-26T02:23:19.880Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Bad Sector and MySQL innodb">
+<meta name="twitter:description" content="StdErrThats shown on screen1234WARNING: Your hard drive is failingDevice: /dev/sda [SAT], 8 Currently unreadable (pending) sectorsWARNING: Your hard drive is failingDevice: /dev/sda [SAT], 8 Offline">
+<meta name="twitter:image" content="http://blog.technicalfever.com/images/mysql.jpg">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-112333390-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+<script>
+window['_fs_debug'] = false;
+window['_fs_host'] = 'fullstory.com';
+window['_fs_org'] = 'AAHCC';
+window['_fs_namespace'] = 'FS';
+(function(m,n,e,t,l,o,g,y){
+    if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+    g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+    o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+    y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+    g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+    y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
+    g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+    g.clearUserCookie=function(){};
+})(window,document,window['_fs_namespace'],'script','user');
+</script>
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">CALS NOTE</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li><li><a href="/Cheatsheets/">Cheatsheets</a></li><li><a href="/atom.xml">rss</a></li><li><a href="/About">About</a></li><li><a href="https://lumiere000.github.io/blog">Friends</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.technicalfever.com"></form>
+	</div>
+</header>
+    <div id="main">
+      <article id="blog-Bad-Sector-and-MySQL-innodb" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/09/Bad-Sector-and-MySQL-innodb/" class="article-date">
+  <time datetime="2018-01-09T02:14:06.000Z" itemprop="datePublished">2018-01-09</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/09/Bad-Sector-and-MySQL-innodb/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 class="article-title entry-title" itemprop="name">
+      Bad Sector and MySQL innodb
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/mysql.jpg" alt="MySQL"></p>
+<h3 id="StdErr"><a href="#StdErr" class="headerlink" title="StdErr"></a>StdErr</h3><p>Thats shown on screen<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">WARNING: Your hard drive is failing</span><br><span class="line">Device: /dev/sda [SAT], 8 Currently unreadable (pending) sectors</span><br><span class="line">WARNING: Your hard drive is failing</span><br><span class="line">Device: /dev/sda [SAT], 8 Offline uncorrectable sectors</span><br></pre></td></tr></table></figure></p>
+<h3 id="SMART-Log"><a href="#SMART-Log" class="headerlink" title="SMART Log"></a>SMART Log</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"># sudo smartctl -a /dev/sda</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">SMART Error Log Version: 1</span><br><span class="line">ATA Error Count: 25 (device log contains only the most recent five errors)</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">Error 25 occurred at disk power-on lifetime: 6502 hours (270 days + 22 hours)</span><br><span class="line">  When the command that caused the error occurred, the device was active or idle.</span><br><span class="line"></span><br><span class="line">  After command completion occurred, registers were:</span><br><span class="line">  ER ST SC SN CL CH DH</span><br><span class="line">  -- -- -- -- -- -- --</span><br><span class="line">  40 51 00 ff ff ff 0f  Error: UNC at LBA = 0x0fffffff = 268435455</span><br><span class="line"></span><br><span class="line">  Commands leading to the command that caused the error were:</span><br><span class="line">  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name</span><br><span class="line">  -- -- -- -- -- -- -- --  ----------------  --------------------</span><br><span class="line">  25 00 08 ff ff ff ef 00  14d+16:54:04.035  READ DMA EXT</span><br><span class="line">  27 00 00 00 00 00 e0 00  14d+16:54:04.031  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]</span><br><span class="line">  ec 00 00 00 00 00 a0 00  14d+16:54:03.993  IDENTIFY DEVICE</span><br><span class="line">  ef 03 45 00 00 00 a0 00  14d+16:54:03.990  SET FEATURES [Set transfer mode]</span><br><span class="line">  27 00 00 00 00 00 e0 00  14d+16:54:03.990  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">SMART Self-test log structure revision number 1</span><br><span class="line">Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error</span><br><span class="line"># 1  Short offline       Completed: read failure       10%      6410         1468496680</span><br><span class="line">...</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<h3 id="MySQL-Log"><a href="#MySQL-Log" class="headerlink" title="MySQL Log"></a>MySQL Log</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">2018-01-08  9:38:25 140666168350528 [Note] InnoDB: Initializing buffer pool, size = 128.0M</span><br><span class="line">2018-01-08  9:38:25 140666168350528 [Note] InnoDB: Completed initialization of buffer pool</span><br><span class="line">2018-01-08  9:38:32 140666168350528 [ERROR] InnoDB: Tried to read 1048576 bytes at offset 2097152. Was only able to read 163840.</span><br><span class="line">2018-01-08 09:38:32 7fef64ff1740  InnoDB: Operating system error number 5 in a file operation.</span><br><span class="line">InnoDB: Error number 5 means &apos;Input/output error&apos;.</span><br><span class="line">InnoDB: Some operating system error numbers are described at</span><br><span class="line">InnoDB: http://dev.mysql.com/doc/refman/5.6/en/operating-system-error-codes.html</span><br><span class="line"> InnoDB: Operation read to file /tmp/mariadb-10.1.14/storage/xtradb/os/os0file.cc and at line 3160</span><br><span class="line">2018-01-08  9:38:32 140666168350528 [ERROR] InnoDB: File (unknown): &apos;read&apos; returned OS error 205. Cannot continue operation</span><br><span class="line">180108 09:38:32 mysqld_safe mysqld from pid file /usr/local/data/mysql/data/mysqld.pid ended</span><br></pre></td></tr></table></figure>
+<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p><strong>‘Input/output error’</strong> most likely means harddisk error!<br><strong>Please backup ASAP!</strong></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Harddisk/">Harddisk</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Maria/">Maria</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Smart/">Smart</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Stderr/">Stderr</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+    
+<nav id="article-nav">
+  
+    <a href="/2018/01/09/A-modest-collection-of-cheatsheets/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          A modest collection of cheatsheets
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/01/05/Go-Programming-Language/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          Go Programming Language
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:blog.technicalfever.com">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">CALS NOTE</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2019 Calvin Lam<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+<script>
+  var disqus_shortname = 'cals-note';
+  
+  var disqus_url = 'http://blog.technicalfever.com/2018/01/09/Bad-Sector-and-MySQL-innodb/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

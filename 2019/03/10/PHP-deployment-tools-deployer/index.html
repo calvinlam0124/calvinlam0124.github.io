@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>PHP Blue-Green deployment tools - deployer | CALS NOTE</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Requirement of deployment server (production server)1apt-get install -y git php Deployer1234567891011121314151617# install via webcurl -LO https://deployer.org/deployer.pharchmod +x deployer.phar# or">
+<meta name="keywords" content="DevOps,Php,BlueGreen,Deployment,Deployer">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP Blue-Green deployment tools - deployer">
+<meta property="og:url" content="http://blog.technicalfever.com/2019/03/10/PHP-deployment-tools-deployer/index.html">
+<meta property="og:site_name" content="CALS NOTE">
+<meta property="og:description" content="Requirement of deployment server (production server)1apt-get install -y git php Deployer1234567891011121314151617# install via webcurl -LO https://deployer.org/deployer.pharchmod +x deployer.phar# or">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://blog.technicalfever.com/images/php.jpg">
+<meta property="og:updated_time" content="2019-11-26T02:23:19.889Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PHP Blue-Green deployment tools - deployer">
+<meta name="twitter:description" content="Requirement of deployment server (production server)1apt-get install -y git php Deployer1234567891011121314151617# install via webcurl -LO https://deployer.org/deployer.pharchmod +x deployer.phar# or">
+<meta name="twitter:image" content="http://blog.technicalfever.com/images/php.jpg">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-112333390-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+<script>
+window['_fs_debug'] = false;
+window['_fs_host'] = 'fullstory.com';
+window['_fs_org'] = 'AAHCC';
+window['_fs_namespace'] = 'FS';
+(function(m,n,e,t,l,o,g,y){
+    if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+    g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+    o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+    y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+    g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+    y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
+    g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+    g.clearUserCookie=function(){};
+})(window,document,window['_fs_namespace'],'script','user');
+</script>
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">CALS NOTE</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li><li><a href="/Cheatsheets/">Cheatsheets</a></li><li><a href="/atom.xml">rss</a></li><li><a href="/About">About</a></li><li><a href="https://lumiere000.github.io/blog">Friends</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.technicalfever.com"></form>
+	</div>
+</header>
+    <div id="main">
+      <article id="blog-PHP-deployment-tools-deployer" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2019/03/10/PHP-deployment-tools-deployer/" class="article-date">
+  <time datetime="2019-03-10T08:24:51.000Z" itemprop="datePublished">2019-03-10</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2019/03/10/PHP-deployment-tools-deployer/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 class="article-title entry-title" itemprop="name">
+      PHP Blue-Green deployment tools - deployer
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/php.jpg" alt="Php"></p>
+<h3 id="Requirement-of-deployment-server-production-server"><a href="#Requirement-of-deployment-server-production-server" class="headerlink" title="Requirement of deployment server (production server)"></a>Requirement of deployment server (production server)</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install -y git php</span><br></pre></td></tr></table></figure>
+<h3 id="Deployer"><a href="#Deployer" class="headerlink" title="Deployer"></a>Deployer</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># install via web</span></span><br><span class="line">curl -LO https://deployer.org/deployer.phar</span><br><span class="line">chmod +x deployer.phar</span><br><span class="line"></span><br><span class="line"><span class="comment"># or install via composer</span></span><br><span class="line">composer global require deployer/deployer</span><br><span class="line">composer require deployer/dist --dev</span><br><span class="line">php vendor/bin/dep</span><br><span class="line"></span><br><span class="line"><span class="comment"># minor update and major upgrade</span></span><br><span class="line">./deployer.phar self-update</span><br><span class="line">./deployer.phar self-update --upgrade</span><br><span class="line"></span><br><span class="line"><span class="comment"># simple usage</span></span><br><span class="line">./deployer.phar init  <span class="comment"># create config file</span></span><br><span class="line">./deployer.phar deploy server-production  <span class="comment"># deploy to production server</span></span><br><span class="line">./deployer.phar run <span class="string">'ifconfig'</span> <span class="comment"># run ad-hoc command at remote server</span></span><br></pre></td></tr></table></figure>
+<h3 id="Sample-of-deployer-php"><a href="#Sample-of-deployer-php" class="headerlink" title="Sample of deployer.php"></a>Sample of deployer.php</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Deployer</span>;</span><br><span class="line"><span class="keyword">require</span> <span class="string">'recipe/common.php'</span>;</span><br><span class="line"></span><br><span class="line">set(<span class="string">'repository'</span>, <span class="string">'https://github.com/calvinlam0124/cron-mysqldump.git'</span>);</span><br><span class="line">set(<span class="string">'deploy_path'</span>, <span class="string">'~/deployer/'</span> . basename(get(<span class="string">'repository'</span>), <span class="string">'.git'</span>));</span><br><span class="line">set(<span class="string">'default_stage'</span>, <span class="string">'server-test'</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// Hosts</span></span><br><span class="line">host(<span class="string">'localhost'</span>)</span><br><span class="line">    -&gt;user(<span class="string">'root'</span>)</span><br><span class="line">    -&gt;port(<span class="number">22000</span>)</span><br><span class="line">    -&gt;stage(<span class="string">'server-test'</span>)</span><br><span class="line">    -&gt;forwardAgent();</span><br><span class="line"></span><br><span class="line">host(<span class="string">'server2.localhost'</span>)</span><br><span class="line">    -&gt;user(<span class="string">'root'</span>)</span><br><span class="line">    -&gt;port(<span class="number">22000</span>)</span><br><span class="line">    -&gt;stage(<span class="string">'server-production'</span>)</span><br><span class="line">    -&gt;forwardAgent();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Tasks</span></span><br><span class="line">desc(<span class="string">'Deploy your project'</span>);</span><br><span class="line">task(<span class="string">'deploy'</span>, [</span><br><span class="line">    <span class="string">'deploy:info'</span>,</span><br><span class="line">    <span class="string">'deploy:prepare'</span>,</span><br><span class="line">    <span class="string">'deploy:lock'</span>,</span><br><span class="line">    <span class="string">'deploy:release'</span>,</span><br><span class="line">    <span class="string">'deploy:update_code'</span>,</span><br><span class="line">    <span class="string">'deploy:shared'</span>,</span><br><span class="line">    <span class="string">'deploy:writable'</span>,</span><br><span class="line">    <span class="string">'deploy:clear_paths'</span>,</span><br><span class="line">    <span class="string">'deploy:symlink'</span>,</span><br><span class="line">    <span class="string">'deploy:unlock'</span>,</span><br><span class="line">    <span class="string">'cleanup'</span>,</span><br><span class="line">    <span class="string">'success'</span></span><br><span class="line">]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// [Optional] If deploy fails automatically unlock.</span></span><br><span class="line">after(<span class="string">'deploy:failed'</span>, <span class="string">'deploy:unlock'</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h3><p><a href="https://deployer.org/docs/examples/inventory.html" target="_blank" rel="noopener">https://deployer.org/docs/examples/inventory.html</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BlueGreen/">BlueGreen</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Deployer/">Deployer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Deployment/">Deployment</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Php/">Php</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+    
+<nav id="article-nav">
+  
+    <a href="/2019/03/18/Real-World-Web-Scraper/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Real World - Web Scraper
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/03/10/Create-a-private-composer-package-repo/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          Create a private composer package repo
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:blog.technicalfever.com">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">CALS NOTE</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2019 Calvin Lam<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+<script>
+  var disqus_shortname = 'cals-note';
+  
+  var disqus_url = 'http://blog.technicalfever.com/2019/03/10/PHP-deployment-tools-deployer/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

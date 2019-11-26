@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>CALS NOTE</title>
+  <meta name="viewport" content="width=device-width">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="CALS NOTE">
+<meta property="og:url" content="http://blog.technicalfever.com/page/5/index.html">
+<meta property="og:site_name" content="CALS NOTE">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CALS NOTE">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-112333390-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+<script>
+window['_fs_debug'] = false;
+window['_fs_host'] = 'fullstory.com';
+window['_fs_org'] = 'AAHCC';
+window['_fs_namespace'] = 'FS';
+(function(m,n,e,t,l,o,g,y){
+    if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+    g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+    o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+    y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+    g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+    y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
+    g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+    g.clearUserCookie=function(){};
+})(window,document,window['_fs_namespace'],'script','user');
+</script>
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">CALS NOTE</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li><li><a href="/Cheatsheets/">Cheatsheets</a></li><li><a href="/atom.xml">rss</a></li><li><a href="/About">About</a></li><li><a href="https://lumiere000.github.io/blog">Friends</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.technicalfever.com"></form>
+	</div>
+</header>
+    <div id="main">
+      
+  
+    <article id="blog-Deploy-container-to-other-host-througt-docker-machine" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/02/09/Deploy-container-to-other-host-througt-docker-machine/" class="article-date">
+  <time datetime="2018-02-09T06:40:31.000Z" itemprop="datePublished">2018-02-09</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/02/09/Deploy-container-to-other-host-througt-docker-machine/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/02/09/Deploy-container-to-other-host-througt-docker-machine/">Deploy container to other host througt docker-machine</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/docker.jpg" alt="Docker"></p>
+<h3 id="Prepare"><a href="#Prepare" class="headerlink" title="Prepare"></a>Prepare</h3><p>You can depoly container to <a href="https://aws.amazon.com/" target="_blank" rel="noopener">AWS</a> or <a href="https://www.digitalocean.com/" target="_blank" rel="noopener">DigitalOcean</a> through <code>docker-machine</code>.</p>
+<ul>
+<li><a href="/2018/02/09/Linux-password-less-ssh-and-sudo/">Password-less ssh and sudo</a></li>
+<li><strong>REMOVE</strong> all of your docker container / network / volume. <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker system prune -a</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Create"><a href="#Create" class="headerlink" title="Create"></a>Create</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker-machine create \</span><br><span class="line">  --driver generic \</span><br><span class="line">  --generic-ssh-user=ec2-user \</span><br><span class="line">  --generic-ip-address=192.168.1.200 \</span><br><span class="line">  --generic-ssh-key ~/.ssh/id_rsa \</span><br><span class="line">  vm-192-168-1-200-sandbox</span><br></pre></td></tr></table></figure>
+<h3 id="List"><a href="#List" class="headerlink" title="List"></a>List</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-machine ls</span><br></pre></td></tr></table></figure>
+<h3 id="Switch-Active"><a href="#Switch-Active" class="headerlink" title="Switch / Active"></a>Switch / Active</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># (optional) get the env of machine</span></span><br><span class="line">docker-machine env vm-192-168-1-200-sandbox</span><br><span class="line"></span><br><span class="line"><span class="comment"># set active (do any docker command you want)</span></span><br><span class="line"><span class="built_in">eval</span> $(docker-machine env vm-192-168-1-200-sandbox)</span><br><span class="line"></span><br><span class="line"><span class="comment"># unset (back to localhost mode)</span></span><br><span class="line"><span class="built_in">eval</span> $(docker-machine env -u)</span><br></pre></td></tr></table></figure>
+<h3 id="Deploy"><a href="#Deploy" class="headerlink" title="Deploy"></a>Deploy</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /your/project/directory</span><br><span class="line">docker build -t project-name .</span><br><span class="line">docker run -p 80:80 project-name</span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://docs.docker.com/machine/drivers/generic/#options" target="_blank" rel="noopener">https://docs.docker.com/machine/drivers/generic/#options</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Aws/">Aws</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Digitalocean/">Digitalocean</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Machine/">Machine</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Linux-password-less-ssh-and-sudo" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/02/09/Linux-password-less-ssh-and-sudo/" class="article-date">
+  <time datetime="2018-02-09T05:49:28.000Z" itemprop="datePublished">2018-02-09</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/02/09/Linux-password-less-ssh-and-sudo/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/02/09/Linux-password-less-ssh-and-sudo/">Linux password-less ssh and sudo</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/cli.jpg" alt="Cli"></p>
+<h3 id="Password-less-ssh"><a href="#Password-less-ssh" class="headerlink" title="Password-less ssh"></a>Password-less ssh</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install ssh</span><br><span class="line"><span class="comment"># client-side</span></span><br><span class="line">ssh-keygen</span><br><span class="line">ssh-copy-id USER@HOST</span><br><span class="line">ssh USER@HOST</span><br></pre></td></tr></table></figure>
+<h3 id="Password-less-sudo"><a href="#Password-less-sudo" class="headerlink" title="Password-less sudo"></a>Password-less sudo</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"`whoami` ALL=(ALL) NOPASSWD:ALL"</span> &gt;&gt; /etc/sudoers</span><br></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Keygen/">Keygen</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Operation/">Operation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ssh/">Ssh</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sudo/">Sudo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SysOps/">SysOps</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/System/">System</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Pug-Cli-Cheatsheet" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/02/08/Pug-Cli-Cheatsheet/" class="article-date">
+  <time datetime="2018-02-08T06:24:13.000Z" itemprop="datePublished">2018-02-08</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/02/08/Pug-Cli-Cheatsheet/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/02/08/Pug-Cli-Cheatsheet/">Pug Cli Cheatsheet</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/pug.jpg" alt="Pug"></p>
+<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><p>Thats a official cli for pug.<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g pug-cli</span><br></pre></td></tr></table></figure></p>
+<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// version</span><br><span class="line">pug --version</span><br><span class="line"></span><br><span class="line">// compile a file to foo-bar.html</span><br><span class="line">pug foo-bar.pug</span><br><span class="line"></span><br><span class="line">// compile a folder </span><br><span class="line">pug templates/</span><br><span class="line"></span><br><span class="line">// compile through StdIn / StdOut</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"h1 hello-pug"</span> | pug</span><br></pre></td></tr></table></figure>
+<h3 id="Syntas"><a href="#Syntas" class="headerlink" title="Syntas"></a>Syntas</h3><p><a href="/2018/02/08/Pug-template-syntax/">pug</a></p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://www.npmjs.com/package/pug-cli" target="_blank" rel="noopener">https://www.npmjs.com/package/pug-cli</a><br><a href="https://github.com/pugjs/pug-cli" target="_blank" rel="noopener">https://github.com/pugjs/pug-cli</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cli/">Cli</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Pug/">Pug</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Template/">Template</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Pug-template-syntax" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/02/08/Pug-template-syntax/" class="article-date">
+  <time datetime="2018-02-08T04:08:34.000Z" itemprop="datePublished">2018-02-08</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/02/08/Pug-template-syntax/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/02/08/Pug-template-syntax/">Pug template syntax</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/pug.jpg" alt="Pug"></p>
+<h3 id="Basic-Element"><a href="#Basic-Element" class="headerlink" title="Basic Element"></a>Basic Element</h3><p>pug<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a(class=<span class="string">'button'</span> href=<span class="string">'google.com'</span>) Google</span><br></pre></td></tr></table></figure></p>
+<p>html<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a class=<span class="string">"button"</span> href=<span class="string">"google.com"</span>&gt;Google&lt;/a&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><p>input<br>pug<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">doctype html</span><br><span class="line">html(lang=<span class="string">"en"</span>)</span><br><span class="line">  head</span><br><span class="line">    title= pageTitle</span><br><span class="line">    link(href=<span class="string">'https://unpkg.com/sakura.css/css/sakura.css'</span>, rel=<span class="string">'stylesheet'</span>)</span><br><span class="line">  body</span><br><span class="line">    h1 Pug - node template engine</span><br><span class="line">    <span class="comment">#container.col</span></span><br><span class="line">      Pug is a terse and simple templating language with a</span><br><span class="line">      strong focus on performance and powerful features.</span><br></pre></td></tr></table></figure></p>
+<p>html<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"en"</span>&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;title&gt;Pug&lt;/title&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;h1&gt;Pug - node template engine&lt;/h1&gt;</span><br><span class="line">    &lt;div id=<span class="string">"container"</span> class=<span class="string">"col"</span>&gt;</span><br><span class="line">      &lt;p&gt;Pug is a terse and simple templating language with a strong focus on performance and powerful features.&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Varriable"><a href="#Varriable" class="headerlink" title="Varriable"></a>Varriable</h3><p>pug<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">url = <span class="string">'https://example.com/'</span></span><br><span class="line">a(href=url) Another link</span><br></pre></td></tr></table></figure></p>
+<p>html<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=<span class="string">"https://example.com/"</span>&gt;Another link&lt;/a&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Escape"><a href="#Escape" class="headerlink" title="Escape"></a>Escape</h3><p>pug<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">div(data=<span class="string">"&lt;hello_world&gt;"</span>)</span><br></pre></td></tr></table></figure></p>
+<p>html<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div data=<span class="string">"&amp;lt;hello_world&amp;gt;"</span>&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Inline-style-css"><a href="#Inline-style-css" class="headerlink" title="Inline style css"></a>Inline style css</h3><p>pug<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a(style=&#123;color: <span class="string">'red'</span>, background: <span class="string">'green'</span>&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>html<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a style=<span class="string">"color:red;background:green;"</span>&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Mixin-function"><a href="#Mixin-function" class="headerlink" title="Mixin (function)"></a>Mixin (function)</h3><p>pug<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mixin list(id, ...items)</span><br><span class="line">  ul(id=id)</span><br><span class="line">    each item <span class="keyword">in</span> items</span><br><span class="line">      li= item</span><br><span class="line"></span><br><span class="line">+list(<span class="string">'my-list'</span>, 1, 2, 3, 4)</span><br></pre></td></tr></table></figure></p>
+<p>html<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"my-list"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>4<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="Cli"><a href="#Cli" class="headerlink" title="Cli"></a>Cli</h3><p><a href="/2018/02/08/Pug-template-syntax/">pug-cli</a></p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://pugjs.org/api/getting-started.html" target="_blank" rel="noopener">https://pugjs.org/api/getting-started.html</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cheatsheet/">Cheatsheet</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Development/">Development</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Pug/">Pug</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Template/">Template</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Node-js-template-engine-quick-search" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/02/08/Node-js-template-engine-quick-search/" class="article-date">
+  <time datetime="2018-02-08T03:27:07.000Z" itemprop="datePublished">2018-02-08</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/02/08/Node-js-template-engine-quick-search/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/02/08/Node-js-template-engine-quick-search/">Node js template engine quick search</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/node.jpg" alt="Node"></p>
+<h3 id="Quick-search"><a href="#Quick-search" class="headerlink" title="Quick search"></a>Quick search</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">Name</th>
+<th style="text-align:center">Star</th>
+<th style="text-align:center">Github</th>
+<th style="text-align:center">Remark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Mustache</td>
+<td style="text-align:center">2457</td>
+<td style="text-align:center"><a href="https://github.com/mustache/mustache" target="_blank" rel="noopener">https://github.com/mustache/mustache</a></td>
+<td style="text-align:center">login-free, Haml like</td>
+</tr>
+<tr>
+<td style="text-align:center">Pug</td>
+<td style="text-align:center">16045</td>
+<td style="text-align:center"><a href="https://github.com/pugjs/pug" target="_blank" rel="noopener">https://github.com/pugjs/pug</a></td>
+<td style="text-align:center">That was formerly known as “Jade”, Haml like</td>
+</tr>
+<tr>
+<td style="text-align:center">olado/doT</td>
+<td style="text-align:center">3779</td>
+<td style="text-align:center"><a href="https://github.com/olado/doT" target="_blank" rel="noopener">https://github.com/olado/doT</a></td>
+<td style="text-align:center">fastest + concise</td>
+</tr>
+<tr>
+<td style="text-align:center">linkedin/dustjs</td>
+<td style="text-align:center">2694</td>
+<td style="text-align:center"><a href="https://github.com/linkedin/dustjs" target="_blank" rel="noopener">https://github.com/linkedin/dustjs</a></td>
+<td style="text-align:center">Maintained by LinkedIn</td>
+</tr>
+<tr>
+<td style="text-align:center">Template 7</td>
+<td style="text-align:center">459</td>
+<td style="text-align:center"><a href="https://github.com/nolimits4web/template7/" target="_blank" rel="noopener">https://github.com/nolimits4web/template7/</a></td>
+<td style="text-align:center">Support <a href="https://framework7.io/" target="_blank" rel="noopener">Framework 7</a></td>
+</tr>
+<tr>
+<td style="text-align:center">EJS</td>
+<td style="text-align:center">2138</td>
+<td style="text-align:center"><a href="https://github.com/mde/ejs" target="_blank" rel="noopener">https://github.com/mde/ejs</a></td>
+<td style="text-align:center">Client-side support, complies with <a href="http://expressjs.com/" target="_blank" rel="noopener">Express</a></td>
+</tr>
+</tbody>
+</table>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Template/">Template</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-New-syntax-for-css-Scss-Sass" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/02/06/New-syntax-for-css-Scss-Sass/" class="article-date">
+  <time datetime="2018-02-06T14:37:33.000Z" itemprop="datePublished">2018-02-06</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/02/06/New-syntax-for-css-Scss-Sass/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/02/06/New-syntax-for-css-Scss-Sass/">New syntax for css - Scss Sass</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/sass.jpg" alt="Sass"></p>
+<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem install sass</span><br></pre></td></tr></table></figure>
+<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Compile scss to css</span></span><br><span class="line">sass input.scss output.css</span><br><span class="line"></span><br><span class="line">sass --watch input.scss output.css</span><br><span class="line"></span><br><span class="line">sass --watch src/sass:dist/css</span><br></pre></td></tr></table></figure>
+<h3 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h3><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// variable</span></span><br><span class="line"><span class="variable">$font-stack</span>: Helvetica, sans-serif;</span><br><span class="line"><span class="variable">$font-color</span>: <span class="number">#000</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">  <span class="attribute">font</span>: <span class="number">100%</span> <span class="variable">$font-stack</span></span><br><span class="line">  color: <span class="variable">$font-color</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// Mixins</span></span><br><span class="line">@<span class="keyword">mixin</span> border-radius(<span class="variable">$radius</span>) &#123;</span><br><span class="line">  -webkit-<span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</span><br><span class="line">     -moz-<span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</span><br><span class="line">      -ms-<span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</span><br><span class="line">          <span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span> &#123; @<span class="keyword">include</span> border-radius(<span class="number">10px</span>); &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="http://sass-lang.com/guide" target="_blank" rel="noopener">http://sass-lang.com/guide</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cheatsheet/">Cheatsheet</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Css/">Css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Devlopment/">Devlopment</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Frontend/">Frontend</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sass/">Sass</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Scss/">Scss</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Capture-all-of-your-http-connection-2" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/02/06/Capture-all-of-your-http-connection-2/" class="article-date">
+  <time datetime="2018-02-06T14:20:35.000Z" itemprop="datePublished">2018-02-06</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/02/06/Capture-all-of-your-http-connection-2/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/02/06/Capture-all-of-your-http-connection-2/">Capture all of your http connection 2</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/web.jpg" alt="Web"></p>
+<h1 id="Mitmweb-Usage"><a href="#Mitmweb-Usage" class="headerlink" title="Mitmweb Usage"></a>Mitmweb Usage</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># make sure you added the cert to you client</span></span><br><span class="line">docker run --rm -it -p 8080:8080 -p 127.0.0.1:8081:8081 mitmproxy/mitmproxy mitmweb</span><br><span class="line"></span><br><span class="line"><span class="comment"># open your bowser http://localhost:8081</span></span><br></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Curl/">Curl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Http/">Http</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Https/">Https</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MITM/">MITM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OWASP/">OWASP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Proxy/">Proxy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ReverseEnginerring/">ReverseEnginerring</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Security/">Security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ios/">ios</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Node-js-ORM-framework-quick-search" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/02/01/Node-js-ORM-framework-quick-search/" class="article-date">
+  <time datetime="2018-02-01T09:30:05.000Z" itemprop="datePublished">2018-02-01</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/02/01/Node-js-ORM-framework-quick-search/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/02/01/Node-js-ORM-framework-quick-search/">Node.js ORM framework quick search</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/node.jpg" alt="Node"></p>
+<h3 id="Quick-search"><a href="#Quick-search" class="headerlink" title="Quick search"></a>Quick search</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:center">Star</th>
+<th style="text-align:right">Github</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Sequelize</td>
+<td style="text-align:center">12959</td>
+<td style="text-align:right"><a href="https://github.com/sequelize/sequelize" target="_blank" rel="noopener">https://github.com/sequelize/sequelize</a></td>
+</tr>
+<tr>
+<td style="text-align:left">Bookshelf</td>
+<td style="text-align:center">4662</td>
+<td style="text-align:right"><a href="https://github.com/bookshelf/bookshelf" target="_blank" rel="noopener">https://github.com/bookshelf/bookshelf</a></td>
+</tr>
+<tr>
+<td style="text-align:left">dresende/node-orm2</td>
+<td style="text-align:center">2757</td>
+<td style="text-align:right"><a href="https://github.com/dresende/node-orm2" target="_blank" rel="noopener">https://github.com/dresende/node-orm2</a></td>
+</tr>
+<tr>
+<td style="text-align:left">SpoonX/wetland</td>
+<td style="text-align:center">209</td>
+<td style="text-align:right"><a href="https://github.com/SpoonX/wetland" target="_blank" rel="noopener">https://github.com/SpoonX/wetland</a></td>
+</tr>
+</tbody>
+</table>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Framework/">Framework</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Orm/">Orm</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-docker-compose-specify-file-run-as-detach-mode" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/02/01/docker-compose-specify-file-run-as-detach-mode/" class="article-date">
+  <time datetime="2018-02-01T02:19:56.000Z" itemprop="datePublished">2018-02-01</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/02/01/docker-compose-specify-file-run-as-detach-mode/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/02/01/docker-compose-specify-file-run-as-detach-mode/">docker-compose specify file run as detach mode</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/docker.jpg" alt="Dokcer"></p>
+<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># correct</span></span><br><span class="line"><span class="comment"># -d detach mode</span></span><br><span class="line"><span class="comment"># -f specify compose file</span></span><br><span class="line">docker-compose -f ~/path/to/docker-compose.yaml up -d</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># incorrect: cuz `-d` is not a option of `docker-compose`</span></span><br><span class="line">docker-compose -d -f ~/path/to/docker-compose.yaml up</span><br><span class="line"></span><br><span class="line"><span class="comment"># incorrect: cuz `-f` is not a option of `up` command</span></span><br><span class="line">docker-compose up -d -f ~/path/to/docker-compose.yaml</span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://docs.docker.com/compose/reference/overview/" target="_blank" rel="noopener">dokcer-compose</a><br><a href="https://docs.docker.com/compose/reference/up/" target="_blank" rel="noopener">docker-compose up</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/compose/">compose</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/yaml/">yaml</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Git-Cheatsheet" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/31/Git-Cheatsheet/" class="article-date">
+  <time datetime="2018-01-31T05:44:06.000Z" itemprop="datePublished">2018-01-31</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/31/Git-Cheatsheet/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/31/Git-Cheatsheet/">Git Cheatsheet</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># git clone</span></span><br><span class="line">git <span class="built_in">clone</span> [github-repo-url]</span><br><span class="line">git <span class="built_in">clone</span> -l /path/to/git copy-to-destination</span><br><span class="line"></span><br><span class="line"><span class="comment"># git init</span></span><br><span class="line">git init</span><br><span class="line">git init --bare</span><br><span class="line"></span><br><span class="line"><span class="comment"># add or update your file(s) / folder(s)</span></span><br><span class="line">git add .</span><br><span class="line"></span><br><span class="line"><span class="comment"># commit</span></span><br><span class="line">git commit -m <span class="string">"your commit message"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># push your code to remote repo</span></span><br><span class="line">git push</span><br><span class="line"></span><br><span class="line"><span class="comment"># pull your code from remote repo</span></span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
+<h3 id="branch"><a href="#branch" class="headerlink" title="branch"></a>branch</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br><span class="line">git reset</span><br><span class="line">git checkout exist-branch</span><br></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cheatsheet/">Cheatsheet</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Development/">Development</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/6/">Next &raquo;</a>
+    </nav>
+  
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:blog.technicalfever.com">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">CALS NOTE</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2019 Calvin Lam<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+<script>
+  var disqus_shortname = 'cals-note';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

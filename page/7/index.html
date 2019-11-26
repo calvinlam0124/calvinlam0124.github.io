@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>CALS NOTE</title>
+  <meta name="viewport" content="width=device-width">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="CALS NOTE">
+<meta property="og:url" content="http://blog.technicalfever.com/page/7/index.html">
+<meta property="og:site_name" content="CALS NOTE">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CALS NOTE">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-112333390-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+<script>
+window['_fs_debug'] = false;
+window['_fs_host'] = 'fullstory.com';
+window['_fs_org'] = 'AAHCC';
+window['_fs_namespace'] = 'FS';
+(function(m,n,e,t,l,o,g,y){
+    if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+    g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+    o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+    y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+    g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+    y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
+    g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+    g.clearUserCookie=function(){};
+})(window,document,window['_fs_namespace'],'script','user');
+</script>
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">CALS NOTE</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li><li><a href="/Cheatsheets/">Cheatsheets</a></li><li><a href="/atom.xml">rss</a></li><li><a href="/About">About</a></li><li><a href="https://lumiere000.github.io/blog">Friends</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.technicalfever.com"></form>
+	</div>
+</header>
+    <div id="main">
+      
+  
+    <article id="blog-Docker-ubuntu-container-network-utilities" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/09/Docker-ubuntu-container-network-utilities/" class="article-date">
+  <time datetime="2018-01-09T07:31:15.000Z" itemprop="datePublished">2018-01-09</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/09/Docker-ubuntu-container-network-utilities/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/09/Docker-ubuntu-container-network-utilities/">Docker ubuntu container network utilities</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/docker.jpg" alt="Docker"></p>
+<h3 id="Senario"><a href="#Senario" class="headerlink" title="Senario"></a>Senario</h3><p>When you need to debug the container you may need some network tools.<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it your_container_name bash</span><br></pre></td></tr></table></figure></p>
+<h3 id="Packages"><a href="#Packages" class="headerlink" title="Packages"></a>Packages</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br><span class="line">apt-get install -y iputils-ping telnet dnsutils net-tools inetutils-traceroute</span><br><span class="line"></span><br><span class="line"><span class="comment"># You must run update before your installation</span></span><br><span class="line">apt-get update</span><br><span class="line"></span><br><span class="line"><span class="comment"># ping google.com</span></span><br><span class="line">apt-get install iputils-ping</span><br><span class="line"></span><br><span class="line"><span class="comment"># telnet google.com 80</span></span><br><span class="line">apt-get install telnet</span><br><span class="line"></span><br><span class="line"><span class="comment"># nslookup google.com</span></span><br><span class="line"><span class="comment"># host google.com</span></span><br><span class="line">apt-get install dnsutils</span><br><span class="line"></span><br><span class="line"><span class="comment"># netstat, arp</span></span><br><span class="line">apt-get install net-tools</span><br><span class="line"></span><br><span class="line"><span class="comment"># traceroute google.com</span></span><br><span class="line">apt-get install inetutils-traceroute</span><br></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Container/">Container</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Network/">Network</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-A-modest-collection-of-cheatsheets" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/09/A-modest-collection-of-cheatsheets/" class="article-date">
+  <time datetime="2018-01-09T07:23:09.000Z" itemprop="datePublished">2018-01-09</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/09/A-modest-collection-of-cheatsheets/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/09/A-modest-collection-of-cheatsheets/">A modest collection of cheatsheets</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/web.jpg" alt="Web"></p>
+<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><p>Just in case you forgot the command or config file’s format.<br>Go to the search box and then type what language or syntax you forgot. That will show the example for your reference.</p>
+<h3 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h3><p><a href="https://devhints.io/" target="_blank" rel="noopener">https://devhints.io/</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cheatsheet/">Cheatsheet</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Dev/">Dev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hits/">Hits</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Bad-Sector-and-MySQL-innodb" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/09/Bad-Sector-and-MySQL-innodb/" class="article-date">
+  <time datetime="2018-01-09T02:14:06.000Z" itemprop="datePublished">2018-01-09</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/09/Bad-Sector-and-MySQL-innodb/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/09/Bad-Sector-and-MySQL-innodb/">Bad Sector and MySQL innodb</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/mysql.jpg" alt="MySQL"></p>
+<h3 id="StdErr"><a href="#StdErr" class="headerlink" title="StdErr"></a>StdErr</h3><p>Thats shown on screen<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">WARNING: Your hard drive is failing</span><br><span class="line">Device: /dev/sda [SAT], 8 Currently unreadable (pending) sectors</span><br><span class="line">WARNING: Your hard drive is failing</span><br><span class="line">Device: /dev/sda [SAT], 8 Offline uncorrectable sectors</span><br></pre></td></tr></table></figure></p>
+<h3 id="SMART-Log"><a href="#SMART-Log" class="headerlink" title="SMART Log"></a>SMART Log</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"># sudo smartctl -a /dev/sda</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">SMART Error Log Version: 1</span><br><span class="line">ATA Error Count: 25 (device log contains only the most recent five errors)</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">Error 25 occurred at disk power-on lifetime: 6502 hours (270 days + 22 hours)</span><br><span class="line">  When the command that caused the error occurred, the device was active or idle.</span><br><span class="line"></span><br><span class="line">  After command completion occurred, registers were:</span><br><span class="line">  ER ST SC SN CL CH DH</span><br><span class="line">  -- -- -- -- -- -- --</span><br><span class="line">  40 51 00 ff ff ff 0f  Error: UNC at LBA = 0x0fffffff = 268435455</span><br><span class="line"></span><br><span class="line">  Commands leading to the command that caused the error were:</span><br><span class="line">  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name</span><br><span class="line">  -- -- -- -- -- -- -- --  ----------------  --------------------</span><br><span class="line">  25 00 08 ff ff ff ef 00  14d+16:54:04.035  READ DMA EXT</span><br><span class="line">  27 00 00 00 00 00 e0 00  14d+16:54:04.031  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]</span><br><span class="line">  ec 00 00 00 00 00 a0 00  14d+16:54:03.993  IDENTIFY DEVICE</span><br><span class="line">  ef 03 45 00 00 00 a0 00  14d+16:54:03.990  SET FEATURES [Set transfer mode]</span><br><span class="line">  27 00 00 00 00 00 e0 00  14d+16:54:03.990  READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">SMART Self-test log structure revision number 1</span><br><span class="line">Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error</span><br><span class="line"># 1  Short offline       Completed: read failure       10%      6410         1468496680</span><br><span class="line">...</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<h3 id="MySQL-Log"><a href="#MySQL-Log" class="headerlink" title="MySQL Log"></a>MySQL Log</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">2018-01-08  9:38:25 140666168350528 [Note] InnoDB: Initializing buffer pool, size = 128.0M</span><br><span class="line">2018-01-08  9:38:25 140666168350528 [Note] InnoDB: Completed initialization of buffer pool</span><br><span class="line">2018-01-08  9:38:32 140666168350528 [ERROR] InnoDB: Tried to read 1048576 bytes at offset 2097152. Was only able to read 163840.</span><br><span class="line">2018-01-08 09:38:32 7fef64ff1740  InnoDB: Operating system error number 5 in a file operation.</span><br><span class="line">InnoDB: Error number 5 means &apos;Input/output error&apos;.</span><br><span class="line">InnoDB: Some operating system error numbers are described at</span><br><span class="line">InnoDB: http://dev.mysql.com/doc/refman/5.6/en/operating-system-error-codes.html</span><br><span class="line"> InnoDB: Operation read to file /tmp/mariadb-10.1.14/storage/xtradb/os/os0file.cc and at line 3160</span><br><span class="line">2018-01-08  9:38:32 140666168350528 [ERROR] InnoDB: File (unknown): &apos;read&apos; returned OS error 205. Cannot continue operation</span><br><span class="line">180108 09:38:32 mysqld_safe mysqld from pid file /usr/local/data/mysql/data/mysqld.pid ended</span><br></pre></td></tr></table></figure>
+<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p><strong>‘Input/output error’</strong> most likely means harddisk error!<br><strong>Please backup ASAP!</strong></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Harddisk/">Harddisk</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Maria/">Maria</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Smart/">Smart</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Stderr/">Stderr</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Go-Programming-Language" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/05/Go-Programming-Language/" class="article-date">
+  <time datetime="2018-01-05T06:43:08.000Z" itemprop="datePublished">2018-01-05</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/05/Go-Programming-Language/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/05/Go-Programming-Language/">Go Programming Language</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/golang.jpg" alt="GoLang"></p>
+<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># download: https://golang.org/doc/install</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># set Path</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:/usr/<span class="built_in">local</span>/go/bin</span><br><span class="line"><span class="built_in">export</span> GOROOT=<span class="variable">$HOME</span>/go1.X</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$GOROOT</span>/bin</span><br></pre></td></tr></table></figure>
+<h3 id="Source-code"><a href="#Source-code" class="headerlink" title="Source code"></a>Source code</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import <span class="string">"fmt"</span></span><br><span class="line"></span><br><span class="line">func <span class="function"><span class="title">main</span></span>() &#123;</span><br><span class="line">    fmt.Printf(<span class="string">"hello, world\n"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Compile"><a href="#Compile" class="headerlink" title="Compile"></a>Compile</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> <span class="variable">$HOME</span>/go/src/hello</span><br><span class="line">go build</span><br></pre></td></tr></table></figure>
+<h3 id="Execute"><a href="#Execute" class="headerlink" title="Execute"></a>Execute</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./hello</span><br><span class="line"><span class="comment"># output: hello, world</span></span><br></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Go/">Go</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Installation/">Installation</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-JAMstack" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/05/JAMstack/" class="article-date">
+  <time datetime="2018-01-05T05:58:50.000Z" itemprop="datePublished">2018-01-05</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/05/JAMstack/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/05/JAMstack/">Serverless JAMstack</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/jamstack.jpg" alt="JAMstack"></p>
+<h3 id="JAMstack"><a href="#JAMstack" class="headerlink" title="JAMstack"></a>JAMstack</h3><p>Javascript, APIs, Markup</p>
+<h3 id="Markup-Generator"><a href="#Markup-Generator" class="headerlink" title="Markup Generator"></a>Markup Generator</h3><ul>
+<li>JekyII - jekyllrb.com</li>
+<li>Hugo - gohugo.io</li>
+<li>Hexo - hexo.io</li>
+<li>Octopress - octopress.org</li>
+<li>Gatsby - github.com/gatsbyjs</li>
+<li>Pelican - getpelican.com</li>
+<li>Brunch - brunch.io</li>
+<li>Metalsmith - metalsmith.io</li>
+<li>Middleman - middlemanapp.com</li>
+<li>Nuxt - nuxtjs.org</li>
+<li>StaticGen - staticgen.com</li>
+</ul>
+<h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><p>Do something to connect your APIs.</p>
+<h3 id="APIs"><a href="#APIs" class="headerlink" title="APIs"></a>APIs</h3><ul>
+<li>Contentful</li>
+<li>Netlify</li>
+<li>Algolia</li>
+</ul>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://jamstack.org/" target="_blank" rel="noopener">https://jamstack.org/</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Generator/">Generator</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Jamstack/">Jamstack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Lamp/">Lamp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mean/">Mean</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-SMART-hard-drive-monitoring-utility" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/05/SMART-hard-drive-monitoring-utility/" class="article-date">
+  <time datetime="2018-01-05T05:41:17.000Z" itemprop="datePublished">2018-01-05</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/05/SMART-hard-drive-monitoring-utility/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/05/SMART-hard-drive-monitoring-utility/">SMART hard drive monitoring utility</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/cli.jpg" alt="Cli"></p>
+<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install smartmontools</span><br></pre></td></tr></table></figure>
+<h3 id="Basic-usage"><a href="#Basic-usage" class="headerlink" title="Basic usage"></a>Basic usage</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># show details</span></span><br><span class="line">smartctl -i /dev/sda</span><br><span class="line"></span><br><span class="line"><span class="comment"># SMART overall-health self-assessment test result: PASSED</span></span><br><span class="line">smartctl -H /dev/sda</span><br><span class="line"></span><br><span class="line"><span class="comment"># do test</span></span><br><span class="line">smartctl —-<span class="built_in">test</span>=short /dev/sda</span><br><span class="line">smartctl --<span class="built_in">test</span>=long /dev/sda</span><br><span class="line"><span class="comment"># show test report</span></span><br><span class="line">smartctl -a</span><br></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cli/">Cli</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Harddisk/">Harddisk</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Smart/">Smart</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Snmap-basic-example" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/04/Snmap-basic-example/" class="article-date">
+  <time datetime="2018-01-04T07:18:17.000Z" itemprop="datePublished">2018-01-04</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/04/Snmap-basic-example/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/04/Snmap-basic-example/">Nmap basic example</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/cli.jpg" alt="Cli"></p>
+<h3 id="Scan"><a href="#Scan" class="headerlink" title="Scan"></a>Scan</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 100 ports</span></span><br><span class="line">nmap --top-ports 100 192.168.1.54</span><br><span class="line"></span><br><span class="line"><span class="comment"># -sC Scan script default</span></span><br><span class="line">nmap --top-ports 100 -T4 -sC 192.168.1.54</span><br><span class="line"></span><br><span class="line"><span class="comment"># -A Enable OS detection</span></span><br><span class="line">nmap -A --top-ports 100 -sC -T4 192.168.1.54</span><br><span class="line"></span><br><span class="line"><span class="comment"># -Pn No ping</span></span><br><span class="line">nmap --top-ports 100 -T4 -Pn -sC 192.168.1.54</span><br></pre></td></tr></table></figure>
+<h3 id="Port-output"><a href="#Port-output" class="headerlink" title="Port output"></a>Port output</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Starting Nmap 7.60 ( https://nmap.org ) at 2018-01-04 15:36 HKT</span><br><span class="line">Nmap scan report <span class="keyword">for</span> cmtech-company (192.168.1.54)</span><br><span class="line">Host is up (0.047s latency).</span><br><span class="line">Not shown: 97 filtered ports</span><br><span class="line">PORT    STATE SERVICE</span><br><span class="line">22/tcp  open  ssh</span><br><span class="line">139/tcp open  netbios-ssn</span><br><span class="line">445/tcp open  microsoft-ds</span><br></pre></td></tr></table></figure>
+<h3 id="OS-detection"><a href="#OS-detection" class="headerlink" title="OS detection"></a>OS detection</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Host script results:</span><br><span class="line">|_nbstat: NetBIOS name: XXX-COMPANY, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)</span><br><span class="line">| smb-os-discovery:</span><br><span class="line">|   OS: Windows 6.1 (Samba 4.3.11-Ubuntu)</span><br><span class="line">|   Computer name: xxx-company</span><br><span class="line">|   NetBIOS computer name: XXX-COMPANY\x00</span><br><span class="line">|   Domain name: \x00</span><br><span class="line">|   FQDN: xxx-company</span><br><span class="line">|_  System time: 2018-01-04T15:37:28+08:00</span><br><span class="line">| smb-security-mode:</span><br><span class="line">|   account_used: guest</span><br><span class="line">|   authentication_level: user</span><br><span class="line">|   challenge_response: supported</span><br><span class="line">|_  message_signing: disabled (dangerous, but default)</span><br><span class="line">| smb2-security-mode:</span><br><span class="line">|   2.02:</span><br><span class="line">|_    Message signing enabled but not required</span><br><span class="line">| smb2-time:</span><br><span class="line">|   date: 2018-01-04 15:37:28</span><br><span class="line">|_  start_date: 1601-01-01 07:36:42</span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://linux.die.net/man/1/nmap" target="_blank" rel="noopener">https://linux.die.net/man/1/nmap</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cli/">Cli</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hack/">Hack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Network/">Network</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nmap/">Nmap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Port/">Port</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Security/">Security</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-GoBuster-options-example" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/04/GoBuster-options-example/" class="article-date">
+  <time datetime="2018-01-04T06:42:09.000Z" itemprop="datePublished">2018-01-04</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/04/GoBuster-options-example/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/04/GoBuster-options-example/">GoBuster basic example</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/cli.jpg" alt="Cli"></p>
+<h3 id="DIR-mode"><a href="#DIR-mode" class="headerlink" title="DIR mode"></a>DIR mode</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">gobuster -u https://mysite.com/path/to/folder -c <span class="string">'session=123456'</span> -t 50 -w common-files.txt -x .php,.html</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># -t Number of threads</span></span><br><span class="line">gobuster -u http://httpbin.org/ -w words.txt -t 10</span><br><span class="line">/index (Status: 200)</span><br><span class="line">/posts (Status: 301)</span><br><span class="line">/contact (Status: 301)</span><br><span class="line"></span><br><span class="line"><span class="comment"># -v Verbose output</span></span><br><span class="line">gobuster -u http://httpbin.org/ -w words.txt -v</span><br><span class="line">Found : /index (Status: 200)</span><br><span class="line">Missed: /derp (Status: 404)</span><br><span class="line">Found : /posts (Status: 301)</span><br><span class="line"></span><br><span class="line"><span class="comment"># -l Show content length</span></span><br><span class="line">gobuster -u http://httpbin.org/ -w words.txt -l</span><br><span class="line">/contact (Status: 301)</span><br><span class="line">/posts (Status: 301)</span><br><span class="line">/index (Status: 200) [Size: 61481]</span><br><span class="line"></span><br><span class="line"><span class="comment"># -n No status code</span></span><br><span class="line"><span class="comment"># -q Quiet output</span></span><br><span class="line"><span class="comment"># -e "grep` mode"</span></span><br><span class="line">gobuster -u http://httpbin.org/ -w words.txt -q -n -e</span><br><span class="line">http://httpbin.org/ip</span><br><span class="line">http://httpbin.org/index</span><br><span class="line">http://httpbin.org/uuid</span><br></pre></td></tr></table></figure>
+<h3 id="DNS-mode"><a href="#DNS-mode" class="headerlink" title="DNS mode"></a>DNS mode</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">gobuster -m dns -w subdomains.txt -u google.com</span><br><span class="line">Found: m.google.com</span><br><span class="line">Found: mobile.google.com</span><br><span class="line">Found: search.google.com</span><br><span class="line"></span><br><span class="line"><span class="comment"># -i Show IP</span></span><br><span class="line">gobuster -m dns -w subdomains.txt -u google.com -i</span><br><span class="line">Found: chrome.google.com [2404:6800:4006:801::200e, 216.58.220.110]</span><br><span class="line">Found: m.google.com [216.58.220.107, 2404:6800:4006:801::200b]</span><br><span class="line">Found: www.google.com [74.125.237.179, 74.125.237.177, 74.125.237.178, 74.125.237.180, 74.125.237.176, 2404:6800:4006:801::2004]</span><br><span class="line"></span><br><span class="line"><span class="comment"># -fw Force wildcard</span></span><br><span class="line">gobuster -m dns -w subdomains.txt -u google.com -fw</span><br><span class="line">[-] Wildcard DNS found. IP address(es):  123.123.123.123</span><br><span class="line">Found: email.doesntexist.com</span><br><span class="line">^C[!] Keyboard interrupt detected, terminating.</span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://github.com/OJ/gobuster" target="_blank" rel="noopener">https://github.com/OJ/gobuster</a><br><a href="https://www.owasp.org/index.php/Category:OWASP_DirBuster_Project" target="_blank" rel="noopener">https://www.owasp.org/index.php/Category:OWASP_DirBuster_Project</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gobuster/">Gobuster</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Golang/">Golang</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hack/">Hack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Security/">Security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Linux-basic-monitor-shell-script" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/04/Linux-basic-monitor-shell-script/" class="article-date">
+  <time datetime="2018-01-04T03:46:25.000Z" itemprop="datePublished">2018-01-04</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/04/Linux-basic-monitor-shell-script/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/04/Linux-basic-monitor-shell-script/">Linux basic monitor shell script</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/cli.jpg" alt="Cli"></p>
+<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><p>NO. Just download and execute.</p>
+<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># run</span></span><br><span class="line">./tecmin_monitor.sh</span><br><span class="line"></span><br><span class="line"><span class="comment"># show --version</span></span><br><span class="line">./tecmin_monitor.sh -v</span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://github.com/atarallo/TECMINT_MONITOR" target="_blank" rel="noopener">https://github.com/atarallo/TECMINT_MONITOR</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bash/">Bash</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cli/">Cli</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Monitor/">Monitor</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-Debian-NO-PUBKEY-solution" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/04/Debian-NO-PUBKEY-solution/" class="article-date">
+  <time datetime="2018-01-04T01:51:43.000Z" itemprop="datePublished">2018-01-04</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/04/Debian-NO-PUBKEY-solution/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/04/Debian-NO-PUBKEY-solution/">Ubuntu apt-get NO_PUBKEY solution</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/ubuntu.jpg" alt="Ubuntu"></p>
+<h3 id="Scenario"><a href="#Scenario" class="headerlink" title="Scenario"></a>Scenario</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># when run apt-get update or apt-get install you got below error</span></span><br><span class="line"></span><br><span class="line">W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: https://dl.yarnpkg.com/debian stable InRelease: The following signatures couldn<span class="string">'t be verified because the public key is not available: NO_PUBKEY E074D16EB6FF4DE3</span></span><br><span class="line"><span class="string">W: Failed to fetch https://dl.yarnpkg.com/debian/dists/stable/InRelease The following signatures couldn'</span>t be verified because the public key is not available: NO_PUBKEY E074D16EB6FF4DE3</span><br><span class="line">W: Some index files failed to download. They have been ignored, or old ones used instead.</span><br></pre></td></tr></table></figure>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Add the latest key that will be fixed</span></span><br><span class="line">curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">wget -qO - https://raw.githubusercontent.com/yarnpkg/releases/gh-pages/debian/pubkey.gpg | sudo apt-key add -</span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://github.com/yarnpkg/yarn/issues/4453" target="_blank" rel="noopener">https://github.com/yarnpkg/yarn/issues/4453</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Apt/">Apt</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Debian/">Debian</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gpg/">Gpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/6/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/8/">Next &raquo;</a>
+    </nav>
+  
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:blog.technicalfever.com">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">CALS NOTE</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2019 Calvin Lam<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+<script>
+  var disqus_shortname = 'cals-note';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>
