@@ -74,6 +74,60 @@ window['_fs_namespace'] = 'FS';
     <div id="main">
       
   
+    <article id="blog-Nginx-password-protect-through-htpasswd" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/04/16/Nginx-password-protect-through-htpasswd/" class="article-date">
+  <time datetime="2018-04-16T08:11:07.000Z" itemprop="datePublished">2018-04-16</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/04/16/Nginx-password-protect-through-htpasswd/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/04/16/Nginx-password-protect-through-htpasswd/">Nginx password protect through htpasswd</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/nginx.jpg" alt="Nginx"></p>
+<h3 id="Create-htpasswd"><a href="#Create-htpasswd" class="headerlink" title="Create .htpasswd"></a>Create .htpasswd</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo sh -c <span class="string">"echo -n 'username:' &gt;&gt; /etc/nginx/.htpasswd"</span></span><br><span class="line">sudo sh -c <span class="string">"openssl passwd -apr1 &gt;&gt; /etc/nginx/.htpasswd"</span></span><br><span class="line"></span><br><span class="line">cat /etc/nginx/.htpasswd  <span class="comment"># username:$apr1$wI1/T0nB$jEKuTJHkTOOWkopnXqC1d1</span></span><br></pre></td></tr></table></figure>
+<h3 id="Update-nginx-conf"><a href="#Update-nginx-conf" class="headerlink" title="Update nginx conf"></a>Update nginx conf</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    ...</span><br><span class="line">    location / &#123;</span><br><span class="line">        auth_basic <span class="string">"Restricted Content"</span>;</span><br><span class="line">        auth_basic_user_file /etc/nginx/.htpasswd;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Reload-Nginx"><a href="#Reload-Nginx" class="headerlink" title="Reload Nginx"></a>Reload Nginx</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service nginx reload</span><br></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Password/">Password</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Protect/">Protect</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sysadm/">Sysadm</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="blog-Linux-Uncomplicated-Firewall" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -576,59 +630,6 @@ window['_fs_namespace'] = 'FS';
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Compiler/">Compiler</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Frontend/">Frontend</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Programming/">Programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Webpack/">Webpack</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="blog-Linux-sed" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2018/03/19/Linux-sed/" class="article-date">
-  <time datetime="2018-03-19T06:34:22.000Z" itemprop="datePublished">2018-03-19</time>
-</a>
-		</span>
-		<span class="meta-elements author">Calvin Lam</span>
-		<div class="commentscount">
-			
-				<a href="http://blog.technicalfever.com/2018/03/19/Linux-sed/#disqus_thread" class="article-comment-link">Comments</a>
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2018/03/19/Linux-sed/">Linux sed</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><img src="/images/cli.jpg" alt="Cli"></p>
-<h3 id="Basic-usage"><a href="#Basic-usage" class="headerlink" title="Basic usage"></a>Basic usage</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># print first 30 lines</span></span><br><span class="line">sed 1,30d log.log</span><br><span class="line"></span><br><span class="line"><span class="comment"># delete first 30 lines</span></span><br><span class="line">sed -e 1,30d log.log</span><br><span class="line"></span><br><span class="line"><span class="comment"># delete 17th lines</span></span><br><span class="line">sed -e 17d log.log</span><br><span class="line"></span><br><span class="line"><span class="comment"># delete last 20 lines</span></span><br><span class="line">sed -e <span class="string">'10,$d'</span> log.log</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># delete last 20 lines and backup file that named 'log.log.bak'</span></span><br><span class="line">sed -e <span class="string">'10,$d'</span> -i <span class="string">'.bak'</span> log.log</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># replace StdOut</span></span><br><span class="line">sed -e <span class="string">'s/__variable__/__replaced__/g'</span> file.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># replace in file</span></span><br><span class="line">sed -e<span class="string">'s/__variable__/__replaced__/g'</span> -i <span class="string">''</span> file.txt</span><br></pre></td></tr></table></figure>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://linux.die.net/man/1/sed" target="_blank" rel="noopener">https://linux.die.net/man/1/sed</a></p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cli/">Cli</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ops/">Ops</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sed/">Sed</a></li></ul>
 
 			</span>
 		</div>

@@ -74,6 +74,59 @@ window['_fs_namespace'] = 'FS';
     <div id="main">
       
   
+    <article id="blog-Linux-sed" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/03/19/Linux-sed/" class="article-date">
+  <time datetime="2018-03-19T06:34:22.000Z" itemprop="datePublished">2018-03-19</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/03/19/Linux-sed/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/03/19/Linux-sed/">Linux sed</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/cli.jpg" alt="Cli"></p>
+<h3 id="Basic-usage"><a href="#Basic-usage" class="headerlink" title="Basic usage"></a>Basic usage</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># print first 30 lines</span></span><br><span class="line">sed 1,30d log.log</span><br><span class="line"></span><br><span class="line"><span class="comment"># delete first 30 lines</span></span><br><span class="line">sed -e 1,30d log.log</span><br><span class="line"></span><br><span class="line"><span class="comment"># delete 17th lines</span></span><br><span class="line">sed -e 17d log.log</span><br><span class="line"></span><br><span class="line"><span class="comment"># delete last 20 lines</span></span><br><span class="line">sed -e <span class="string">'10,$d'</span> log.log</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># delete last 20 lines and backup file that named 'log.log.bak'</span></span><br><span class="line">sed -e <span class="string">'10,$d'</span> -i <span class="string">'.bak'</span> log.log</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># replace StdOut</span></span><br><span class="line">sed -e <span class="string">'s/__variable__/__replaced__/g'</span> file.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># replace in file</span></span><br><span class="line">sed -e<span class="string">'s/__variable__/__replaced__/g'</span> -i <span class="string">''</span> file.txt</span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://linux.die.net/man/1/sed" target="_blank" rel="noopener">https://linux.die.net/man/1/sed</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cli/">Cli</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ops/">Ops</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sed/">Sed</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="blog-Setup-Gitlab-on-Docker" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -545,65 +598,6 @@ window['_fs_namespace'] = 'FS';
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Database/">Database</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Firebase/">Firebase</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Firestore/">Firestore</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Google/">Google</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hosting/">Hosting</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Jamstack/">Jamstack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Serverless/">Serverless</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="blog-Deploy-your-docker-container-to-AWS" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2018/02/09/Deploy-your-docker-container-to-AWS/" class="article-date">
-  <time datetime="2018-02-09T09:10:35.000Z" itemprop="datePublished">2018-02-09</time>
-</a>
-		</span>
-		<span class="meta-elements author">Calvin Lam</span>
-		<div class="commentscount">
-			
-				<a href="http://blog.technicalfever.com/2018/02/09/Deploy-your-docker-container-to-AWS/#disqus_thread" class="article-comment-link">Comments</a>
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2018/02/09/Deploy-your-docker-container-to-AWS/">Deploy your docker container to AWS</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><img src="/images/docker.jpg" alt="Docker"></p>
-<h3 id="1-Installation-and-Configure-AWS"><a href="#1-Installation-and-Configure-AWS" class="headerlink" title="1. Installation and Configure AWS"></a>1. Installation and Configure AWS</h3><p>1.1 install aws-cli<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pip3 install awscli</span><br></pre></td></tr></table></figure></p>
-<p>1.2 Create IAM at <a href="https://console.aws.amazon.com/iam/home?region=ap-southeast-1#/users" target="_blank" rel="noopener">aws-console</a></p>
-<p>1.3 Configure your IAM token<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">aws configure</span><br><span class="line"></span><br><span class="line">AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE</span><br><span class="line">AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY</span><br><span class="line">Default region name [None]: ap-southeast-1</span><br><span class="line">Default output format [None]: ENTER</span><br><span class="line"></span><br><span class="line"><span class="comment"># that will generate file in </span></span><br><span class="line">~/.aws/config</span><br><span class="line">~/.aws/credentials</span><br></pre></td></tr></table></figure></p>
-<h3 id="2-Create-Docker-Machine"><a href="#2-Create-Docker-Machine" class="headerlink" title="2. Create Docker-Machine"></a>2. Create Docker-Machine</h3><p>The VPC-ID and Subnet-ID should copy from AWS-console.<br>2.1 Create a docker-machine<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">docker-machine create \</span><br><span class="line">  --driver amazonec2 \</span><br><span class="line">  --amazonec2-access-key AKIAIOSFODNN7EXAMPLE \</span><br><span class="line">  --amazonec2-secret-key wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY \</span><br><span class="line">  --amazonec2-region ap-southeast-1 \</span><br><span class="line">  --amazonec2-subnet-id subnet-16b8e272 \</span><br><span class="line">  --amazonec2-vpc-id vpc-b263fdd6 \</span><br><span class="line">  --amazonec2-zone a \</span><br><span class="line">  ap-southeast-1-docker-machine-1</span><br></pre></td></tr></table></figure></p>
-<p>2.2 Active it<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker-machine ls</span><br><span class="line">docker-machine env ap-southeast-1-docker-machine-1</span><br><span class="line"><span class="built_in">eval</span> $(docker-machine env ap-southeast-1-docker-machine-1)</span><br></pre></td></tr></table></figure></p>
-<p>2.3 Build and run your project<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /your/project/root</span><br><span class="line">docker build -t ap-southeast-1/project .</span><br><span class="line">docker run ap-southeast-1/project</span><br><span class="line"></span><br><span class="line">docker ps</span><br><span class="line">docker-machine ls</span><br></pre></td></tr></table></figure></p>
-<p>2.4 <strong>DONT FORGET TO CONFIGT AWS SECURITY GROUP FOR YOUR APPLICATION </strong></p>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://docs.docker.com/machine/drivers/aws/#options" target="_blank" rel="noopener">https://docs.docker.com/machine/drivers/aws/#options</a></p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Aws/">Aws</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Container/">Container</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Machine/">Machine</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Operation/">Operation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SysOps/">SysOps</a></li></ul>
 
 			</span>
 		</div>

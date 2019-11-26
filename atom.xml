@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.technicalfever.com/"/>
-  <updated>2019-11-26T02:50:30.231Z</updated>
+  <updated>2019-11-26T03:11:41.966Z</updated>
   <id>http://blog.technicalfever.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How to use telnet to test your web server</title>
+    <link href="http://blog.technicalfever.com/2019/11/26/How-to-use-telnet-to-test-your-web-server/"/>
+    <id>http://blog.technicalfever.com/2019/11/26/How-to-use-telnet-to-test-your-web-server/</id>
+    <published>2019-11-26T02:59:24.000Z</published>
+    <updated>2019-11-26T03:11:41.966Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/images/cli.jpg&quot; alt=&quot;Cli&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Usage&quot;&gt;&lt;a href=&quot;#Usage&quot; class=&quot;headerlink&quot; title=&quot;Usage&quot;&gt;&lt;/a&gt;Usage&lt;/h3&gt;&lt;figure
+        
+      
+    
+    </summary>
+    
+    
+      <category term="DevOps" scheme="http://blog.technicalfever.com/tags/DevOps/"/>
+    
+      <category term="Telnet" scheme="http://blog.technicalfever.com/tags/Telnet/"/>
+    
+  </entry>
   
   <entry>
     <title>Docker for PHP Laravel (Dockerfile and docker-compose.yaml)</title>
@@ -253,15 +280,15 @@
     
       <category term="Ansible" scheme="http://blog.technicalfever.com/tags/Ansible/"/>
     
-      <category term="Role" scheme="http://blog.technicalfever.com/tags/Role/"/>
-    
-      <category term="Playbook" scheme="http://blog.technicalfever.com/tags/Playbook/"/>
-    
       <category term="SystemEngine" scheme="http://blog.technicalfever.com/tags/SystemEngine/"/>
     
       <category term="Automation" scheme="http://blog.technicalfever.com/tags/Automation/"/>
     
       <category term="SSH" scheme="http://blog.technicalfever.com/tags/SSH/"/>
+    
+      <category term="Role" scheme="http://blog.technicalfever.com/tags/Role/"/>
+    
+      <category term="Playbook" scheme="http://blog.technicalfever.com/tags/Playbook/"/>
     
   </entry>
   
@@ -354,9 +381,9 @@
     </summary>
     
     
-      <category term="Cheatsheet" scheme="http://blog.technicalfever.com/tags/Cheatsheet/"/>
-    
       <category term="Docker" scheme="http://blog.technicalfever.com/tags/Docker/"/>
+    
+      <category term="Cheatsheet" scheme="http://blog.technicalfever.com/tags/Cheatsheet/"/>
     
       <category term="Php" scheme="http://blog.technicalfever.com/tags/Php/"/>
     
@@ -383,9 +410,9 @@
     </summary>
     
     
-      <category term="Cli" scheme="http://blog.technicalfever.com/tags/Cli/"/>
-    
       <category term="Docker" scheme="http://blog.technicalfever.com/tags/Docker/"/>
+    
+      <category term="Cli" scheme="http://blog.technicalfever.com/tags/Cli/"/>
     
       <category term="Programming" scheme="http://blog.technicalfever.com/tags/Programming/"/>
     
@@ -451,9 +478,9 @@
     </summary>
     
     
-      <category term="Web" scheme="http://blog.technicalfever.com/tags/Web/"/>
-    
       <category term="Docker" scheme="http://blog.technicalfever.com/tags/Docker/"/>
+    
+      <category term="Web" scheme="http://blog.technicalfever.com/tags/Web/"/>
     
       <category term="Nginx" scheme="http://blog.technicalfever.com/tags/Nginx/"/>
     
@@ -480,9 +507,9 @@
     </summary>
     
     
-      <category term="Docker" scheme="http://blog.technicalfever.com/tags/Docker/"/>
-    
       <category term="DevOps" scheme="http://blog.technicalfever.com/tags/DevOps/"/>
+    
+      <category term="Docker" scheme="http://blog.technicalfever.com/tags/Docker/"/>
     
       <category term="Now.sh" scheme="http://blog.technicalfever.com/tags/Now-sh/"/>
     
@@ -599,37 +626,6 @@
       <category term="Cli" scheme="http://blog.technicalfever.com/tags/Cli/"/>
     
       <category term="MySQL" scheme="http://blog.technicalfever.com/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Nginx password protect through htpasswd</title>
-    <link href="http://blog.technicalfever.com/2018/04/16/Nginx-password-protect-through-htpasswd/"/>
-    <id>http://blog.technicalfever.com/2018/04/16/Nginx-password-protect-through-htpasswd/</id>
-    <published>2018-04-16T08:11:07.000Z</published>
-    <updated>2019-11-26T02:23:19.885Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;img src=&quot;/images/nginx.jpg&quot; alt=&quot;Nginx&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Create-htpasswd&quot;&gt;&lt;a href=&quot;#Create-htpasswd&quot; class=&quot;headerlink&quot; title=&quot;Create
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Nginx" scheme="http://blog.technicalfever.com/tags/Nginx/"/>
-    
-      <category term="Sysadm" scheme="http://blog.technicalfever.com/tags/Sysadm/"/>
-    
-      <category term="Password" scheme="http://blog.technicalfever.com/tags/Password/"/>
-    
-      <category term="Protect" scheme="http://blog.technicalfever.com/tags/Protect/"/>
     
   </entry>
   
