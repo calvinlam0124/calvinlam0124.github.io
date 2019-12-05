@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.technicalfever.com/2019/12/05/espeak-text-to-speech/</loc>
+    
+    <lastmod>2019-12-05T10:20:54.360Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.technicalfever.com/2019/11/26/How-to-use-telnet-to-test-your-web-server/</loc>
     
     <lastmod>2019-11-26T03:11:41.966Z</lastmod>
@@ -37,7 +44,7 @@
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2019/03/18/Real-World-Web-Scraper/</loc>
+    <loc>http://blog.technicalfever.com/2019/03/10/PHP-deployment-tools-deployer/</loc>
     
     <lastmod>2019-11-26T02:23:19.889Z</lastmod>
     
@@ -51,14 +58,14 @@
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2019/03/10/PHP-deployment-tools-deployer/</loc>
+    <loc>http://blog.technicalfever.com/2019/03/01/zsh/</loc>
     
     <lastmod>2019-11-26T02:23:19.889Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2019/03/01/zsh/</loc>
+    <loc>http://blog.technicalfever.com/2019/03/18/Real-World-Web-Scraper/</loc>
     
     <lastmod>2019-11-26T02:23:19.889Z</lastmod>
     
@@ -72,14 +79,14 @@
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2019/02/25/IT-automation-2-Ansible-Playbook/</loc>
+    <loc>http://blog.technicalfever.com/2019/02/28/Encoding/</loc>
     
     <lastmod>2019-11-26T02:23:19.888Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2019/02/28/Encoding/</loc>
+    <loc>http://blog.technicalfever.com/2019/02/25/IT-automation-2-Ansible-Playbook/</loc>
     
     <lastmod>2019-11-26T02:23:19.888Z</lastmod>
     
@@ -93,28 +100,7 @@
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2019/02/22/IT-automation-Ansible/</loc>
-    
-    <lastmod>2019-11-26T02:23:19.887Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.technicalfever.com/2018/11/06/Cusomte-a-PHP-docker-image/</loc>
-    
-    <lastmod>2019-11-26T02:23:19.887Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.technicalfever.com/2018/10/25/Run-a-basic-web-with-Nginx-Docker/</loc>
-    
-    <lastmod>2019-11-26T02:23:19.887Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.technicalfever.com/2018/10/25/Apache-password-protect-through-htpasswd-htaccess/</loc>
     
     <lastmod>2019-11-26T02:23:19.887Z</lastmod>
     
@@ -128,16 +114,23 @@
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2018/04/17/Docker-container-set-timezone/</loc>
+    <loc>http://blog.technicalfever.com/2018/10/25/Apache-password-protect-through-htpasswd-htaccess/</loc>
     
-    <lastmod>2019-11-26T02:23:19.886Z</lastmod>
+    <lastmod>2019-11-26T02:23:19.887Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2018/04/17/Basic-MySQL-status-command/</loc>
+    <loc>http://blog.technicalfever.com/2019/02/22/IT-automation-Ansible/</loc>
     
-    <lastmod>2019-11-26T02:23:19.886Z</lastmod>
+    <lastmod>2019-11-26T02:23:19.887Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/10/25/Run-a-basic-web-with-Nginx-Docker/</loc>
+    
+    <lastmod>2019-11-26T02:23:19.887Z</lastmod>
     
   </url>
   
@@ -156,7 +149,21 @@
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2018/04/16/Linux-Uncomplicated-Firewall/</loc>
+    <loc>http://blog.technicalfever.com/2018/04/17/Docker-container-set-timezone/</loc>
+    
+    <lastmod>2019-11-26T02:23:19.886Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/04/17/Basic-MySQL-status-command/</loc>
+    
+    <lastmod>2019-11-26T02:23:19.886Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/04/16/Nginx-password-protect-through-htpasswd/</loc>
     
     <lastmod>2019-11-26T02:23:19.885Z</lastmod>
     
@@ -170,6 +177,13 @@
   </url>
   
   <url>
+    <loc>http://blog.technicalfever.com/2018/03/27/Ubunt-startup-service/</loc>
+    
+    <lastmod>2019-11-26T02:23:19.885Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.technicalfever.com/2018/03/27/SSH-tunnel/</loc>
     
     <lastmod>2019-11-26T02:23:19.885Z</lastmod>
@@ -177,7 +191,7 @@
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2018/03/27/Ubunt-startup-service/</loc>
+    <loc>http://blog.technicalfever.com/2018/03/20/Test-DNS-server/</loc>
     
     <lastmod>2019-11-26T02:23:19.885Z</lastmod>
     
@@ -198,21 +212,14 @@
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2018/03/20/Test-DNS-server/</loc>
+    <loc>http://blog.technicalfever.com/2018/04/16/Linux-Uncomplicated-Firewall/</loc>
     
     <lastmod>2019-11-26T02:23:19.885Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2018/04/16/Nginx-password-protect-through-htpasswd/</loc>
-    
-    <lastmod>2019-11-26T02:23:19.885Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.technicalfever.com/2018/02/28/Python-sandbox-platform-jupyter/</loc>
+    <loc>http://blog.technicalfever.com/2018/02/23/MacOS-Multiple-User-Run-Brew-Issue/</loc>
     
     <lastmod>2019-11-26T02:23:19.884Z</lastmod>
     
@@ -240,7 +247,14 @@
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2018/02/23/MacOS-Multiple-User-Run-Brew-Issue/</loc>
+    <loc>http://blog.technicalfever.com/2018/03/09/Apache-24-authz-core-error-and-solution/</loc>
+    
+    <lastmod>2019-11-26T02:23:19.884Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/02/28/Python-sandbox-platform-jupyter/</loc>
     
     <lastmod>2019-11-26T02:23:19.884Z</lastmod>
     
@@ -254,13 +268,6 @@
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2018/03/09/Apache-24-authz-core-error-and-solution/</loc>
-    
-    <lastmod>2019-11-26T02:23:19.884Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.technicalfever.com/2018/03/20/Convert-jks-to-key-file-for-web-server/</loc>
     
     <lastmod>2019-11-26T02:23:19.884Z</lastmod>
@@ -268,7 +275,7 @@
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2018/02/13/Google-Firebase-quick-start/</loc>
+    <loc>http://blog.technicalfever.com/2018/02/13/Deploy-Java-WAR-file-to-docker-container/</loc>
     
     <lastmod>2019-11-26T02:23:19.883Z</lastmod>
     
@@ -276,13 +283,6 @@
   
   <url>
     <loc>http://blog.technicalfever.com/2018/02/20/Curl-test-your-http-server/</loc>
-    
-    <lastmod>2019-11-26T02:23:19.883Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.technicalfever.com/2018/02/13/Deploy-Java-WAR-file-to-docker-container/</loc>
     
     <lastmod>2019-11-26T02:23:19.883Z</lastmod>
     
@@ -303,6 +303,13 @@
   </url>
   
   <url>
+    <loc>http://blog.technicalfever.com/2018/02/13/Google-Firebase-quick-start/</loc>
+    
+    <lastmod>2019-11-26T02:23:19.883Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.technicalfever.com/2018/02/09/Linux-password-less-ssh-and-sudo/</loc>
     
     <lastmod>2019-11-26T02:23:19.883Z</lastmod>
@@ -310,14 +317,7 @@
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2018/02/08/Pug-Cli-Cheatsheet/</loc>
-    
-    <lastmod>2019-11-26T02:23:19.882Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.technicalfever.com/2018/02/08/Node-js-template-engine-quick-search/</loc>
+    <loc>http://blog.technicalfever.com/2018/02/09/Deploy-container-to-other-host-througt-docker-machine/</loc>
     
     <lastmod>2019-11-26T02:23:19.882Z</lastmod>
     
@@ -331,14 +331,14 @@
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2018/02/09/Deploy-container-to-other-host-througt-docker-machine/</loc>
+    <loc>http://blog.technicalfever.com/2018/02/08/Pug-Cli-Cheatsheet/</loc>
     
     <lastmod>2019-11-26T02:23:19.882Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2018/02/08/Pug-template-syntax/</loc>
+    <loc>http://blog.technicalfever.com/2018/02/08/Node-js-template-engine-quick-search/</loc>
     
     <lastmod>2019-11-26T02:23:19.882Z</lastmod>
     
@@ -359,7 +359,28 @@
   </url>
   
   <url>
+    <loc>http://blog.technicalfever.com/2018/02/08/Pug-template-syntax/</loc>
+    
+    <lastmod>2019-11-26T02:23:19.882Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.technicalfever.com/2018/01/31/Git-Cheatsheet/</loc>
+    
+    <lastmod>2019-11-26T02:23:19.881Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/01/30/Chrome-Console-Cheatsheet/</loc>
+    
+    <lastmod>2019-11-26T02:23:19.881Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/01/30/Capture-all-of-your-http-connection/</loc>
     
     <lastmod>2019-11-26T02:23:19.881Z</lastmod>
     
@@ -380,7 +401,7 @@
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2018/01/30/Capture-all-of-your-http-connection/</loc>
+    <loc>http://blog.technicalfever.com/2018/01/26/Direct-query-a-specific-dns/</loc>
     
     <lastmod>2019-11-26T02:23:19.881Z</lastmod>
     
@@ -394,16 +415,16 @@
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2018/01/26/Direct-query-a-specific-dns/</loc>
+    <loc>http://blog.technicalfever.com/2018/01/24/Measure-your-network-speed/</loc>
     
-    <lastmod>2019-11-26T02:23:19.881Z</lastmod>
+    <lastmod>2019-11-26T02:23:19.880Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2018/01/30/Chrome-Console-Cheatsheet/</loc>
+    <loc>http://blog.technicalfever.com/2018/01/24/Command-line-message-of-the-day/</loc>
     
-    <lastmod>2019-11-26T02:23:19.881Z</lastmod>
+    <lastmod>2019-11-26T02:23:19.880Z</lastmod>
     
   </url>
   
@@ -422,14 +443,7 @@
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2018/01/24/Measure-your-network-speed/</loc>
-    
-    <lastmod>2019-11-26T02:23:19.880Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.technicalfever.com/2018/01/09/A-modest-collection-of-cheatsheets/</loc>
+    <loc>http://blog.technicalfever.com/2018/01/10/Docker-mem-limit-error/</loc>
     
     <lastmod>2019-11-26T02:23:19.880Z</lastmod>
     
@@ -450,28 +464,14 @@
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2018/01/10/Docker-mem-limit-error/</loc>
+    <loc>http://blog.technicalfever.com/2018/01/09/A-modest-collection-of-cheatsheets/</loc>
     
     <lastmod>2019-11-26T02:23:19.880Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2018/01/24/Command-line-message-of-the-day/</loc>
-    
-    <lastmod>2019-11-26T02:23:19.880Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.technicalfever.com/2018/01/04/Snmap-basic-example/</loc>
-    
-    <lastmod>2019-11-26T02:23:19.879Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.technicalfever.com/2018/01/05/JAMstack/</loc>
+    <loc>http://blog.technicalfever.com/2018/01/05/SMART-hard-drive-monitoring-utility/</loc>
     
     <lastmod>2019-11-26T02:23:19.879Z</lastmod>
     
@@ -485,14 +485,7 @@
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2018/01/04/GoBuster-options-example/</loc>
-    
-    <lastmod>2019-11-26T02:23:19.879Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.technicalfever.com/2018/01/05/SMART-hard-drive-monitoring-utility/</loc>
+    <loc>http://blog.technicalfever.com/2018/01/04/Snmap-basic-example/</loc>
     
     <lastmod>2019-11-26T02:23:19.879Z</lastmod>
     
@@ -506,16 +499,16 @@
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2018/01/02/Sparse-file/</loc>
+    <loc>http://blog.technicalfever.com/2018/01/04/GoBuster-options-example/</loc>
     
-    <lastmod>2019-11-26T02:23:19.878Z</lastmod>
+    <lastmod>2019-11-26T02:23:19.879Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2018/01/02/Learning-Roadmap-2018/</loc>
+    <loc>http://blog.technicalfever.com/2018/01/05/JAMstack/</loc>
     
-    <lastmod>2019-11-26T02:23:19.878Z</lastmod>
+    <lastmod>2019-11-26T02:23:19.879Z</lastmod>
     
   </url>
   
@@ -534,6 +527,27 @@
   </url>
   
   <url>
+    <loc>http://blog.technicalfever.com/2018/01/02/Sparse-file/</loc>
+    
+    <lastmod>2019-11-26T02:23:19.878Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/01/02/Learning-Roadmap-2018/</loc>
+    
+    <lastmod>2019-11-26T02:23:19.878Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/01/02/Cronjob/</loc>
+    
+    <lastmod>2019-11-26T02:23:19.877Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.technicalfever.com/2017/12/31/OWASP-top-10-2017-A3/</loc>
     
     <lastmod>2019-11-26T02:23:19.877Z</lastmod>
@@ -541,7 +555,7 @@
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2018/01/02/Cronjob/</loc>
+    <loc>http://blog.technicalfever.com/2017/12/31/OWASP-top-10-2017/</loc>
     
     <lastmod>2019-11-26T02:23:19.877Z</lastmod>
     
@@ -562,9 +576,9 @@
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2017/12/31/OWASP-top-10-2017/</loc>
+    <loc>http://blog.technicalfever.com/2017/12/29/Scriptable-image-processing-system/</loc>
     
-    <lastmod>2019-11-26T02:23:19.877Z</lastmod>
+    <lastmod>2019-11-26T02:23:19.876Z</lastmod>
     
   </url>
   
@@ -583,23 +597,9 @@
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2017/12/29/Scriptable-image-processing-system/</loc>
-    
-    <lastmod>2019-11-26T02:23:19.876Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.technicalfever.com/2017/12/29/Chrome-headless-mode/</loc>
     
     <lastmod>2019-11-26T02:23:19.876Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.technicalfever.com/2017/12/14/Hexo-create-a-new-blog-post/</loc>
-    
-    <lastmod>2019-11-26T02:23:19.875Z</lastmod>
     
   </url>
   
@@ -618,7 +618,7 @@
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/2017/12/14/Hexo-generate-sitemap-via-hexo-generator-sitemap/</loc>
+    <loc>http://blog.technicalfever.com/2017/12/14/Hexo-create-a-new-blog-post/</loc>
     
     <lastmod>2019-11-26T02:23:19.875Z</lastmod>
     
@@ -632,6 +632,13 @@
   </url>
   
   <url>
+    <loc>http://blog.technicalfever.com/2017/12/14/Hexo-generate-sitemap-via-hexo-generator-sitemap/</loc>
+    
+    <lastmod>2019-11-26T02:23:19.875Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.technicalfever.com/Web-Development/index.html</loc>
     
     <lastmod>2019-11-26T02:23:19.832Z</lastmod>
@@ -639,14 +646,14 @@
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/Markdown-Cheatsheet/index.html</loc>
+    <loc>http://blog.technicalfever.com/Cheatsheets/index.html</loc>
     
     <lastmod>2019-11-26T02:23:19.831Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/Hexo-Cheatsheet/index.html</loc>
+    <loc>http://blog.technicalfever.com/Markdown-Cheatsheet/index.html</loc>
     
     <lastmod>2019-11-26T02:23:19.831Z</lastmod>
     
@@ -660,7 +667,7 @@
   </url>
   
   <url>
-    <loc>http://blog.technicalfever.com/Cheatsheets/index.html</loc>
+    <loc>http://blog.technicalfever.com/Hexo-Cheatsheet/index.html</loc>
     
     <lastmod>2019-11-26T02:23:19.831Z</lastmod>
     

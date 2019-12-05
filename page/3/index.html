@@ -74,6 +74,58 @@ window['_fs_namespace'] = 'FS';
     <div id="main">
       
   
+    <article id="blog-Basic-MySQL-status-command" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/04/17/Basic-MySQL-status-command/" class="article-date">
+  <time datetime="2018-04-17T08:29:28.000Z" itemprop="datePublished">2018-04-17</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/04/17/Basic-MySQL-status-command/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/04/17/Basic-MySQL-status-command/">Basic MySQL status command</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/mysql.jpg" alt="MySQL"></p>
+<h3 id="Basic-usage"><a href="#Basic-usage" class="headerlink" title="Basic usage"></a>Basic usage</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># show connection status</span></span><br><span class="line">status;</span><br><span class="line"></span><br><span class="line"><span class="comment"># show connections</span></span><br><span class="line">show processlist;</span><br><span class="line"></span><br><span class="line"><span class="comment"># show runtime env</span></span><br><span class="line">SHOW VARIABLES;</span><br><span class="line">SHOW VARIABLES WHERE Variable_name = <span class="string">'hostname'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment"># show tables satus</span></span><br><span class="line">show table status;</span><br><span class="line">show table status <span class="built_in">where</span> name = <span class="string">'users'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment"># show server variables</span></span><br><span class="line">select @@sql_mode;</span><br><span class="line"></span><br><span class="line"><span class="comment"># exit</span></span><br><span class="line"><span class="built_in">exit</span>;</span><br></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cheatsheet/">Cheatsheet</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cli/">Cli</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="blog-Nginx-password-protect-through-htpasswd" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -574,62 +626,6 @@ window['_fs_namespace'] = 'FS';
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cli/">Cli</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Dig/">Dig</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Dns/">Dns</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac/">Mac</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="blog-Javascript-bundler-webpack" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2018/03/19/Javascript-bundler-webpack/" class="article-date">
-  <time datetime="2018-03-19T07:56:03.000Z" itemprop="datePublished">2018-03-19</time>
-</a>
-		</span>
-		<span class="meta-elements author">Calvin Lam</span>
-		<div class="commentscount">
-			
-				<a href="http://blog.technicalfever.com/2018/03/19/Javascript-bundler-webpack/#disqus_thread" class="article-comment-link">Comments</a>
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2018/03/19/Javascript-bundler-webpack/">Javascript bundler webpack</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><img src="/images/web.jpg" alt="Web"></p>
-<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># webpack@4.1.1</span></span><br><span class="line">npm init -y</span><br><span class="line">npm install --save-dev webpack</span><br></pre></td></tr></table></figure>
-<h3 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># compile to bundle.js</span></span><br><span class="line">npx webpack src/index.js --output dist/bundle.js</span><br></pre></td></tr></table></figure>
-<h3 id="Integrate-with-npm-project"><a href="#Integrate-with-npm-project" class="headerlink" title="Integrate with npm project"></a>Integrate with npm project</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">vim package.json</span><br><span class="line">&#123;</span><br><span class="line">  ...</span><br><span class="line">  <span class="string">"scripts"</span>: &#123;</span><br><span class="line">    <span class="string">"build"</span>: <span class="string">"webpack"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">npm run build</span><br></pre></td></tr></table></figure>
-<h3 id="Custom-config-webpack-config-js"><a href="#Custom-config-webpack-config-js" class="headerlink" title="Custom config - webpack.config.js"></a>Custom config - webpack.config.js</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  entry: <span class="string">'./src/index.js'</span>,</span><br><span class="line">  output: &#123;</span><br><span class="line">    filename: <span class="string">'bundle.js'</span>,</span><br><span class="line">    path: path.resolve(__dirname, <span class="string">'dist'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://webpack.js.org/guides/getting-started/" target="_blank" rel="noopener">https://webpack.js.org/guides/getting-started/</a></p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Compiler/">Compiler</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Frontend/">Frontend</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Programming/">Programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Webpack/">Webpack</a></li></ul>
 
 			</span>
 		</div>

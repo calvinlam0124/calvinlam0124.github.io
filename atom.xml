@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.technicalfever.com/"/>
-  <updated>2019-11-26T03:11:41.966Z</updated>
+  <updated>2019-12-05T10:20:54.360Z</updated>
   <id>http://blog.technicalfever.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>espeak - text to speech </title>
+    <link href="http://blog.technicalfever.com/2019/12/05/espeak-text-to-speech/"/>
+    <id>http://blog.technicalfever.com/2019/12/05/espeak-text-to-speech/</id>
+    <published>2019-12-05T10:19:41.000Z</published>
+    <updated>2019-12-05T10:20:54.360Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/images/cli.jpg&quot; alt=&quot;Cli&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Usage&quot;&gt;&lt;a href=&quot;#Usage&quot; class=&quot;headerlink&quot; title=&quot;Usage&quot;&gt;&lt;/a&gt;Usage&lt;/h3&gt;&lt;figure
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Cli" scheme="http://blog.technicalfever.com/tags/Cli/"/>
+    
+  </entry>
   
   <entry>
     <title>How to use telnet to test your web server</title>
@@ -597,35 +622,6 @@
       <category term="Docker" scheme="http://blog.technicalfever.com/tags/Docker/"/>
     
       <category term="Sysadm" scheme="http://blog.technicalfever.com/tags/Sysadm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Basic MySQL status command</title>
-    <link href="http://blog.technicalfever.com/2018/04/17/Basic-MySQL-status-command/"/>
-    <id>http://blog.technicalfever.com/2018/04/17/Basic-MySQL-status-command/</id>
-    <published>2018-04-17T08:29:28.000Z</published>
-    <updated>2019-11-26T02:23:19.886Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;img src=&quot;/images/mysql.jpg&quot; alt=&quot;MySQL&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Basic-usage&quot;&gt;&lt;a href=&quot;#Basic-usage&quot; class=&quot;headerlink&quot; title=&quot;Basic
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Cheatsheet" scheme="http://blog.technicalfever.com/tags/Cheatsheet/"/>
-    
-      <category term="Cli" scheme="http://blog.technicalfever.com/tags/Cli/"/>
-    
-      <category term="MySQL" scheme="http://blog.technicalfever.com/tags/MySQL/"/>
     
   </entry>
   

@@ -74,6 +74,59 @@ window['_fs_namespace'] = 'FS';
     <div id="main">
       
   
+    <article id="blog-docker-compose-specify-file-run-as-detach-mode" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/02/01/docker-compose-specify-file-run-as-detach-mode/" class="article-date">
+  <time datetime="2018-02-01T02:19:56.000Z" itemprop="datePublished">2018-02-01</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/02/01/docker-compose-specify-file-run-as-detach-mode/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/02/01/docker-compose-specify-file-run-as-detach-mode/">docker-compose specify file run as detach mode</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/docker.jpg" alt="Dokcer"></p>
+<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># correct</span></span><br><span class="line"><span class="comment"># -d detach mode</span></span><br><span class="line"><span class="comment"># -f specify compose file</span></span><br><span class="line">docker-compose -f ~/path/to/docker-compose.yaml up -d</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># incorrect: cuz `-d` is not a option of `docker-compose`</span></span><br><span class="line">docker-compose -d -f ~/path/to/docker-compose.yaml up</span><br><span class="line"></span><br><span class="line"><span class="comment"># incorrect: cuz `-f` is not a option of `up` command</span></span><br><span class="line">docker-compose up -d -f ~/path/to/docker-compose.yaml</span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://docs.docker.com/compose/reference/overview/" target="_blank" rel="noopener">dokcer-compose</a><br><a href="https://docs.docker.com/compose/reference/up/" target="_blank" rel="noopener">docker-compose up</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/compose/">compose</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/yaml/">yaml</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="blog-Git-Cheatsheet" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -541,61 +594,6 @@ window['_fs_namespace'] = 'FS';
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Exploration/">Exploration</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Google/">Google</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Iot/">Iot</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Physicalweb/">Physicalweb</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="blog-Setup-SMART-on-ubuntu-server" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2018/01/11/Setup-SMART-on-ubuntu-server/" class="article-date">
-  <time datetime="2018-01-11T06:03:15.000Z" itemprop="datePublished">2018-01-11</time>
-</a>
-		</span>
-		<span class="meta-elements author">Calvin Lam</span>
-		<div class="commentscount">
-			
-				<a href="http://blog.technicalfever.com/2018/01/11/Setup-SMART-on-ubuntu-server/#disqus_thread" class="article-comment-link">Comments</a>
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2018/01/11/Setup-SMART-on-ubuntu-server/">Setup SMART on ubuntu server</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><img src="/images/ubuntu.jpg" alt="Ubuntu"></p>
-<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install smartmontools</span><br></pre></td></tr></table></figure>
-<h3 id="Configuation"><a href="#Configuation" class="headerlink" title="Configuation"></a>Configuation</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/default/smartmontools</span><br><span class="line"><span class="comment"># file content</span></span><br><span class="line">enable_smart=<span class="string">"/dev/sda /dev/sdb"</span></span><br><span class="line">start_smartd=yes</span><br><span class="line">smartd_opts=<span class="string">"--interval=1800"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cat  /etc/smartd.conf</span><br><span class="line"><span class="comment"># file content</span></span><br><span class="line">DEVICESCAN -d removable -n standby -m root -M <span class="built_in">exec</span> /usr/share/smartmontools/smartd-runner</span><br><span class="line">/dev/sda -a -o on -S on -s (S/../.././02|L/../../6/03)</span><br><span class="line">/dev/sda -H -l error -l selftest -t -I 194</span><br><span class="line">/dev/sda -H -C 0 -U 0 -m calvin@test.com.tld</span><br></pre></td></tr></table></figure>
-<h3 id="Start-Service"><a href="#Start-Service" class="headerlink" title="Start Service"></a>Start Service</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/smartd start</span><br><span class="line">systemctl <span class="built_in">enable</span> smartd</span><br></pre></td></tr></table></figure>
-<h3 id="Log"><a href="#Log" class="headerlink" title="Log"></a>Log</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /var/<span class="built_in">log</span>/syslog</span><br></pre></td></tr></table></figure>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Engine/">Engine</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Harddisk/">Harddisk</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Installation/">Installation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Smart/">Smart</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
 
 			</span>
 		</div>

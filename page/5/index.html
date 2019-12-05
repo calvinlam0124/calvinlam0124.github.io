@@ -74,6 +74,60 @@ window['_fs_namespace'] = 'FS';
     <div id="main">
       
   
+    <article id="blog-Google-Firebase-quick-start" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/02/13/Google-Firebase-quick-start/" class="article-date">
+  <time datetime="2018-02-13T02:47:31.000Z" itemprop="datePublished">2018-02-13</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/02/13/Google-Firebase-quick-start/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/02/13/Google-Firebase-quick-start/">Google Serverless with Firebase quick start</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/firebase.jpg" alt="Firebase"></p>
+<h3 id="Basic-usage"><a href="#Basic-usage" class="headerlink" title="Basic usage"></a>Basic usage</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># install firebase-cli</span></span><br><span class="line">yarn global add firebase-tool</span><br><span class="line"></span><br><span class="line"><span class="comment"># login</span></span><br><span class="line">firebase login</span><br><span class="line"></span><br><span class="line"><span class="comment"># create project, that will generate files</span></span><br><span class="line">firebase init</span><br><span class="line"></span><br><span class="line"><span class="comment"># deploy your app</span></span><br><span class="line">firebase deploy</span><br></pre></td></tr></table></figure>
+<h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// cdn</span></span><br><span class="line">&lt;script src=<span class="string">"https://www.gstatic.com/firebasejs/4.9.0/firebase.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;script src=<span class="string">"https://www.gstatic.com/firebasejs/4.9.0/firebase-firestore.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// js</span></span><br><span class="line"><span class="keyword">var</span> db = firebase.firestore();</span><br><span class="line">firebase.initializeApp(&#123;</span><br><span class="line">  apiKey: <span class="string">'AIzaSyAaJ-xa21TAN8f8PbEubfMTh1234567890'</span>,</span><br><span class="line">  authDomain: <span class="string">'helloworld-11594.firebaseapp.com'</span>,</span><br><span class="line">  projectId: <span class="string">'helloworld-11594'</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// read data</span></span><br><span class="line">db.collection(<span class="string">"device"</span>).get().then(<span class="function">(<span class="params">querySnapshot</span>) =&gt;</span> &#123;</span><br><span class="line">    querySnapshot.forEach(<span class="function">(<span class="params">doc</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(doc.data());</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// write data</span></span><br><span class="line">db.collection(<span class="string">"user"</span>).add(&#123;</span><br><span class="line">    first: <span class="string">"Ada"</span>,</span><br><span class="line">    last: <span class="string">"Lovelace"</span>,</span><br><span class="line">    born: <span class="number">1815</span></span><br><span class="line">&#125;)</span><br><span class="line">.then(<span class="function"><span class="keyword">function</span>(<span class="params">docRef</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"Document written with ID: "</span>, docRef.id);</span><br><span class="line">&#125;)</span><br><span class="line">.catch(<span class="function"><span class="keyword">function</span>(<span class="params">error</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.error(<span class="string">"Error adding document: "</span>, error);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://console.firebase.google.com" target="_blank" rel="noopener">https://console.firebase.google.com</a><br><a href="https://firebase.google.com/docs/firestore/query-data/listen" target="_blank" rel="noopener">https://firebase.google.com/docs/firestore/query-data/listen</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Database/">Database</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Firebase/">Firebase</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Firestore/">Firestore</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Google/">Google</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hosting/">Hosting</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Jamstack/">Jamstack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Serverless/">Serverless</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="blog-Deploy-your-docker-container-to-AWS" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -643,59 +697,6 @@ window['_fs_namespace'] = 'FS';
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Framework/">Framework</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Orm/">Orm</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="blog-docker-compose-specify-file-run-as-detach-mode" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2018/02/01/docker-compose-specify-file-run-as-detach-mode/" class="article-date">
-  <time datetime="2018-02-01T02:19:56.000Z" itemprop="datePublished">2018-02-01</time>
-</a>
-		</span>
-		<span class="meta-elements author">Calvin Lam</span>
-		<div class="commentscount">
-			
-				<a href="http://blog.technicalfever.com/2018/02/01/docker-compose-specify-file-run-as-detach-mode/#disqus_thread" class="article-comment-link">Comments</a>
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2018/02/01/docker-compose-specify-file-run-as-detach-mode/">docker-compose specify file run as detach mode</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><img src="/images/docker.jpg" alt="Dokcer"></p>
-<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># correct</span></span><br><span class="line"><span class="comment"># -d detach mode</span></span><br><span class="line"><span class="comment"># -f specify compose file</span></span><br><span class="line">docker-compose -f ~/path/to/docker-compose.yaml up -d</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># incorrect: cuz `-d` is not a option of `docker-compose`</span></span><br><span class="line">docker-compose -d -f ~/path/to/docker-compose.yaml up</span><br><span class="line"></span><br><span class="line"><span class="comment"># incorrect: cuz `-f` is not a option of `up` command</span></span><br><span class="line">docker-compose up -d -f ~/path/to/docker-compose.yaml</span><br></pre></td></tr></table></figure>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://docs.docker.com/compose/reference/overview/" target="_blank" rel="noopener">dokcer-compose</a><br><a href="https://docs.docker.com/compose/reference/up/" target="_blank" rel="noopener">docker-compose up</a></p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/compose/">compose</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/yaml/">yaml</a></li></ul>
 
 			</span>
 		</div>
