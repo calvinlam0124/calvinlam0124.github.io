@@ -74,6 +74,61 @@ window['_fs_namespace'] = 'FS';
     <div id="main">
       
   
+    <article id="blog-Exploring-the-Physical-Web" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/12/Exploring-the-Physical-Web/" class="article-date">
+  <time datetime="2018-01-12T01:52:29.000Z" itemprop="datePublished">2018-01-12</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/12/Exploring-the-Physical-Web/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/12/Exploring-the-Physical-Web/">Exploring the Physical Web</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/physical_web.jpg" alt="Physical Web"></p>
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>Objects around you that are part of the Physical Web send Bluetooth signals to your phone. When you’re in range, you’ll see a list of suggested webpages.</p>
+<h3 id="Client-side"><a href="#Client-side" class="headerlink" title="Client side"></a>Client side</h3><p>You can run the client app on your smart phone that will through bluetooth to scan any objects nearby you. And list out the URLs. (hints: I found a Brother’s printer on the app)<br><a href="https://itunes.apple.com/us/app/physical-web/id927653608?mt=8" target="_blank" rel="noopener">iOS app store</a><br><a href="https://play.google.com/store/apps/details?id=physical_web.org.physicalweb&amp;hl=en" target="_blank" rel="noopener">Android</a></p>
+<h3 id="Server-side"><a href="#Server-side" class="headerlink" title="Server side"></a>Server side</h3><p>You can build you only Physical Web in few steps really quick.<br><a href="https://apkpure.com/beacon-toy/com.uriio" target="_blank" rel="noopener">https://apkpure.com/beacon-toy/com.uriio</a></p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://google.github.io/physical-web/" target="_blank" rel="noopener">https://google.github.io/physical-web/</a><br><a href="https://github.com/google/physical-web" target="_blank" rel="noopener">https://github.com/google/physical-web</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Exploration/">Exploration</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Google/">Google</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Iot/">Iot</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Physicalweb/">Physicalweb</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="blog-Setup-SMART-on-ubuntu-server" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -580,63 +635,9 @@ window['_fs_namespace'] = 'FS';
 
 
   
-    <article id="blog-GoBuster-options-example" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2018/01/04/GoBuster-options-example/" class="article-date">
-  <time datetime="2018-01-04T06:42:09.000Z" itemprop="datePublished">2018-01-04</time>
-</a>
-		</span>
-		<span class="meta-elements author">Calvin Lam</span>
-		<div class="commentscount">
-			
-				<a href="http://blog.technicalfever.com/2018/01/04/GoBuster-options-example/#disqus_thread" class="article-comment-link">Comments</a>
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2018/01/04/GoBuster-options-example/">GoBuster basic example</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><img src="/images/cli.jpg" alt="Cli"></p>
-<h3 id="DIR-mode"><a href="#DIR-mode" class="headerlink" title="DIR mode"></a>DIR mode</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">gobuster -u https://mysite.com/path/to/folder -c <span class="string">'session=123456'</span> -t 50 -w common-files.txt -x .php,.html</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># -t Number of threads</span></span><br><span class="line">gobuster -u http://httpbin.org/ -w words.txt -t 10</span><br><span class="line">/index (Status: 200)</span><br><span class="line">/posts (Status: 301)</span><br><span class="line">/contact (Status: 301)</span><br><span class="line"></span><br><span class="line"><span class="comment"># -v Verbose output</span></span><br><span class="line">gobuster -u http://httpbin.org/ -w words.txt -v</span><br><span class="line">Found : /index (Status: 200)</span><br><span class="line">Missed: /derp (Status: 404)</span><br><span class="line">Found : /posts (Status: 301)</span><br><span class="line"></span><br><span class="line"><span class="comment"># -l Show content length</span></span><br><span class="line">gobuster -u http://httpbin.org/ -w words.txt -l</span><br><span class="line">/contact (Status: 301)</span><br><span class="line">/posts (Status: 301)</span><br><span class="line">/index (Status: 200) [Size: 61481]</span><br><span class="line"></span><br><span class="line"><span class="comment"># -n No status code</span></span><br><span class="line"><span class="comment"># -q Quiet output</span></span><br><span class="line"><span class="comment"># -e "grep` mode"</span></span><br><span class="line">gobuster -u http://httpbin.org/ -w words.txt -q -n -e</span><br><span class="line">http://httpbin.org/ip</span><br><span class="line">http://httpbin.org/index</span><br><span class="line">http://httpbin.org/uuid</span><br></pre></td></tr></table></figure>
-<h3 id="DNS-mode"><a href="#DNS-mode" class="headerlink" title="DNS mode"></a>DNS mode</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">gobuster -m dns -w subdomains.txt -u google.com</span><br><span class="line">Found: m.google.com</span><br><span class="line">Found: mobile.google.com</span><br><span class="line">Found: search.google.com</span><br><span class="line"></span><br><span class="line"><span class="comment"># -i Show IP</span></span><br><span class="line">gobuster -m dns -w subdomains.txt -u google.com -i</span><br><span class="line">Found: chrome.google.com [2404:6800:4006:801::200e, 216.58.220.110]</span><br><span class="line">Found: m.google.com [216.58.220.107, 2404:6800:4006:801::200b]</span><br><span class="line">Found: www.google.com [74.125.237.179, 74.125.237.177, 74.125.237.178, 74.125.237.180, 74.125.237.176, 2404:6800:4006:801::2004]</span><br><span class="line"></span><br><span class="line"><span class="comment"># -fw Force wildcard</span></span><br><span class="line">gobuster -m dns -w subdomains.txt -u google.com -fw</span><br><span class="line">[-] Wildcard DNS found. IP address(es):  123.123.123.123</span><br><span class="line">Found: email.doesntexist.com</span><br><span class="line">^C[!] Keyboard interrupt detected, terminating.</span><br></pre></td></tr></table></figure>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://github.com/OJ/gobuster" target="_blank" rel="noopener">https://github.com/OJ/gobuster</a><br><a href="https://www.owasp.org/index.php/Category:OWASP_DirBuster_Project" target="_blank" rel="noopener">https://www.owasp.org/index.php/Category:OWASP_DirBuster_Project</a></p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gobuster/">Gobuster</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Golang/">Golang</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hack/">Hack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Security/">Security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/6/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/8/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/6/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/8/">Next &raquo;</a>
     </nav>
   
 

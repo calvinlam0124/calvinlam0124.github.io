@@ -74,6 +74,60 @@ window['_fs_namespace'] = 'FS';
     <div id="main">
       
   
+    <article id="blog-GoBuster-options-example" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/04/GoBuster-options-example/" class="article-date">
+  <time datetime="2018-01-04T06:42:09.000Z" itemprop="datePublished">2018-01-04</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/04/GoBuster-options-example/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/04/GoBuster-options-example/">GoBuster basic example</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/cli.jpg" alt="Cli"></p>
+<h3 id="DIR-mode"><a href="#DIR-mode" class="headerlink" title="DIR mode"></a>DIR mode</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">gobuster -u https://mysite.com/path/to/folder -c <span class="string">'session=123456'</span> -t 50 -w common-files.txt -x .php,.html</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># -t Number of threads</span></span><br><span class="line">gobuster -u http://httpbin.org/ -w words.txt -t 10</span><br><span class="line">/index (Status: 200)</span><br><span class="line">/posts (Status: 301)</span><br><span class="line">/contact (Status: 301)</span><br><span class="line"></span><br><span class="line"><span class="comment"># -v Verbose output</span></span><br><span class="line">gobuster -u http://httpbin.org/ -w words.txt -v</span><br><span class="line">Found : /index (Status: 200)</span><br><span class="line">Missed: /derp (Status: 404)</span><br><span class="line">Found : /posts (Status: 301)</span><br><span class="line"></span><br><span class="line"><span class="comment"># -l Show content length</span></span><br><span class="line">gobuster -u http://httpbin.org/ -w words.txt -l</span><br><span class="line">/contact (Status: 301)</span><br><span class="line">/posts (Status: 301)</span><br><span class="line">/index (Status: 200) [Size: 61481]</span><br><span class="line"></span><br><span class="line"><span class="comment"># -n No status code</span></span><br><span class="line"><span class="comment"># -q Quiet output</span></span><br><span class="line"><span class="comment"># -e "grep` mode"</span></span><br><span class="line">gobuster -u http://httpbin.org/ -w words.txt -q -n -e</span><br><span class="line">http://httpbin.org/ip</span><br><span class="line">http://httpbin.org/index</span><br><span class="line">http://httpbin.org/uuid</span><br></pre></td></tr></table></figure>
+<h3 id="DNS-mode"><a href="#DNS-mode" class="headerlink" title="DNS mode"></a>DNS mode</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">gobuster -m dns -w subdomains.txt -u google.com</span><br><span class="line">Found: m.google.com</span><br><span class="line">Found: mobile.google.com</span><br><span class="line">Found: search.google.com</span><br><span class="line"></span><br><span class="line"><span class="comment"># -i Show IP</span></span><br><span class="line">gobuster -m dns -w subdomains.txt -u google.com -i</span><br><span class="line">Found: chrome.google.com [2404:6800:4006:801::200e, 216.58.220.110]</span><br><span class="line">Found: m.google.com [216.58.220.107, 2404:6800:4006:801::200b]</span><br><span class="line">Found: www.google.com [74.125.237.179, 74.125.237.177, 74.125.237.178, 74.125.237.180, 74.125.237.176, 2404:6800:4006:801::2004]</span><br><span class="line"></span><br><span class="line"><span class="comment"># -fw Force wildcard</span></span><br><span class="line">gobuster -m dns -w subdomains.txt -u google.com -fw</span><br><span class="line">[-] Wildcard DNS found. IP address(es):  123.123.123.123</span><br><span class="line">Found: email.doesntexist.com</span><br><span class="line">^C[!] Keyboard interrupt detected, terminating.</span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://github.com/OJ/gobuster" target="_blank" rel="noopener">https://github.com/OJ/gobuster</a><br><a href="https://www.owasp.org/index.php/Category:OWASP_DirBuster_Project" target="_blank" rel="noopener">https://www.owasp.org/index.php/Category:OWASP_DirBuster_Project</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gobuster/">Gobuster</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Golang/">Golang</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hack/">Hack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Security/">Security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="blog-Linux-basic-monitor-shell-script" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -577,66 +631,9 @@ window['_fs_namespace'] = 'FS';
 
 
   
-    <article id="post-Chrome-headless-mode" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/12/29/Chrome-headless-mode/" class="article-date">
-  <time datetime="2017-12-29T09:36:20.000Z" itemprop="datePublished">2017-12-29</time>
-</a>
-		</span>
-		<span class="meta-elements author">Calvin Lam</span>
-		<div class="commentscount">
-			
-				<a href="http://blog.technicalfever.com/2017/12/29/Chrome-headless-mode/#disqus_thread" class="article-comment-link">Comments</a>
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/12/29/Chrome-headless-mode/">Chrome headless mode</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><img src="/images/chrome.jpg" alt="Chrome"></p>
-<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Chrome version 59+</p>
-<h3 id="command-alias-or-edit-bash-profile"><a href="#command-alias-or-edit-bash-profile" class="headerlink" title="command alias (or edit .bash_profile)"></a>command alias (or edit <code>.bash_profile</code>)</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> chrome=<span class="string">"/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --headless --disable-gpu"</span></span><br></pre></td></tr></table></figure>
-<h3 id="print-website-to-pdf"><a href="#print-website-to-pdf" class="headerlink" title="print website to pdf"></a>print website to pdf</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chrome --<span class="built_in">print</span>-to-pdf https://httpbin.org</span><br></pre></td></tr></table></figure>
-<h3 id="print-website-to-png"><a href="#print-website-to-png" class="headerlink" title="print website to png"></a>print website to png</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chrome --screenshot https://httpbin.org</span><br><span class="line">chrome --screenshot --window-size=1280,1696 https://httpbin.org</span><br></pre></td></tr></table></figure>
-<h3 id="REPL-mode-read-eval-print-loop-samething-like-javascript-console"><a href="#REPL-mode-read-eval-print-loop-samething-like-javascript-console" class="headerlink" title="REPL mode (read-eval-print loop) - samething like javascript console"></a>REPL mode (read-eval-print loop) - samething like javascript console</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">chrome --repl https://httpbin.org</span><br><span class="line"></span><br><span class="line">&gt;&gt; window.innerHeight</span><br><span class="line">&#123;<span class="string">"result"</span>:&#123;<span class="string">"description"</span>:<span class="string">"600"</span>,<span class="string">"type"</span>:<span class="string">"number"</span>,<span class="string">"value"</span>:600&#125;&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://developers.google.com/web/updates/2017/04/headless-chrome" target="_blank" rel="noopener">https://developers.google.com/web/updates/2017/04/headless-chrome</a><br><a href="https://en.wikipedia.org/wiki/Headless_browser" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Headless_browser</a></p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Browser/">Browser</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Chrome/">Chrome</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Headless/">Headless</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MacOS/">MacOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Script/">Script</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/7/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/9/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/7/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/9/">Next &raquo;</a>
     </nav>
   
 

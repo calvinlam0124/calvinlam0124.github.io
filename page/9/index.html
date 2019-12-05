@@ -74,6 +74,63 @@ window['_fs_namespace'] = 'FS';
     <div id="main">
       
   
+    <article id="post-Chrome-headless-mode" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/12/29/Chrome-headless-mode/" class="article-date">
+  <time datetime="2017-12-29T09:36:20.000Z" itemprop="datePublished">2017-12-29</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2017/12/29/Chrome-headless-mode/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/12/29/Chrome-headless-mode/">Chrome headless mode</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/chrome.jpg" alt="Chrome"></p>
+<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Chrome version 59+</p>
+<h3 id="command-alias-or-edit-bash-profile"><a href="#command-alias-or-edit-bash-profile" class="headerlink" title="command alias (or edit .bash_profile)"></a>command alias (or edit <code>.bash_profile</code>)</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> chrome=<span class="string">"/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --headless --disable-gpu"</span></span><br></pre></td></tr></table></figure>
+<h3 id="print-website-to-pdf"><a href="#print-website-to-pdf" class="headerlink" title="print website to pdf"></a>print website to pdf</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chrome --<span class="built_in">print</span>-to-pdf https://httpbin.org</span><br></pre></td></tr></table></figure>
+<h3 id="print-website-to-png"><a href="#print-website-to-png" class="headerlink" title="print website to png"></a>print website to png</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chrome --screenshot https://httpbin.org</span><br><span class="line">chrome --screenshot --window-size=1280,1696 https://httpbin.org</span><br></pre></td></tr></table></figure>
+<h3 id="REPL-mode-read-eval-print-loop-samething-like-javascript-console"><a href="#REPL-mode-read-eval-print-loop-samething-like-javascript-console" class="headerlink" title="REPL mode (read-eval-print loop) - samething like javascript console"></a>REPL mode (read-eval-print loop) - samething like javascript console</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">chrome --repl https://httpbin.org</span><br><span class="line"></span><br><span class="line">&gt;&gt; window.innerHeight</span><br><span class="line">&#123;<span class="string">"result"</span>:&#123;<span class="string">"description"</span>:<span class="string">"600"</span>,<span class="string">"type"</span>:<span class="string">"number"</span>,<span class="string">"value"</span>:600&#125;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://developers.google.com/web/updates/2017/04/headless-chrome" target="_blank" rel="noopener">https://developers.google.com/web/updates/2017/04/headless-chrome</a><br><a href="https://en.wikipedia.org/wiki/Headless_browser" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Headless_browser</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Browser/">Browser</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Chrome/">Chrome</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Headless/">Headless</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MacOS/">MacOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Script/">Script</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-Install-python3-and-pip3" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -597,60 +654,9 @@ window['_fs_namespace'] = 'FS';
 
 
   
-    <article id="post-My-first-post" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/12/13/My-first-post/" class="article-date">
-  <time datetime="2017-12-13T14:29:44.000Z" itemprop="datePublished">2017-12-13</time>
-</a>
-		</span>
-		<span class="meta-elements author">Calvin Lam</span>
-		<div class="commentscount">
-			
-				<a href="http://blog.technicalfever.com/2017/12/13/My-first-post/#disqus_thread" class="article-comment-link">Comments</a>
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/12/13/My-first-post/">My first post</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>Page content</p>
-<h1 id="H1-im-markdown"><a href="#H1-im-markdown" class="headerlink" title="H1 - im markdown"></a>H1 - im markdown</h1>
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/">test</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/8/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span>
+      <a class="extend prev" rel="prev" href="/page/8/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/10/">Next &raquo;</a>
     </nav>
   
 

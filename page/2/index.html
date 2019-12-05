@@ -74,6 +74,60 @@ window['_fs_namespace'] = 'FS';
     <div id="main">
       
   
+    <article id="blog-IT-automation-2-Ansible-Playbook" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2019/02/25/IT-automation-2-Ansible-Playbook/" class="article-date">
+  <time datetime="2019-02-25T06:37:50.000Z" itemprop="datePublished">2019-02-25</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2019/02/25/IT-automation-2-Ansible-Playbook/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2019/02/25/IT-automation-2-Ansible-Playbook/">IT automation 2 - Ansible Playbook</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/ansible.jpg" alt="Ansible"></p>
+<h3 id="Quick-start"><a href="#Quick-start" class="headerlink" title="Quick start"></a>Quick start</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">apt-get install ansible</span><br><span class="line"></span><br><span class="line"><span class="comment"># docker pip and docker role</span></span><br><span class="line">ansible-galaxy install geerlingguy.pip geerlingguy.docker</span><br><span class="line"></span><br><span class="line"><span class="comment"># create and run a playbook</span></span><br><span class="line">vim docker.playbook.yaml</span><br><span class="line">ansible-playbook docker.playbook.yaml</span><br></pre></td></tr></table></figure>
+<h3 id="Sample-playbook-yaml-install-pip-and-docker-docker-compose"><a href="#Sample-playbook-yaml-install-pip-and-docker-docker-compose" class="headerlink" title="Sample playbook yaml - install pip and docker, docker-compose"></a>Sample playbook yaml - install pip and docker, docker-compose</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">- hosts:</span> <span class="string">all</span></span><br><span class="line"><span class="attr">  vars:</span></span><br><span class="line"><span class="attr">    pip_install_packages:</span></span><br><span class="line"><span class="attr">      - name:</span> <span class="string">docker</span></span><br><span class="line"><span class="attr">  roles:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">geerlingguy.pip</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">geerlingguy.docker</span></span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://galaxy.ansible.com/geerlingguy/docker" target="_blank" rel="noopener">https://galaxy.ansible.com/geerlingguy/docker</a><br><a href="https://galaxy.ansible.com/docs/" target="_blank" rel="noopener">https://galaxy.ansible.com/docs/</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ansible/">Ansible</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Automation/">Automation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Playbook/">Playbook</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Role/">Role</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SSH/">SSH</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SystemEngine/">SystemEngine</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="blog-IT-automation-Ansible" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -567,64 +621,9 @@ window['_fs_namespace'] = 'FS';
 
 
   
-    <article id="blog-Docker-container-set-timezone" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2018/04/17/Docker-container-set-timezone/" class="article-date">
-  <time datetime="2018-04-17T08:33:33.000Z" itemprop="datePublished">2018-04-17</time>
-</a>
-		</span>
-		<span class="meta-elements author">Calvin Lam</span>
-		<div class="commentscount">
-			
-				<a href="http://blog.technicalfever.com/2018/04/17/Docker-container-set-timezone/#disqus_thread" class="article-comment-link">Comments</a>
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2018/04/17/Docker-container-set-timezone/">Docker container set timezone</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><img src="/images/docker.jpg" alt="Docker"></p>
-<h3 id="Method-1"><a href="#Method-1" class="headerlink" title="Method 1"></a>Method 1</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"Asia/Hong_Kong"</span> &gt; /etc/timezone</span><br><span class="line">ln -snf /usr/share/zoneinfo/Asia/Hong_Kong /etc/localtime</span><br><span class="line"></span><br><span class="line">apt-get update</span><br><span class="line">apt-get install tzdata</span><br><span class="line">dpkg-reconfigure tzdata</span><br></pre></td></tr></table></figure>
-<h3 id="Method-2"><a href="#Method-2" class="headerlink" title="Method 2"></a>Method 2</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -v /etc/localtime:/etc/localtime:ro</span><br></pre></td></tr></table></figure>
-<h3 id="Method-3"><a href="#Method-3" class="headerlink" title="Method 3"></a>Method 3</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -e <span class="string">"TZ=Asia/Hong_Kong"</span></span><br></pre></td></tr></table></figure>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://github.com/gliderlabs/docker-alpine/issues/136" target="_blank" rel="noopener">https://github.com/gliderlabs/docker-alpine/issues/136</a></p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sysadm/">Sysadm</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 

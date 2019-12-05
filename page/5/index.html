@@ -74,6 +74,58 @@ window['_fs_namespace'] = 'FS';
     <div id="main">
       
   
+    <article id="blog-Deploy-Java-WAR-file-to-docker-container" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/02/13/Deploy-Java-WAR-file-to-docker-container/" class="article-date">
+  <time datetime="2018-02-13T07:00:51.000Z" itemprop="datePublished">2018-02-13</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/02/13/Deploy-Java-WAR-file-to-docker-container/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/02/13/Deploy-Java-WAR-file-to-docker-container/">Deploy Java WAR file to docker container</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/docker.jpg" alt="Docker"></p>
+<h3 id="Sh"><a href="#Sh" class="headerlink" title="Sh"></a>Sh</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker pull tomcat</span><br><span class="line">docker run -v /project/path/war.war:/usr/<span class="built_in">local</span>/tomcat/webapps/war.war -it -p 8888:8080 tomcat</span><br><span class="line"></span><br><span class="line">curl localhost:8888/war</span><br></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cheatsheet/">Cheatsheet</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/War/">War</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="blog-Google-Firebase-quick-start" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -628,91 +680,9 @@ window['_fs_namespace'] = 'FS';
 
 
   
-    <article id="blog-Node-js-ORM-framework-quick-search" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2018/02/01/Node-js-ORM-framework-quick-search/" class="article-date">
-  <time datetime="2018-02-01T09:30:05.000Z" itemprop="datePublished">2018-02-01</time>
-</a>
-		</span>
-		<span class="meta-elements author">Calvin Lam</span>
-		<div class="commentscount">
-			
-				<a href="http://blog.technicalfever.com/2018/02/01/Node-js-ORM-framework-quick-search/#disqus_thread" class="article-comment-link">Comments</a>
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2018/02/01/Node-js-ORM-framework-quick-search/">Node.js ORM framework quick search</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><img src="/images/node.jpg" alt="Node"></p>
-<h3 id="Quick-search"><a href="#Quick-search" class="headerlink" title="Quick search"></a>Quick search</h3><table>
-<thead>
-<tr>
-<th style="text-align:left">Name</th>
-<th style="text-align:center">Star</th>
-<th style="text-align:right">Github</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">Sequelize</td>
-<td style="text-align:center">12959</td>
-<td style="text-align:right"><a href="https://github.com/sequelize/sequelize" target="_blank" rel="noopener">https://github.com/sequelize/sequelize</a></td>
-</tr>
-<tr>
-<td style="text-align:left">Bookshelf</td>
-<td style="text-align:center">4662</td>
-<td style="text-align:right"><a href="https://github.com/bookshelf/bookshelf" target="_blank" rel="noopener">https://github.com/bookshelf/bookshelf</a></td>
-</tr>
-<tr>
-<td style="text-align:left">dresende/node-orm2</td>
-<td style="text-align:center">2757</td>
-<td style="text-align:right"><a href="https://github.com/dresende/node-orm2" target="_blank" rel="noopener">https://github.com/dresende/node-orm2</a></td>
-</tr>
-<tr>
-<td style="text-align:left">SpoonX/wetland</td>
-<td style="text-align:center">209</td>
-<td style="text-align:right"><a href="https://github.com/SpoonX/wetland" target="_blank" rel="noopener">https://github.com/SpoonX/wetland</a></td>
-</tr>
-</tbody>
-</table>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Framework/">Framework</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Orm/">Orm</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/6/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/6/">Next &raquo;</a>
     </nav>
   
 

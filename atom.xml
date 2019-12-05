@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.technicalfever.com/"/>
-  <updated>2019-12-05T10:20:54.360Z</updated>
+  <updated>2019-12-05T10:27:47.980Z</updated>
   <id>http://blog.technicalfever.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Expose localhost to internet</title>
+    <link href="http://blog.technicalfever.com/2019/12/05/Expose-localhost-to-internet/"/>
+    <id>http://blog.technicalfever.com/2019/12/05/Expose-localhost-to-internet/</id>
+    <published>2019-12-05T10:23:09.000Z</published>
+    <updated>2019-12-05T10:27:47.980Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/images/cli.jpg&quot; alt=&quot;Cli&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Ngrok&quot;&gt;&lt;a href=&quot;#Ngrok&quot; class=&quot;headerlink&quot; title=&quot;Ngrok&quot;&gt;&lt;/a&gt;Ngrok&lt;/h3&gt;&lt;p&gt;secure
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Ssh" scheme="http://blog.technicalfever.com/tags/Ssh/"/>
+    
+      <category term="Devops" scheme="http://blog.technicalfever.com/tags/Devops/"/>
+    
+      <category term="Develop" scheme="http://blog.technicalfever.com/tags/Develop/"/>
+    
+  </entry>
   
   <entry>
     <title>espeak - text to speech </title>
@@ -595,33 +624,6 @@
       <category term="Cli" scheme="http://blog.technicalfever.com/tags/Cli/"/>
     
       <category term="Screen" scheme="http://blog.technicalfever.com/tags/Screen/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Docker container set timezone</title>
-    <link href="http://blog.technicalfever.com/2018/04/17/Docker-container-set-timezone/"/>
-    <id>http://blog.technicalfever.com/2018/04/17/Docker-container-set-timezone/</id>
-    <published>2018-04-17T08:33:33.000Z</published>
-    <updated>2019-11-26T02:23:19.886Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;img src=&quot;/images/docker.jpg&quot; alt=&quot;Docker&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Method-1&quot;&gt;&lt;a href=&quot;#Method-1&quot; class=&quot;headerlink&quot; title=&quot;Method 1&quot;&gt;&lt;/a&gt;Method
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Docker" scheme="http://blog.technicalfever.com/tags/Docker/"/>
-    
-      <category term="Sysadm" scheme="http://blog.technicalfever.com/tags/Sysadm/"/>
     
   </entry>
   
