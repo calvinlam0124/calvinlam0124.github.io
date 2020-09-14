@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Docker for PHP Laravel (Dockerfile and docker-compose.yaml) | CALS NOTE</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Dockerfile123456789101112131415161718192021222324252627282930313233343536373839FROM php:7-apacheWORKDIR /var/www/html# git: for php package barryvdh/laravel-debugbar# zip, unzip: for composer downloa">
+<meta name="keywords" content="Docker,Php,Dockerfile">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker for PHP Laravel (Dockerfile and docker-compose.yaml)">
+<meta property="og:url" content="http://blog.technicalfever.com/2019/11/26/Dockerfile-for-PHP-Laravel/index.html">
+<meta property="og:site_name" content="CALS NOTE">
+<meta property="og:description" content="Dockerfile123456789101112131415161718192021222324252627282930313233343536373839FROM php:7-apacheWORKDIR /var/www/html# git: for php package barryvdh/laravel-debugbar# zip, unzip: for composer downloa">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://blog.technicalfever.com/images/php.jpg">
+<meta property="og:updated_time" content="2020-09-14T06:57:56.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Docker for PHP Laravel (Dockerfile and docker-compose.yaml)">
+<meta name="twitter:description" content="Dockerfile123456789101112131415161718192021222324252627282930313233343536373839FROM php:7-apacheWORKDIR /var/www/html# git: for php package barryvdh/laravel-debugbar# zip, unzip: for composer downloa">
+<meta name="twitter:image" content="http://blog.technicalfever.com/images/php.jpg">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-112333390-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+<script>
+window['_fs_debug'] = false;
+window['_fs_host'] = 'fullstory.com';
+window['_fs_org'] = 'AAHCC';
+window['_fs_namespace'] = 'FS';
+(function(m,n,e,t,l,o,g,y){
+    if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+    g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+    o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+    y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+    g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+    y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
+    g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+    g.clearUserCookie=function(){};
+})(window,document,window['_fs_namespace'],'script','user');
+</script>
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">CALS NOTE</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li><li><a href="/Cheatsheets/">Cheatsheets</a></li><li><a href="/atom.xml">rss</a></li><li><a href="/About">About</a></li><li><a href="https://lumiere000.github.io/blog">Friends</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.technicalfever.com"></form>
+	</div>
+</header>
+    <div id="main">
+      <article id="blog-Dockerfile-for-PHP-Laravel" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2019/11/26/Dockerfile-for-PHP-Laravel/" class="article-date">
+  <time datetime="2019-11-26T10:43:00.000Z" itemprop="datePublished">2019-11-26</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2019/11/26/Dockerfile-for-PHP-Laravel/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 class="article-title entry-title" itemprop="name">
+      Docker for PHP Laravel (Dockerfile and docker-compose.yaml)
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/php.jpg" alt="Php"></p>
+<h3 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h3><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> php:<span class="number">7</span>-apache</span><br><span class="line"></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> /var/www/html</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash"><span class="comment"># git: for php package barryvdh/laravel-debugbar</span></span></span><br><span class="line"><span class="bash"><span class="comment"># zip, unzip: for composer download from dist</span></span></span><br><span class="line"><span class="bash"><span class="comment"># libmagickwand-dev: for intervention/image and php7-imagick</span></span></span><br><span class="line"><span class="bash"><span class="comment"># ssh: ssh client for git-ssh</span></span></span><br><span class="line"><span class="bash">RUN apt-get update &amp;&amp; apt-get install -y \</span></span><br><span class="line"><span class="bash">        <span class="variable">$PHPIZE_DEPS</span> \</span></span><br><span class="line"><span class="bash">        ca-certificates \</span></span><br><span class="line"><span class="bash">        curl \</span></span><br><span class="line"><span class="bash">        xz-utils \</span></span><br><span class="line"><span class="bash">        git \</span></span><br><span class="line"><span class="bash">        zip unzip\</span></span><br><span class="line"><span class="bash">        libzip-dev \</span></span><br><span class="line"><span class="bash">        libmagickwand-dev \</span></span><br><span class="line"><span class="bash">        ssh \</span></span><br><span class="line"><span class="bash">        --no-install-recommends &amp;&amp; rm -r /var/lib/apt/lists/*</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash"><span class="comment"># imagick: for intervention/image</span></span></span><br><span class="line"><span class="bash">RUN pecl install imagick</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash"><span class="comment"># pdo_mysql, bcmath: officail laravel requirement</span></span></span><br><span class="line"><span class="bash"><span class="comment"># fileinfo, imagick: for php package intervention/image</span></span></span><br><span class="line"><span class="bash">RUN docker-php-ext-install pdo_mysql bcmath zip</span></span><br><span class="line"><span class="bash">RUN docker-php-ext-enable imagick</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash">RUN a2enmod rewrite</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash">COPY apache2.000-default.conf /etc/apache2/sites-enabled/000-default.conf</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash"><span class="comment"># xdebug</span></span></span><br><span class="line"><span class="bash"><span class="comment">#RUN apt-get update &amp;&amp;\</span></span></span><br><span class="line"><span class="bash"><span class="comment">#    apt-get install --no-install-recommends --assume-yes --quiet ca-certificates curl git &amp;&amp;\</span></span></span><br><span class="line"><span class="bash"><span class="comment">#    rm -rf /var/lib/apt/lists/*</span></span></span><br><span class="line"><span class="bash"><span class="comment">#</span></span></span><br><span class="line"><span class="bash"><span class="comment">#RUN pecl install xdebug &amp;&amp; docker-php-ext-enable xdebug</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="docker-compose-yaml"><a href="#docker-compose-yaml" class="headerlink" title="docker-compose.yaml"></a>docker-compose.yaml</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">'3'</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="comment"># docker run --rm -it --net myNetwork -v $(pwd):/var/www/html -p 10080:80 --name localhost-cms-backend-v2 localhost/cms_backend_v2</span></span><br><span class="line"><span class="attr">  api:</span></span><br><span class="line">    <span class="comment"># container_name: localhost-cms-backend-v2</span></span><br><span class="line"><span class="attr">    build:</span> <span class="string">.</span></span><br><span class="line"><span class="attr">    ports:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">"10080:80"</span></span><br><span class="line"><span class="attr">    volumes:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">.:/var/www/html</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">~/.ssh:/root/.ssh</span></span><br><span class="line"><span class="attr">  db:</span></span><br><span class="line">    <span class="comment"># container_name: db</span></span><br><span class="line"><span class="attr">    image:</span> <span class="attr">mariadb:10.3.15-bionic</span></span><br><span class="line"><span class="attr">    ports:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">"13306:3306"</span></span><br><span class="line">    <span class="comment"># volumes:</span></span><br><span class="line">    <span class="comment">#     - ../../Storage/mysql:/var/lib/mysql</span></span><br><span class="line"><span class="attr">    environment:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">MYSQL_DATABASE=my_db</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">MYSQL_ROOT_PASSWORD=123456!</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># docker run --name redis --net myNetwork -d -t -p 6379:6379 redis</span></span><br><span class="line"><span class="attr">  redis:</span></span><br><span class="line">    <span class="comment"># container_name: redis</span></span><br><span class="line"><span class="attr">    image:</span> <span class="attr">redis:5.0.5-stretch</span></span><br><span class="line"><span class="attr">    ports:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">"6379:6379"</span></span><br></pre></td></tr></table></figure>
+<h3 id="apache2-000-default-conf"><a href="#apache2-000-default-conf" class="headerlink" title="apache2.000-default.conf"></a>apache2.000-default.conf</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    ServerName localhost</span><br><span class="line">    DocumentRoot /var/www/html/public # set default doccument root to `/var/www/html/public`</span><br><span class="line">    ErrorLog $&#123;APACHE_LOG_DIR&#125;/error.log</span><br><span class="line">    CustomLog $&#123;APACHE_LOG_DIR&#125;/access.log combined</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Dockerfile/">Dockerfile</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Php/">Php</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+    
+<nav id="article-nav">
+  
+    <a href="/2019/11/26/How-to-use-telnet-to-test-your-web-server/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          How to use telnet to test your web server
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/03/18/Real-World-Web-Scraper/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          Real World - Web Scraper
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:blog.technicalfever.com">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">CALS NOTE</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2020 Calvin Lam<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+<script>
+  var disqus_shortname = 'cals-note';
+  
+  var disqus_url = 'http://blog.technicalfever.com/2019/11/26/Dockerfile-for-PHP-Laravel/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

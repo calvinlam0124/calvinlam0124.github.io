@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Own your CHEATSHEET</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.1.0/highlightjs-line-numbers.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <script src="https://fastcdn.org/FileSaver.js/1.1.20151003/FileSaver.min.js"></script>
+
+
+    <script src="main.js"></script>
+    <script src="local_storage.js"></script>
+    <script src="app.js"></script>
+    <!--
+      @TODO:
+      - import / export ALL
+      - export to markdown, save xxx.md
+      - add default
+      - single cheatsheet (share)
+      - version control (like jsonbin.io)
+      - drag and drop ajust window
+      - readonly / edit mode (online editor - ckeditor)
+      - seach
+    -->
+
+
+    <style>
+      main{ padding-top: 2em}
+
+
+      /* for block of numbers */
+      td.hljs-ln-numbers {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        text-align: center;
+        color: #ccc;
+        border-right: 1px solid #CCC;
+        vertical-align: top;
+        padding-right: 5px;
+
+        /* your custom style here */
+      }
+
+      /* for block of code */
+      td.hljs-ln-code {
+        padding-left: 10px;
+      }
+    </style>
+</head>
+<body>
+
+   <!--
+     $('.ui.sidebar').sidebar('toggle')
+     -->
+<!-- <div class="ui top demo inverted sidebar labeled icon menu">
+    <a class="item" id="add-new-button">New CHEATSHEET</a>
+    <a class="item" id="export-all-button">Export</a>
+</div> -->
+
+
+<!-- MAIN -->
+<main class="ui container">
+  <!-- MENU -->
+  <div class="ui menu">
+  <a class="active teal item">Show All<div id="number-of-records" class="ui teal left pointing label">0</div></a>
+  <a class="item" id="add-new-button">New CHEATSHEET</a>
+  <a class="item" id="project-truncate-button">Delete All</a>
+  <a class="item" id="export-all-button">Export All</a>
+  <a class="item" id="import-all-button">Import All</a>
+
+  <!-- <div class="item">
+  <div class="ui transparent icon input">
+  <input type="text" placeholder="Search ...">
+  <i class="search icon"></i>
+  </div>
+  </div> -->
+  </div>
+</main>
+
+
+
+<!-- input file; for import -->
+<input type="file" id="import-file" style="display:none">
+
+
+
+<!-- modal basic -->
+<div id="empty-import-modal" class="ui basic mini modal">
+<div class="ui icon header"><i class="archive icon"></i>Empty</div>
+<div class="content">
+  <p>System detected you dont have any CHEATSHEET.</p>
+  <p>Do you would to import our cool CHEATSHEET?</p>
+</div>
+<div class="actions left aligned">
+<div id="empty-import-button" class="ui green ok inverted button"><i class="checkmark icon"></i>Yes</div>
+</div>
+</div>
+
+
+
+<!-- modal form -->
+<div id="add-new-modal" class="ui modal">
+<div class="header">New CHEATSHEET</div>
+<div class="content">
+<!-- start form -->
+<div class="ui form">
+<div class="field"><input type="text" name="title" placeholder="Title"></div>
+<div class="field"><input type="text" name="syntax" placeholder="Syntax (e.g. Bash, Python)"></div>
+<div class="field"><textarea placeholder="Plain Text Content..."></textarea></div>
+</div>
+<!-- end form -->
+</div>
+<div class="actions">
+<div class="ui black deny button">Cancel</div>
+<div id="add-new-submit-button" class="ui positive right labeled icon button">Save<i class="checkmark icon"></i></div>
+</div>
+</div>
+
+
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-112333390-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+</body>
+</html>

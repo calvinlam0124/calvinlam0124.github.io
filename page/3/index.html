@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>CALS NOTE</title>
+  <meta name="viewport" content="width=device-width">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="CALS NOTE">
+<meta property="og:url" content="http://blog.technicalfever.com/page/3/index.html">
+<meta property="og:site_name" content="CALS NOTE">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CALS NOTE">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-112333390-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+<script>
+window['_fs_debug'] = false;
+window['_fs_host'] = 'fullstory.com';
+window['_fs_org'] = 'AAHCC';
+window['_fs_namespace'] = 'FS';
+(function(m,n,e,t,l,o,g,y){
+    if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+    g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+    o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+    y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+    g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+    y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
+    g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+    g.clearUserCookie=function(){};
+})(window,document,window['_fs_namespace'],'script','user');
+</script>
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">CALS NOTE</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li><li><a href="/Cheatsheets/">Cheatsheets</a></li><li><a href="/atom.xml">rss</a></li><li><a href="/About">About</a></li><li><a href="https://lumiere000.github.io/blog">Friends</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.technicalfever.com"></form>
+	</div>
+</header>
+    <div id="main">
+      
+  
+    <article id="blot-screen-cheatsheet" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/04/18/screen-cheatsheet/" class="article-date">
+  <time datetime="2018-04-18T13:30:41.000Z" itemprop="datePublished">2018-04-18</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/04/18/screen-cheatsheet/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/04/18/screen-cheatsheet/">screen cheatsheet</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/cli.jpg" alt="Cli"></p>
+<h3 id="Basic-usage"><a href="#Basic-usage" class="headerlink" title="Basic usage"></a>Basic usage</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># create new screen</span></span><br><span class="line">screen</span><br><span class="line">screen -a</span><br><span class="line"></span><br><span class="line"><span class="comment"># list</span></span><br><span class="line">screen -ls</span><br><span class="line"></span><br><span class="line"><span class="comment"># attach</span></span><br><span class="line">screen -r [pid.sessionname]</span><br><span class="line"></span><br><span class="line"><span class="comment"># run as screen</span></span><br><span class="line">screen -d -m ping 8.8.8.8</span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://www.gnu.org/software/screen/manual/screen.html" target="_blank" rel="noopener">https://www.gnu.org/software/screen/manual/screen.html</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cheatsheet/">Cheatsheet</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cli/">Cli</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Screen/">Screen</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Docker-container-set-timezone" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/04/17/Docker-container-set-timezone/" class="article-date">
+  <time datetime="2018-04-17T16:33:33.000Z" itemprop="datePublished">2018-04-17</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/04/17/Docker-container-set-timezone/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/04/17/Docker-container-set-timezone/">Docker container set timezone</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/docker.jpg" alt="Docker"></p>
+<h3 id="Method-1"><a href="#Method-1" class="headerlink" title="Method 1"></a>Method 1</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"Asia/Hong_Kong"</span> &gt; /etc/timezone</span><br><span class="line">ln -snf /usr/share/zoneinfo/Asia/Hong_Kong /etc/localtime</span><br><span class="line"></span><br><span class="line">apt-get update</span><br><span class="line">apt-get install tzdata</span><br><span class="line">dpkg-reconfigure tzdata</span><br></pre></td></tr></table></figure>
+<h3 id="Method-2"><a href="#Method-2" class="headerlink" title="Method 2"></a>Method 2</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -v /etc/localtime:/etc/localtime:ro</span><br></pre></td></tr></table></figure>
+<h3 id="Method-3"><a href="#Method-3" class="headerlink" title="Method 3"></a>Method 3</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -e <span class="string">"TZ=Asia/Hong_Kong"</span></span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://github.com/gliderlabs/docker-alpine/issues/136" target="_blank" rel="noopener">https://github.com/gliderlabs/docker-alpine/issues/136</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sysadm/">Sysadm</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Basic-MySQL-status-command" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/04/17/Basic-MySQL-status-command/" class="article-date">
+  <time datetime="2018-04-17T16:29:28.000Z" itemprop="datePublished">2018-04-17</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/04/17/Basic-MySQL-status-command/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/04/17/Basic-MySQL-status-command/">Basic MySQL status command</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/mysql.jpg" alt="MySQL"></p>
+<h3 id="Basic-usage"><a href="#Basic-usage" class="headerlink" title="Basic usage"></a>Basic usage</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># show connection status</span></span><br><span class="line">status;</span><br><span class="line"></span><br><span class="line"><span class="comment"># show connections</span></span><br><span class="line">show processlist;</span><br><span class="line"></span><br><span class="line"><span class="comment"># show runtime env</span></span><br><span class="line">SHOW VARIABLES;</span><br><span class="line">SHOW VARIABLES WHERE Variable_name = <span class="string">'hostname'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment"># show tables satus</span></span><br><span class="line">show table status;</span><br><span class="line">show table status <span class="built_in">where</span> name = <span class="string">'users'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment"># show server variables</span></span><br><span class="line">select @@sql_mode;</span><br><span class="line"></span><br><span class="line"><span class="comment"># exit</span></span><br><span class="line"><span class="built_in">exit</span>;</span><br></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cheatsheet/">Cheatsheet</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cli/">Cli</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Nginx-password-protect-through-htpasswd" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/04/16/Nginx-password-protect-through-htpasswd/" class="article-date">
+  <time datetime="2018-04-16T16:11:07.000Z" itemprop="datePublished">2018-04-16</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/04/16/Nginx-password-protect-through-htpasswd/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/04/16/Nginx-password-protect-through-htpasswd/">Nginx password protect through htpasswd</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/nginx.jpg" alt="Nginx"></p>
+<h3 id="Create-htpasswd"><a href="#Create-htpasswd" class="headerlink" title="Create .htpasswd"></a>Create .htpasswd</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo sh -c <span class="string">"echo -n 'username:' &gt;&gt; /etc/nginx/.htpasswd"</span></span><br><span class="line">sudo sh -c <span class="string">"openssl passwd -apr1 &gt;&gt; /etc/nginx/.htpasswd"</span></span><br><span class="line"></span><br><span class="line">cat /etc/nginx/.htpasswd  <span class="comment"># username:$apr1$wI1/T0nB$jEKuTJHkTOOWkopnXqC1d1</span></span><br></pre></td></tr></table></figure>
+<h3 id="Update-nginx-conf"><a href="#Update-nginx-conf" class="headerlink" title="Update nginx conf"></a>Update nginx conf</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    ...</span><br><span class="line">    location / &#123;</span><br><span class="line">        auth_basic <span class="string">"Restricted Content"</span>;</span><br><span class="line">        auth_basic_user_file /etc/nginx/.htpasswd;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Reload-Nginx"><a href="#Reload-Nginx" class="headerlink" title="Reload Nginx"></a>Reload Nginx</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service nginx reload</span><br></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Password/">Password</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Protect/">Protect</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sysadm/">Sysadm</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Linux-Uncomplicated-Firewall" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/04/16/Linux-Uncomplicated-Firewall/" class="article-date">
+  <time datetime="2018-04-16T15:21:53.000Z" itemprop="datePublished">2018-04-16</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/04/16/Linux-Uncomplicated-Firewall/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/04/16/Linux-Uncomplicated-Firewall/">Linux Uncomplicated Firewall</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/ubuntu.jpg" alt="Ubuntu"></p>
+<h3 id="UFW-basic-usage"><a href="#UFW-basic-usage" class="headerlink" title="UFW basic usage"></a>UFW basic usage</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># list allowed ports</span></span><br><span class="line">sudo ufw status verbose</span><br><span class="line"></span><br><span class="line"><span class="comment"># show ufw status</span></span><br><span class="line">sudo ufw status</span><br><span class="line"></span><br><span class="line"><span class="comment"># show and allow by application name</span></span><br><span class="line">sudo ufw app list</span><br><span class="line">sudo ufw allow <span class="string">'Nginx HTTP'</span></span><br><span class="line">sudo ufw allow 53/tcp</span><br><span class="line">sudo ufw allow 6000:6007/tcp</span><br><span class="line">sudo ufw allow from 8.8.8.8</span><br><span class="line">sudo ufw allow from 8.8.8.8 to any port 22</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># show rule raw</span></span><br><span class="line">sudo ufw show raw</span><br><span class="line"></span><br><span class="line"><span class="comment"># Default Policies</span></span><br><span class="line">sudo ufw default deny incoming</span><br><span class="line">sudo ufw default allow outgoing</span><br><span class="line"></span><br><span class="line"><span class="comment"># service enable</span></span><br><span class="line">sudo ufw <span class="built_in">enable</span></span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-16-04" target="_blank" rel="noopener">https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-16-04</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Firewall/">Firewall</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Iptable/">Iptable</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sysadm/">Sysadm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ufw/">Ufw</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Common-javascript-linter" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/03/28/Common-javascript-linter/" class="article-date">
+  <time datetime="2018-03-28T15:51:19.000Z" itemprop="datePublished">2018-03-28</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/03/28/Common-javascript-linter/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/03/28/Common-javascript-linter/">Common javascript linter quick research</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/web.jpg" alt="Web"></p>
+<h3 id="Quick-research"><a href="#Quick-research" class="headerlink" title="Quick research"></a>Quick research</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:center">Star</th>
+<th style="text-align:right">Github</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ESLint</td>
+<td style="text-align:center">10,945</td>
+<td style="text-align:right"><a href="https://github.com/eslint/eslint" target="_blank" rel="noopener">https://github.com/eslint/eslint</a></td>
+</tr>
+<tr>
+<td style="text-align:left">JSlint</td>
+<td style="text-align:center">3,120</td>
+<td style="text-align:right"><a href="https://github.com/douglascrockford/JSLint" target="_blank" rel="noopener">https://github.com/douglascrockford/JSLint</a></td>
+</tr>
+<tr>
+<td style="text-align:left">Jscs</td>
+<td style="text-align:center">5,163</td>
+<td style="text-align:right"><a href="https://github.com/jscs-dev/node-jscs" target="_blank" rel="noopener">https://github.com/jscs-dev/node-jscs</a></td>
+</tr>
+<tr>
+<td style="text-align:left">JS Hint</td>
+<td style="text-align:center">7,890</td>
+<td style="text-align:right"><a href="https://github.com/jshint/jshint" target="_blank" rel="noopener">https://github.com/jshint/jshint</a></td>
+</tr>
+</tbody>
+</table>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linter/">Linter</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Docker-container-startup" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/03/27/Docker-container-startup/" class="article-date">
+  <time datetime="2018-03-27T12:12:57.000Z" itemprop="datePublished">2018-03-27</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/03/27/Docker-container-startup/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/03/27/Docker-container-startup/">Docker container startup</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/docker.jpg" alt="Docker"></p>
+<h3 id="Setup-auto-startup"><a href="#Setup-auto-startup" class="headerlink" title="Setup auto startup"></a>Setup auto startup</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># --restart=always Docker will restart it</span></span><br><span class="line">docker run --restart=always CONTAINER_ID</span><br><span class="line"></span><br><span class="line"><span class="comment"># update exisit container</span></span><br><span class="line">docker update --restart=always CONTAINER_ID</span><br><span class="line">docker update --restart=no CONTAINER_ID</span><br><span class="line"></span><br><span class="line"><span class="comment"># ps: --restart=always cannot use --rm</span></span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://docs.docker.com/engine/reference/commandline/run/#options" target="_blank" rel="noopener">https://docs.docker.com/engine/reference/commandline/run/#options</a><br><a href="https://github.com/moby/moby/blob/v1.11.2/docs/reference/commandline/update.md#update-a-containers-restart-policy" target="_blank" rel="noopener">https://github.com/moby/moby/blob/v1.11.2/docs/reference/commandline/update.md#update-a-containers-restart-policy</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Starup/">Starup</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Ubunt-startup-service" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/03/27/Ubunt-startup-service/" class="article-date">
+  <time datetime="2018-03-27T10:32:32.000Z" itemprop="datePublished">2018-03-27</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/03/27/Ubunt-startup-service/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/03/27/Ubunt-startup-service/">Ubunt startup service</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/ubuntu.jpg" alt="Ubuntu"></p>
+<h3 id="Basic-usage"><a href="#Basic-usage" class="headerlink" title="Basic usage"></a>Basic usage</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># List processes</span></span><br><span class="line">chkconfig --list</span><br><span class="line">systemctl list-units</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Enable / Disable a service - on, off</span></span><br><span class="line">chkconfig apache on</span><br><span class="line">systemctl <span class="built_in">enable</span> apache on</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Control a service - start, stop, restart, status</span></span><br><span class="line">service apache start</span><br><span class="line">systemctl start apache</span><br><span class="line">/etc/init.d/apache start</span><br></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Admin/">Admin</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Centos/">Centos</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Service/">Service</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-SSH-tunnel" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/03/27/SSH-tunnel/" class="article-date">
+  <time datetime="2018-03-27T10:24:20.000Z" itemprop="datePublished">2018-03-27</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/03/27/SSH-tunnel/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/03/27/SSH-tunnel/">SSH tunnel</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/cli.jpg" alt="Cli"></p>
+<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># connect port 999 to target.server.tld:3306</span></span><br><span class="line">ssh target.server.tld -L 999:localhost:3306</span><br><span class="line"></span><br><span class="line">sudo ssh -N -f -l user target.server.tld -L 999:localhost:3306</span><br><span class="line"></span><br><span class="line">ssh</span><br><span class="line">  -N Do not execute a remote <span class="built_in">command</span></span><br><span class="line">  -f run as background process</span><br><span class="line">  -L SSH Tunnel</span><br></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac/">Mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mysql/">Mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ssh/">Ssh</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tunnel/">Tunnel</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Convert-jks-to-key-file-for-web-server" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/03/20/Convert-jks-to-key-file-for-web-server/" class="article-date">
+  <time datetime="2018-03-20T16:43:12.000Z" itemprop="datePublished">2018-03-20</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/03/20/Convert-jks-to-key-file-for-web-server/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/03/20/Convert-jks-to-key-file-for-web-server/">Convert jks to key file for web server</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/cli.jpg" alt="Cli"></p>
+<h3 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. Convert .jks to .p12 (need password)</span></span><br><span class="line">keytool -importkeystore -srckeystore your-file.jks -destkeystore new-output.p12 -deststoretype PKCS12</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. Extract .pem from .p12 (need password)</span></span><br><span class="line">openssl pkcs12 -nokeys -<span class="keyword">in</span> new-output.p12 -out new-output.pem</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. Extract unencrypted .key from .p12 (need password)</span></span><br><span class="line">openssl pkcs12 -nocerts -nodes -<span class="keyword">in</span> new-output.p12 -out final-output.key</span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://gist.github.com/paulosalgado/d12b069498ac6c8ed0821a066d68605e" target="_blank" rel="noopener">https://gist.github.com/paulosalgado/d12b069498ac6c8ed0821a066d68605e</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Apache/">Apache</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cert/">Cert</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Jks/">Jks</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Key/">Key</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ssl/">Ssl</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
+    </nav>
+  
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:blog.technicalfever.com">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">CALS NOTE</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2020 Calvin Lam<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+<script>
+  var disqus_shortname = 'cals-note';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

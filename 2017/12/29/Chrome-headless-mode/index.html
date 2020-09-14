@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Chrome headless mode | CALS NOTE</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="RequirementChrome version 59+ command alias (or edit .bash_profile)1alias chrome=&quot;/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --headless --disable-gpu&quot; print website to pdf1chrome">
+<meta name="keywords" content="Chrome,Headless,Browser,Script,MacOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Chrome headless mode">
+<meta property="og:url" content="http://blog.technicalfever.com/2017/12/29/Chrome-headless-mode/index.html">
+<meta property="og:site_name" content="CALS NOTE">
+<meta property="og:description" content="RequirementChrome version 59+ command alias (or edit .bash_profile)1alias chrome=&quot;/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --headless --disable-gpu&quot; print website to pdf1chrome">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://blog.technicalfever.com/images/chrome.jpg">
+<meta property="og:updated_time" content="2020-09-14T06:57:56.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chrome headless mode">
+<meta name="twitter:description" content="RequirementChrome version 59+ command alias (or edit .bash_profile)1alias chrome=&quot;/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --headless --disable-gpu&quot; print website to pdf1chrome">
+<meta name="twitter:image" content="http://blog.technicalfever.com/images/chrome.jpg">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-112333390-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+<script>
+window['_fs_debug'] = false;
+window['_fs_host'] = 'fullstory.com';
+window['_fs_org'] = 'AAHCC';
+window['_fs_namespace'] = 'FS';
+(function(m,n,e,t,l,o,g,y){
+    if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+    g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+    o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+    y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+    g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+    y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
+    g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+    g.clearUserCookie=function(){};
+})(window,document,window['_fs_namespace'],'script','user');
+</script>
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">CALS NOTE</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li><li><a href="/Cheatsheets/">Cheatsheets</a></li><li><a href="/atom.xml">rss</a></li><li><a href="/About">About</a></li><li><a href="https://lumiere000.github.io/blog">Friends</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.technicalfever.com"></form>
+	</div>
+</header>
+    <div id="main">
+      <article id="post-Chrome-headless-mode" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/12/29/Chrome-headless-mode/" class="article-date">
+  <time datetime="2017-12-29T17:36:20.000Z" itemprop="datePublished">2017-12-29</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2017/12/29/Chrome-headless-mode/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 class="article-title entry-title" itemprop="name">
+      Chrome headless mode
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/chrome.jpg" alt="Chrome"></p>
+<h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><p>Chrome version 59+</p>
+<h3 id="command-alias-or-edit-bash-profile"><a href="#command-alias-or-edit-bash-profile" class="headerlink" title="command alias (or edit .bash_profile)"></a>command alias (or edit <code>.bash_profile</code>)</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> chrome=<span class="string">"/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --headless --disable-gpu"</span></span><br></pre></td></tr></table></figure>
+<h3 id="print-website-to-pdf"><a href="#print-website-to-pdf" class="headerlink" title="print website to pdf"></a>print website to pdf</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chrome --<span class="built_in">print</span>-to-pdf https://httpbin.org</span><br></pre></td></tr></table></figure>
+<h3 id="print-website-to-png"><a href="#print-website-to-png" class="headerlink" title="print website to png"></a>print website to png</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chrome --screenshot https://httpbin.org</span><br><span class="line">chrome --screenshot --window-size=1280,1696 https://httpbin.org</span><br></pre></td></tr></table></figure>
+<h3 id="REPL-mode-read-eval-print-loop-samething-like-javascript-console"><a href="#REPL-mode-read-eval-print-loop-samething-like-javascript-console" class="headerlink" title="REPL mode (read-eval-print loop) - samething like javascript console"></a>REPL mode (read-eval-print loop) - samething like javascript console</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">chrome --repl https://httpbin.org</span><br><span class="line"></span><br><span class="line">&gt;&gt; window.innerHeight</span><br><span class="line">&#123;<span class="string">"result"</span>:&#123;<span class="string">"description"</span>:<span class="string">"600"</span>,<span class="string">"type"</span>:<span class="string">"number"</span>,<span class="string">"value"</span>:600&#125;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://developers.google.com/web/updates/2017/04/headless-chrome" target="_blank" rel="noopener">https://developers.google.com/web/updates/2017/04/headless-chrome</a><br><a href="https://en.wikipedia.org/wiki/Headless_browser" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Headless_browser</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Browser/">Browser</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Chrome/">Chrome</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Headless/">Headless</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MacOS/">MacOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Script/">Script</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+    
+<nav id="article-nav">
+  
+    <a href="/2017/12/31/OWASP-top-10-2017/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          OWASP top 10, 2017 - A1 Injection
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/12/29/Install-python3-and-pip3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          Install python3 and pip3
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:blog.technicalfever.com">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">CALS NOTE</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2020 Calvin Lam<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+<script>
+  var disqus_shortname = 'cals-note';
+  
+  var disqus_url = 'http://blog.technicalfever.com/2017/12/29/Chrome-headless-mode/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

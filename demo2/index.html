@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/jquery.easings.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/scrolloverflow.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
+<script type="text/javascript" src="fpController.js"></script>
+<script>
+    $(function(){
+        fpController.init();
+        $("#button").on("click", function(){
+            url = $("#url").val() || "/api/data.php";
+            fpController.getData(url);
+        });
+    });
+</script>
+<style>
+img{height: 100%}
+body{background-color: #eee}
+</style>
+</head>
+<body>
+    <input type="text" id="url"><button id="button">
+</body>
+</html>

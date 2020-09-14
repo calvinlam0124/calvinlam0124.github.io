@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2020/09/14/GraphQl-and-Curl/</loc>
+    
+    <lastmod>2020-09-14T07:15:41.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2017/12/14/Hexo-and-Jekyll/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2017/12/14/Hexo-generate-sitemap-via-hexo-generator-sitemap/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2017/12/29/Chrome-headless-mode/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2017/12/14/Hexo-create-a-new-blog-post/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2017/12/29/Docker-Cheatsheet/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2017/12/29/Install-python3-and-pip3/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2017/12/14/Setup-hexo/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/01/02/Learning-Roadmap-2018/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2017/12/31/OWASP-top-10-2017-A3/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2017/12/29/install-disqus-on-hexo/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2017/12/14/hexo-rss-via-hexo-generator-feed/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2017/12/31/OWASP-top-10-2017/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/01/02/Cronjob/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2017/12/29/Scriptable-image-processing-system/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/01/04/Snmap-basic-example/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2017/12/31/OWASP-top-10-2017-A2-Broken-Authentication/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/01/05/Go-Programming-Language/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/01/02/Verify-SHA-256-checksum/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/01/04/Debian-NO-PUBKEY-solution/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/01/04/GoBuster-options-example/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/01/02/Sparse-file/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/01/04/Linux-basic-monitor-shell-script/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/01/11/Setup-SMART-on-ubuntu-server/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/01/09/A-modest-collection-of-cheatsheets/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/01/05/SMART-hard-drive-monitoring-utility/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/01/05/JAMstack/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/01/10/Docker-mem-limit-error/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/01/09/Docker-ubuntu-container-network-utilities/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/01/12/Exploring-the-Physical-Web/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/01/09/Bad-Sector-and-MySQL-innodb/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/01/26/Direct-query-a-specific-dns/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/01/26/Javascript-package-manager-from-NPM-to-YARM/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/01/24/Measure-your-network-speed/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/01/24/Command-line-message-of-the-day/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/01/31/Git-Cheatsheet/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/02/01/Node-js-ORM-framework-quick-search/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/02/06/New-syntax-for-css-Scss-Sass/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/01/26/MySQL-and-Docker-for-development/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/02/06/Capture-all-of-your-http-connection-2/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/02/01/docker-compose-specify-file-run-as-detach-mode/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/01/30/Capture-all-of-your-http-connection/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/02/08/Pug-Cli-Cheatsheet/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/01/30/Chrome-Console-Cheatsheet/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/02/08/Pug-template-syntax/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/02/09/Linux-password-less-ssh-and-sudo/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/02/15/Vue-js-devtools-quick-start/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/02/08/Node-js-template-engine-quick-search/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/02/09/Deploy-container-to-other-host-througt-docker-machine/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/02/23/MacOS-install-ImageMagick/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/02/20/Curl-test-your-http-server/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/02/13/Google-Firebase-quick-start/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/02/09/Deploy-your-docker-container-to-AWS/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/02/28/Python-sandbox-platform-jupyter/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/02/13/Deploy-Java-WAR-file-to-docker-container/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/03/19/Linux-sed/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/03/09/Apache-24-authz-core-error-and-solution/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/03/12/Setup-Gitlab-on-Docker/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/02/23/MacOS-Multiple-User-Run-Brew-Issue/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/03/20/Test-DNS-server/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/03/27/SSH-tunnel/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/03/27/Docker-container-startup/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/03/20/Convert-jks-to-key-file-for-web-server/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/03/20/Create-your-DNS-server-on-docker/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/03/19/Javascript-bundler-webpack/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/03/27/Ubunt-startup-service/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/04/16/Nginx-password-protect-through-htpasswd/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/04/16/Linux-Uncomplicated-Firewall/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/03/28/Common-javascript-linter/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/04/17/Basic-MySQL-status-command/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/04/17/Docker-container-set-timezone/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/06/19/Run-a-basic-web-with-Docker/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/11/06/Cusomte-a-PHP-docker-image/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/06/21/Deploy-your-project-through-now-sh/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/04/18/screen-cheatsheet/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/10/25/Run-a-basic-web-with-Nginx-Docker/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2019/02/25/IT-automation-2-Ansible-Playbook/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/10/25/Apache-password-protect-through-htpasswd-htaccess/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/11/06/Basic-usage-of-PHP-Composer-docker-image/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2019/03/01/zsh/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2018/11/07/Enable-MySQL-slow-query-log/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2019/02/28/Encoding/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2019/02/22/IT-automation-Ansible/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2019/03/05/git-usage/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2019/03/10/PHP-deployment-tools-deployer/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2019/03/10/Create-a-private-composer-package-repo/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2019/03/18/Real-World-Web-Scraper/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2019/11/26/Dockerfile-for-PHP-Laravel/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2019/12/05/Expose-localhost-to-internet/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2019/11/26/How-to-use-telnet-to-test-your-web-server/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2017/12/13/My-first-post/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/2019/12/05/espeak-text-to-speech/</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/About/index.html</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/Cheatsheets/index.html</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/Hexo-Cheatsheet/index.html</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/Markdown-Cheatsheet/index.html</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/My-Notes/index.html</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/Web-Development/index.html</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.technicalfever.com/tags/index.html</loc>
+    
+    <lastmod>2020-09-14T06:57:56.000Z</lastmod>
+    
+  </url>
+  
+</urlset>

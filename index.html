@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>CALS NOTE</title>
+  <meta name="viewport" content="width=device-width">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="CALS NOTE">
+<meta property="og:url" content="http://blog.technicalfever.com/index.html">
+<meta property="og:site_name" content="CALS NOTE">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CALS NOTE">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-112333390-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+<script>
+window['_fs_debug'] = false;
+window['_fs_host'] = 'fullstory.com';
+window['_fs_org'] = 'AAHCC';
+window['_fs_namespace'] = 'FS';
+(function(m,n,e,t,l,o,g,y){
+    if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+    g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+    o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+    y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+    g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+    y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
+    g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+    g.clearUserCookie=function(){};
+})(window,document,window['_fs_namespace'],'script','user');
+</script>
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">CALS NOTE</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li><li><a href="/Cheatsheets/">Cheatsheets</a></li><li><a href="/atom.xml">rss</a></li><li><a href="/About">About</a></li><li><a href="https://lumiere000.github.io/blog">Friends</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.technicalfever.com"></form>
+	</div>
+</header>
+    <div id="main">
+      
+  
+    <article id="blog-GraphQl-and-Curl" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2020/09/14/GraphQl-and-Curl/" class="article-date">
+  <time datetime="2020-09-14T15:10:23.000Z" itemprop="datePublished">2020-09-14</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2020/09/14/GraphQl-and-Curl/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2020/09/14/GraphQl-and-Curl/">get GraphQl schema through Curl</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/cli.jpg" alt="Cli"></p>
+<h3 id="Get-graphql-schema-through-curl"><a href="#Get-graphql-schema-through-curl" class="headerlink" title="Get graphql schema through curl"></a>Get graphql schema through curl</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">curl <span class="string">'https://gitlab.com/api/graphql'</span> \</span><br><span class="line">  -H <span class="string">'Content-Type: application/json'</span> \</span><br><span class="line">  -H <span class="string">'Accept: application/json'</span> \</span><br><span class="line">  --data-binary <span class="string">'&#123;"query":"# Write your query or mutation here\nquery &#123;\n  __schema &#123;\n    mutationType &#123;\n      fields &#123;\n        name\n      &#125;\n    &#125;\n    queryType &#123;\n      fields &#123;\n        name\n      &#125;\n    &#125;\n\t\ttypes&#123;\n      name\n    &#125;\n    directives&#123;\n      name\n    &#125;\n  &#125;\n&#125;"&#125;'</span> \</span><br><span class="line">  | jq</span><br></pre></td></tr></table></figure>
+<h3 id="GraphQL-query"><a href="#GraphQL-query" class="headerlink" title="GraphQL query"></a>GraphQL query</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">query &#123;</span><br><span class="line">  __schema &#123;</span><br><span class="line">    mutationType &#123;</span><br><span class="line">      fields &#123;</span><br><span class="line">        name</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    queryType &#123;</span><br><span class="line">      fields &#123;</span><br><span class="line">        name</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">		types&#123;</span><br><span class="line">      name</span><br><span class="line">    &#125;</span><br><span class="line">    directives&#123;</span><br><span class="line">      name</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Online-Live-GitLab-link"><a href="#Online-Live-GitLab-link" class="headerlink" title="Online Live GitLab link"></a>Online Live GitLab link</h3><p><a href="https://gitlab.com/-/graphql-explorer" target="_blank" rel="noopener">https://gitlab.com/-/graphql-explorer</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cli/">Cli</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Curl/">Curl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GQL/">GQL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GraphQL/">GraphQL</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Expose-localhost-to-internet" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2019/12/05/Expose-localhost-to-internet/" class="article-date">
+  <time datetime="2019-12-05T18:23:09.000Z" itemprop="datePublished">2019-12-05</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2019/12/05/Expose-localhost-to-internet/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2019/12/05/Expose-localhost-to-internet/">Expose localhost to internet</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/cli.jpg" alt="Cli"></p>
+<h3 id="Ngrok"><a href="#Ngrok" class="headerlink" title="Ngrok"></a>Ngrok</h3><p>secure introspectable tunnels to localhost<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">brew cask install ngrok</span><br><span class="line"></span><br><span class="line">ngrok http 8080</span><br></pre></td></tr></table></figure></p>
+<h3 id="Servo"><a href="#Servo" class="headerlink" title="Servo"></a>Servo</h3><p>Expose local 5000 port to the internet<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -R 80:localhost:5000 serveo.net</span><br></pre></td></tr></table></figure></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Develop/">Develop</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Devops/">Devops</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ssh/">Ssh</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-espeak-text-to-speech" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2019/12/05/espeak-text-to-speech/" class="article-date">
+  <time datetime="2019-12-05T18:19:41.000Z" itemprop="datePublished">2019-12-05</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2019/12/05/espeak-text-to-speech/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2019/12/05/espeak-text-to-speech/">espeak - text to speech </a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/cli.jpg" alt="Cli"></p>
+<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># install</span></span><br><span class="line">brew install espeak</span><br><span class="line"></span><br><span class="line">espeak <span class="string">"Nice to meet u?"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># female #5</span></span><br><span class="line">espeak -v f5 <span class="string">"Nice to meet u?"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># male #2</span></span><br><span class="line">espeak -v m2 <span class="string">"Nice to meet u?"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 中文</span></span><br><span class="line">espeak -v zh <span class="string">"中文"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># slow</span></span><br><span class="line">espeak -s 80 -v m2 <span class="string">"Nice to meet u?"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># read and write a file</span></span><br><span class="line">espeak -f foo.txt -w foo.wav</span><br></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cli/">Cli</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-How-to-use-telnet-to-test-your-web-server" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2019/11/26/How-to-use-telnet-to-test-your-web-server/" class="article-date">
+  <time datetime="2019-11-26T10:59:24.000Z" itemprop="datePublished">2019-11-26</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2019/11/26/How-to-use-telnet-to-test-your-web-server/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2019/11/26/How-to-use-telnet-to-test-your-web-server/">How to use telnet to test your web server</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/cli.jpg" alt="Cli"></p>
+<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># telnet $&#123;YOUR_SERVER&#125; $&#123;PORT_NUMBER&#125;</span></span><br><span class="line">telnet localhost 80</span><br><span class="line">telnet_mode&gt;_</span><br><span class="line"></span><br><span class="line"><span class="comment"># example 1: telnet www.google.com 80</span></span><br><span class="line">GET / HTTP/1.1</span><br><span class="line">Host: www.google.ccom</span><br><span class="line">[ENTER]</span><br><span class="line">[...HTTP_RESPONSE]</span><br><span class="line"></span><br><span class="line"><span class="comment"># example 2: telnet localhost 8080</span></span><br><span class="line">GET /controller/action?a=b HTTP/2</span><br><span class="line">Host: localhost</span><br><span class="line">User-Agent: Mozilla/5.0 AppleWebKit/500.0 Chrome/60.0</span><br><span class="line">[ENTER]</span><br><span class="line">[...HTTP_RESPONSE]</span><br></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Telnet/">Telnet</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Dockerfile-for-PHP-Laravel" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2019/11/26/Dockerfile-for-PHP-Laravel/" class="article-date">
+  <time datetime="2019-11-26T10:43:00.000Z" itemprop="datePublished">2019-11-26</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2019/11/26/Dockerfile-for-PHP-Laravel/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2019/11/26/Dockerfile-for-PHP-Laravel/">Docker for PHP Laravel (Dockerfile and docker-compose.yaml)</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/php.jpg" alt="Php"></p>
+<h3 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h3><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> php:<span class="number">7</span>-apache</span><br><span class="line"></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> /var/www/html</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash"><span class="comment"># git: for php package barryvdh/laravel-debugbar</span></span></span><br><span class="line"><span class="bash"><span class="comment"># zip, unzip: for composer download from dist</span></span></span><br><span class="line"><span class="bash"><span class="comment"># libmagickwand-dev: for intervention/image and php7-imagick</span></span></span><br><span class="line"><span class="bash"><span class="comment"># ssh: ssh client for git-ssh</span></span></span><br><span class="line"><span class="bash">RUN apt-get update &amp;&amp; apt-get install -y \</span></span><br><span class="line"><span class="bash">        <span class="variable">$PHPIZE_DEPS</span> \</span></span><br><span class="line"><span class="bash">        ca-certificates \</span></span><br><span class="line"><span class="bash">        curl \</span></span><br><span class="line"><span class="bash">        xz-utils \</span></span><br><span class="line"><span class="bash">        git \</span></span><br><span class="line"><span class="bash">        zip unzip\</span></span><br><span class="line"><span class="bash">        libzip-dev \</span></span><br><span class="line"><span class="bash">        libmagickwand-dev \</span></span><br><span class="line"><span class="bash">        ssh \</span></span><br><span class="line"><span class="bash">        --no-install-recommends &amp;&amp; rm -r /var/lib/apt/lists/*</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash"><span class="comment"># imagick: for intervention/image</span></span></span><br><span class="line"><span class="bash">RUN pecl install imagick</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash"><span class="comment"># pdo_mysql, bcmath: officail laravel requirement</span></span></span><br><span class="line"><span class="bash"><span class="comment"># fileinfo, imagick: for php package intervention/image</span></span></span><br><span class="line"><span class="bash">RUN docker-php-ext-install pdo_mysql bcmath zip</span></span><br><span class="line"><span class="bash">RUN docker-php-ext-enable imagick</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash">RUN a2enmod rewrite</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash">COPY apache2.000-default.conf /etc/apache2/sites-enabled/000-default.conf</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash"><span class="comment"># xdebug</span></span></span><br><span class="line"><span class="bash"><span class="comment">#RUN apt-get update &amp;&amp;\</span></span></span><br><span class="line"><span class="bash"><span class="comment">#    apt-get install --no-install-recommends --assume-yes --quiet ca-certificates curl git &amp;&amp;\</span></span></span><br><span class="line"><span class="bash"><span class="comment">#    rm -rf /var/lib/apt/lists/*</span></span></span><br><span class="line"><span class="bash"><span class="comment">#</span></span></span><br><span class="line"><span class="bash"><span class="comment">#RUN pecl install xdebug &amp;&amp; docker-php-ext-enable xdebug</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="docker-compose-yaml"><a href="#docker-compose-yaml" class="headerlink" title="docker-compose.yaml"></a>docker-compose.yaml</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">'3'</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="comment"># docker run --rm -it --net myNetwork -v $(pwd):/var/www/html -p 10080:80 --name localhost-cms-backend-v2 localhost/cms_backend_v2</span></span><br><span class="line"><span class="attr">  api:</span></span><br><span class="line">    <span class="comment"># container_name: localhost-cms-backend-v2</span></span><br><span class="line"><span class="attr">    build:</span> <span class="string">.</span></span><br><span class="line"><span class="attr">    ports:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">"10080:80"</span></span><br><span class="line"><span class="attr">    volumes:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">.:/var/www/html</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">~/.ssh:/root/.ssh</span></span><br><span class="line"><span class="attr">  db:</span></span><br><span class="line">    <span class="comment"># container_name: db</span></span><br><span class="line"><span class="attr">    image:</span> <span class="attr">mariadb:10.3.15-bionic</span></span><br><span class="line"><span class="attr">    ports:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">"13306:3306"</span></span><br><span class="line">    <span class="comment"># volumes:</span></span><br><span class="line">    <span class="comment">#     - ../../Storage/mysql:/var/lib/mysql</span></span><br><span class="line"><span class="attr">    environment:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">MYSQL_DATABASE=my_db</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">MYSQL_ROOT_PASSWORD=123456!</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># docker run --name redis --net myNetwork -d -t -p 6379:6379 redis</span></span><br><span class="line"><span class="attr">  redis:</span></span><br><span class="line">    <span class="comment"># container_name: redis</span></span><br><span class="line"><span class="attr">    image:</span> <span class="attr">redis:5.0.5-stretch</span></span><br><span class="line"><span class="attr">    ports:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">"6379:6379"</span></span><br></pre></td></tr></table></figure>
+<h3 id="apache2-000-default-conf"><a href="#apache2-000-default-conf" class="headerlink" title="apache2.000-default.conf"></a>apache2.000-default.conf</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    ServerName localhost</span><br><span class="line">    DocumentRoot /var/www/html/public # set default doccument root to `/var/www/html/public`</span><br><span class="line">    ErrorLog $&#123;APACHE_LOG_DIR&#125;/error.log</span><br><span class="line">    CustomLog $&#123;APACHE_LOG_DIR&#125;/access.log combined</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Dockerfile/">Dockerfile</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Php/">Php</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-Real-World-Web-Scraper" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2019/03/18/Real-World-Web-Scraper/" class="article-date">
+  <time datetime="2019-03-18T21:14:23.000Z" itemprop="datePublished">2019-03-18</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2019/03/18/Real-World-Web-Scraper/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2019/03/18/Real-World-Web-Scraper/">Real World - Web Scraper</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/web.jpg" alt="Web"></p>
+<h3 id="Real-World-Web-Scraper"><a href="#Real-World-Web-Scraper" class="headerlink" title="Real World - Web Scraper"></a>Real World - Web Scraper</h3><p>Web scraper in diffence language</p>
+<ul>
+<li><a href="https://github.com/calvinlam0124/real-world-web-scraper/blob/master/python3" target="_blank" rel="noopener">Python 3</a></li>
+<li><a href="https://github.com/calvinlam0124/real-world-web-scraper/tree/master/php" target="_blank" rel="noopener">PHP 5/7</a></li>
+<li><a href="https://github.com/calvinlam0124/real-world-web-scraper/tree/master/nodejs" target="_blank" rel="noopener">NodeJS</a></li>
+</ul>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nodejs/">Nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Php/">Php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Real-world/">Real-world</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-PHP-deployment-tools-deployer" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2019/03/10/PHP-deployment-tools-deployer/" class="article-date">
+  <time datetime="2019-03-10T16:24:51.000Z" itemprop="datePublished">2019-03-10</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2019/03/10/PHP-deployment-tools-deployer/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2019/03/10/PHP-deployment-tools-deployer/">PHP Blue-Green deployment tools - deployer</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/php.jpg" alt="Php"></p>
+<h3 id="Requirement-of-deployment-server-production-server"><a href="#Requirement-of-deployment-server-production-server" class="headerlink" title="Requirement of deployment server (production server)"></a>Requirement of deployment server (production server)</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install -y git php</span><br></pre></td></tr></table></figure>
+<h3 id="Deployer"><a href="#Deployer" class="headerlink" title="Deployer"></a>Deployer</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># install via web</span></span><br><span class="line">curl -LO https://deployer.org/deployer.phar</span><br><span class="line">chmod +x deployer.phar</span><br><span class="line"></span><br><span class="line"><span class="comment"># or install via composer</span></span><br><span class="line">composer global require deployer/deployer</span><br><span class="line">composer require deployer/dist --dev</span><br><span class="line">php vendor/bin/dep</span><br><span class="line"></span><br><span class="line"><span class="comment"># minor update and major upgrade</span></span><br><span class="line">./deployer.phar self-update</span><br><span class="line">./deployer.phar self-update --upgrade</span><br><span class="line"></span><br><span class="line"><span class="comment"># simple usage</span></span><br><span class="line">./deployer.phar init  <span class="comment"># create config file</span></span><br><span class="line">./deployer.phar deploy server-production  <span class="comment"># deploy to production server</span></span><br><span class="line">./deployer.phar run <span class="string">'ifconfig'</span> <span class="comment"># run ad-hoc command at remote server</span></span><br></pre></td></tr></table></figure>
+<h3 id="Sample-of-deployer-php"><a href="#Sample-of-deployer-php" class="headerlink" title="Sample of deployer.php"></a>Sample of deployer.php</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Deployer</span>;</span><br><span class="line"><span class="keyword">require</span> <span class="string">'recipe/common.php'</span>;</span><br><span class="line"></span><br><span class="line">set(<span class="string">'repository'</span>, <span class="string">'https://github.com/calvinlam0124/cron-mysqldump.git'</span>);</span><br><span class="line">set(<span class="string">'deploy_path'</span>, <span class="string">'~/deployer/'</span> . basename(get(<span class="string">'repository'</span>), <span class="string">'.git'</span>));</span><br><span class="line">set(<span class="string">'default_stage'</span>, <span class="string">'server-test'</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// Hosts</span></span><br><span class="line">host(<span class="string">'localhost'</span>)</span><br><span class="line">    -&gt;user(<span class="string">'root'</span>)</span><br><span class="line">    -&gt;port(<span class="number">22000</span>)</span><br><span class="line">    -&gt;stage(<span class="string">'server-test'</span>)</span><br><span class="line">    -&gt;forwardAgent();</span><br><span class="line"></span><br><span class="line">host(<span class="string">'server2.localhost'</span>)</span><br><span class="line">    -&gt;user(<span class="string">'root'</span>)</span><br><span class="line">    -&gt;port(<span class="number">22000</span>)</span><br><span class="line">    -&gt;stage(<span class="string">'server-production'</span>)</span><br><span class="line">    -&gt;forwardAgent();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Tasks</span></span><br><span class="line">desc(<span class="string">'Deploy your project'</span>);</span><br><span class="line">task(<span class="string">'deploy'</span>, [</span><br><span class="line">    <span class="string">'deploy:info'</span>,</span><br><span class="line">    <span class="string">'deploy:prepare'</span>,</span><br><span class="line">    <span class="string">'deploy:lock'</span>,</span><br><span class="line">    <span class="string">'deploy:release'</span>,</span><br><span class="line">    <span class="string">'deploy:update_code'</span>,</span><br><span class="line">    <span class="string">'deploy:shared'</span>,</span><br><span class="line">    <span class="string">'deploy:writable'</span>,</span><br><span class="line">    <span class="string">'deploy:clear_paths'</span>,</span><br><span class="line">    <span class="string">'deploy:symlink'</span>,</span><br><span class="line">    <span class="string">'deploy:unlock'</span>,</span><br><span class="line">    <span class="string">'cleanup'</span>,</span><br><span class="line">    <span class="string">'success'</span></span><br><span class="line">]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// [Optional] If deploy fails automatically unlock.</span></span><br><span class="line">after(<span class="string">'deploy:failed'</span>, <span class="string">'deploy:unlock'</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h3><p><a href="https://deployer.org/docs/examples/inventory.html" target="_blank" rel="noopener">https://deployer.org/docs/examples/inventory.html</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BlueGreen/">BlueGreen</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Deployer/">Deployer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Deployment/">Deployment</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Php/">Php</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Create-a-private-composer-package-repo" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2019/03/10/Create-a-private-composer-package-repo/" class="article-date">
+  <time datetime="2019-03-10T15:52:34.000Z" itemprop="datePublished">2019-03-10</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2019/03/10/Create-a-private-composer-package-repo/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2019/03/10/Create-a-private-composer-package-repo/">Create a private composer package repo</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/php.jpg" alt="Php"></p>
+<h3 id="Source-code"><a href="#Source-code" class="headerlink" title="Source code"></a>Source code</h3><p>touch “src/HelloWorld.php”<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">CalvinLam</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span>&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">say</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"Hello world!"</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>touch “composer.json”<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"license"</span>: <span class="string">"proprietary"</span>,</span><br><span class="line">    <span class="attr">"name"</span>: <span class="string">"calvinlam/hello-world"</span>,</span><br><span class="line">    <span class="attr">"description"</span>: <span class="string">"calvinlam's test composer package"</span>,</span><br><span class="line">    <span class="attr">"minimum-stability"</span>: <span class="string">"dev"</span>,</span><br><span class="line">    <span class="attr">"require"</span>: &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"autoload"</span>: &#123;</span><br><span class="line">        <span class="attr">"psr-4"</span>: &#123;</span><br><span class="line">            <span class="attr">"CalvinLam\\"</span>: <span class="string">"src/"</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Develop-your-package-locally"><a href="#Develop-your-package-locally" class="headerlink" title="Develop your package locally"></a>Develop your package locally</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer dump-autoload <span class="comment"># or composer install</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">require</span>(<span class="string">"vendor/autoload.php"</span>);</span><br><span class="line">\CalvinLam\HelloWorld::say();</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"done"</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="Download-your-private-package"><a href="#Download-your-private-package" class="headerlink" title="Download your private package"></a>Download your private package</h3><ul>
+<li>config your private repo OAuth access</li>
+<li>touch composer.json<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"repositories"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"url"</span>: <span class="string">"https://bitbucket.org/calvin-lam/php-composer-module-hello-world.git"</span>,</span><br><span class="line">            <span class="attr">"type"</span>: <span class="string">"git"</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">"require"</span>: &#123;</span><br><span class="line">        <span class="attr">"calvinlam/hello-world"</span>: <span class="string">"dev-master"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"config"</span>: &#123;</span><br><span class="line">        <span class="attr">"bitbucket-oauth"</span>: &#123;</span><br><span class="line">                <span class="attr">"consumer-key"</span>: <span class="string">"xxxxx"</span>,</span><br><span class="line">                <span class="attr">"consumer-secret"</span>: <span class="string">"yyyyyy"</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Composer/">Composer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Php/">Php</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-git-usage" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2019/03/05/git-usage/" class="article-date">
+  <time datetime="2019-03-05T19:45:44.000Z" itemprop="datePublished">2019-03-05</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2019/03/05/git-usage/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2019/03/05/git-usage/">git usage</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="/2018/01/31/Git-Cheatsheet/">part-1</a></p>
+<h3 id="General"><a href="#General" class="headerlink" title="General"></a>General</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># add new file</span></span><br><span class="line">git add [YOUR_FILE] [YOUR_FILE] [YOUR_FILE]</span><br><span class="line"><span class="comment"># add new files</span></span><br><span class="line">git add .</span><br><span class="line"><span class="comment"># commit</span></span><br><span class="line">git commit -m <span class="string">"[YOUR_COMMIT_MESSAGE]"</span></span><br><span class="line"><span class="comment"># reset a commit</span></span><br><span class="line">git reset HEAD</span><br><span class="line"><span class="comment"># push your commit(s) to repo</span></span><br><span class="line">git push</span><br><span class="line"><span class="comment"># pull files from repo</span></span><br><span class="line">git pull</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># stash</span></span><br><span class="line">git stash</span><br><span class="line">git stash list</span><br><span class="line">git stash pop</span><br><span class="line">git stash drop</span><br><span class="line"></span><br><span class="line"><span class="comment"># discard the changes to one file in the repo</span></span><br><span class="line">git checkout -- path/to/the/file.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># show file changes</span></span><br><span class="line">git diff path/to/the/file.txt</span><br></pre></td></tr></table></figure>
+<h3 id="git-amend"><a href="#git-amend" class="headerlink" title="git amend"></a>git amend</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># update last commit message</span></span><br><span class="line">git add add-to-last-commit.file</span><br><span class="line">git commit --amend</span><br></pre></td></tr></table></figure>
+<h3 id="Branch"><a href="#Branch" class="headerlink" title="Branch"></a>Branch</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># list branch</span></span><br><span class="line">git branch</span><br><span class="line"><span class="comment"># switch branch</span></span><br><span class="line">git checkout [BRANCH_NAME]</span><br><span class="line"><span class="comment"># create branch</span></span><br><span class="line">git checkout -b [NEW_BRANCH_NAME]</span><br><span class="line"></span><br><span class="line"><span class="comment"># rename</span></span><br><span class="line">git branch -m rename-from rename-to</span><br><span class="line"></span><br><span class="line"><span class="comment"># remove</span></span><br><span class="line">git branch -d the_local_branch</span><br><span class="line">git push origin --delete the_remove_branch</span><br></pre></td></tr></table></figure>
+<h3 id="Export-Archive"><a href="#Export-Archive" class="headerlink" title="Export / Archive"></a>Export / Archive</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout-index --prefix=git-export-dir/ -a</span><br><span class="line">git archive --format zip --output zipfile.zip master</span><br></pre></td></tr></table></figure>
+<h3 id="git-log"><a href="#git-log" class="headerlink" title="git log"></a>git log</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br><span class="line">git reflog</span><br><span class="line">git reset HEAD@&#123;index&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Merge"><a href="#Merge" class="headerlink" title="Merge"></a>Merge</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout Dev</span><br><span class="line">git merge --no-ff -m <span class="string">'Merged in feature/Malls-Controller (pull request #1)'</span> remotes/origin/feature/Malls-Controller</span><br></pre></td></tr></table></figure>
+<h3 id="git-flow"><a href="#git-flow" class="headerlink" title="git flow"></a>git flow</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># install</span></span><br><span class="line">brew install git-flow</span><br><span class="line"></span><br><span class="line">git flow init</span><br><span class="line">git flow feature start some_awesome_feature</span><br><span class="line">git flow feature finish some_awesome_feature</span><br><span class="line">git flow feature publish some_awesome_feature</span><br></pre></td></tr></table></figure>
+<h3 id="git-branch-up-to-date"><a href="#git-branch-up-to-date" class="headerlink" title="git branch up to date"></a>git branch up to date</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git checkout newBranch</span><br><span class="line">git fetch</span><br><span class="line">git merge origin/master</span><br><span class="line"><span class="comment"># reference</span></span><br><span class="line">https://stackoverflow.com/questions/19758915/keeping<span class="_">-a</span>-branch-up-to-date-with-master</span><br></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cheatsheet/">Cheatsheet</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Development/">Development</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-zsh" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2019/03/01/zsh/" class="article-date">
+  <time datetime="2019-03-01T22:51:08.000Z" itemprop="datePublished">2019-03-01</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2019/03/01/zsh/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2019/03/01/zsh/">zsh, oh-my-zsh and powerlevel9k</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/cli.jpg" alt="Cli"></p>
+<h3 id="installation"><a href="#installation" class="headerlink" title="installation"></a>installation</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># zsh</span></span><br><span class="line">brew install zsh zsh-completions</span><br><span class="line">chsh -s $(<span class="built_in">which</span> zsh)</span><br><span class="line"></span><br><span class="line"><span class="comment"># oh-my-zsh</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh</span><br><span class="line"></span><br><span class="line"><span class="comment"># powerlevel9k</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k</span><br><span class="line"><span class="built_in">echo</span> <span class="string">'ZSH_THEME="powerlevel9k/powerlevel9k"'</span> &gt;&gt;  ~/.zshrc</span><br></pre></td></tr></table></figure>
+<h3 id="edit-zshrc"><a href="#edit-zshrc" class="headerlink" title="edit ~/.zshrc"></a>edit ~/.zshrc</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> ZSH=<span class="variable">$HOME</span>/.oh-my-zsh</span><br><span class="line">ZSH_THEME=<span class="string">"powerlevel9k/powerlevel9k"</span></span><br><span class="line">plugins=(git)</span><br><span class="line"><span class="built_in">source</span> <span class="variable">$ZSH</span>/oh-my-zsh.sh</span><br><span class="line"><span class="built_in">source</span> /usr/<span class="built_in">local</span>/share/zsh-history-substring-search/zsh-history-substring-search.zsh</span><br><span class="line"></span><br><span class="line">POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0</span><br><span class="line">POWERLEVEL9K_COMMAND_EXECUTION_TIME_PRECISION=2</span><br><span class="line">POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time time)</span><br></pre></td></tr></table></figure>
+<h3 id="useful-plugin"><a href="#useful-plugin" class="headerlink" title="useful plugin"></a>useful plugin</h3><ul>
+<li><a href="https://github.com/zsh-users/zsh-syntax-highlighting" target="_blank" rel="noopener">zsh-syntax-highlighting</a></li>
+<li><a href="https://github.com/bhilburn/powerlevel9k#command_execution_time" target="_blank" rel="noopener">command-execution-time</a></li>
+</ul>
+<h3 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h3><p><a href="https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH" target="_blank" rel="noopener">https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH</a><br><a href="https://github.com/robbyrussell/oh-my-zsh" target="_blank" rel="noopener">https://github.com/robbyrussell/oh-my-zsh</a><br><a href="https://github.com/bhilburn/powerlevel9k/wiki/Install-Instructions" target="_blank" rel="noopener">https://github.com/bhilburn/powerlevel9k/wiki/Install-Instructions</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cli/">Cli</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Oh-my-zsh/">Oh-my-zsh</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Powerlevel9k/">Powerlevel9k</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Zsh/">Zsh</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
+  
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:blog.technicalfever.com">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">CALS NOTE</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2020 Calvin Lam<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+<script>
+  var disqus_shortname = 'cals-note';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

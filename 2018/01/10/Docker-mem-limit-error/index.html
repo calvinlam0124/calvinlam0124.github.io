@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Docker compose error (mem_limit) | CALS NOTE</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="SenarioWhen you try to run container with ./docker-compose.yml file, you will get below error message.123456789101112131415161718192021Traceback (most recent call last):  File &amp;quot;docker-compose&amp;qu">
+<meta name="keywords" content="Docker,Compose,Error,Fix">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker compose error (mem_limit)">
+<meta property="og:url" content="http://blog.technicalfever.com/2018/01/10/Docker-mem-limit-error/index.html">
+<meta property="og:site_name" content="CALS NOTE">
+<meta property="og:description" content="SenarioWhen you try to run container with ./docker-compose.yml file, you will get below error message.123456789101112131415161718192021Traceback (most recent call last):  File &amp;quot;docker-compose&amp;qu">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://blog.technicalfever.com/images/docker.jpg">
+<meta property="og:updated_time" content="2020-09-14T06:57:56.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Docker compose error (mem_limit)">
+<meta name="twitter:description" content="SenarioWhen you try to run container with ./docker-compose.yml file, you will get below error message.123456789101112131415161718192021Traceback (most recent call last):  File &amp;quot;docker-compose&amp;qu">
+<meta name="twitter:image" content="http://blog.technicalfever.com/images/docker.jpg">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-112333390-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+<script>
+window['_fs_debug'] = false;
+window['_fs_host'] = 'fullstory.com';
+window['_fs_org'] = 'AAHCC';
+window['_fs_namespace'] = 'FS';
+(function(m,n,e,t,l,o,g,y){
+    if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+    g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+    o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+    y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+    g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+    y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
+    g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+    g.clearUserCookie=function(){};
+})(window,document,window['_fs_namespace'],'script','user');
+</script>
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">CALS NOTE</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li><li><a href="/Cheatsheets/">Cheatsheets</a></li><li><a href="/atom.xml">rss</a></li><li><a href="/About">About</a></li><li><a href="https://lumiere000.github.io/blog">Friends</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.technicalfever.com"></form>
+	</div>
+</header>
+    <div id="main">
+      <article id="blog-Docker-mem-limit-error" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/10/Docker-mem-limit-error/" class="article-date">
+  <time datetime="2018-01-10T11:50:52.000Z" itemprop="datePublished">2018-01-10</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/10/Docker-mem-limit-error/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 class="article-title entry-title" itemprop="name">
+      Docker compose error (mem_limit)
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/docker.jpg" alt="Docker"></p>
+<h3 id="Senario"><a href="#Senario" class="headerlink" title="Senario"></a>Senario</h3><p>When you try to run container with <code>./docker-compose.yml</code> file, you will get below error message.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;docker-compose&quot;, line 6, in &lt;module&gt;</span><br><span class="line">  File &quot;compose/cli/main.py&quot;, line 71, in main</span><br><span class="line">  File &quot;compose/cli/main.py&quot;, line 121, in perform_command</span><br><span class="line">  File &quot;compose/cli/command.py&quot;, line 37, in project_from_options</span><br><span class="line">  File &quot;compose/cli/command.py&quot;, line 91, in get_project</span><br><span class="line">  File &quot;compose/config/config.py&quot;, line 375, in load</span><br><span class="line">  File &quot;compose/config/config.py&quot;, line 506, in process_config_file</span><br><span class="line">  File &quot;compose/config/config.py&quot;, line 497, in interpolate_config_section</span><br><span class="line">  File &quot;compose/config/interpolation.py&quot;, line 44, in interpolate_environment_variables</span><br><span class="line">  File &quot;compose/config/interpolation.py&quot;, line 44, in &lt;genexpr&gt;</span><br><span class="line">  File &quot;compose/config/interpolation.py&quot;, line 39, in process_item</span><br><span class="line">  File &quot;compose/config/interpolation.py&quot;, line 39, in &lt;genexpr&gt;</span><br><span class="line">  File &quot;compose/config/interpolation.py&quot;, line 54, in interpolate_value</span><br><span class="line">  File &quot;compose/config/interpolation.py&quot;, line 74, in recursive_interpolate</span><br><span class="line">  File &quot;compose/config/interpolation.py&quot;, line 74, in &lt;genexpr&gt;</span><br><span class="line">  File &quot;compose/config/interpolation.py&quot;, line 70, in recursive_interpolate</span><br><span class="line">  File &quot;compose/config/interpolation.py&quot;, line 184, in convert</span><br><span class="line">  File &quot;compose/config/interpolation.py&quot;, line 141, in to_int</span><br><span class="line">ValueError: invalid literal for int() with base 0: &apos;512m&apos;</span><br><span class="line">Failed to execute script docker-compose</span><br></pre></td></tr></table></figure></p>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>The value of <code>mem_limit</code> no more supported with recent docker-compose (1.18.0)</p>
+<h3 id="Hot-fix"><a href="#Hot-fix" class="headerlink" title="Hot-fix"></a>Hot-fix</h3><p>Just edit your <code>docker-compose.yml</code> and remove <code>mem_limit</code> lines. The best soloution should be replace as <code>RESOURCES</code>.<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># backup your file</span></span><br><span class="line">cp -a docker-compose.yml docker-compose.yml.bak</span><br><span class="line"></span><br><span class="line"><span class="comment"># trim mem_limit</span></span><br><span class="line">cat docker-compose.yml.bak |grep -v <span class="string">"mem_limit"</span> &gt; docker-compose.yml</span><br><span class="line"></span><br><span class="line"><span class="comment"># then run again</span></span><br><span class="line">docker-compose up</span><br></pre></td></tr></table></figure></p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://support.zabbix.com/browse/ZBX-13224" target="_blank" rel="noopener">https://support.zabbix.com/browse/ZBX-13224</a><br><a href="https://docs.docker.com/compose/compose-file/#resources" target="_blank" rel="noopener">https://docs.docker.com/compose/compose-file/#resources</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Compose/">Compose</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Error/">Error</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Fix/">Fix</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+    
+<nav id="article-nav">
+  
+    <a href="/2018/01/11/Setup-SMART-on-ubuntu-server/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Setup SMART on ubuntu server
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/01/09/Docker-ubuntu-container-network-utilities/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          Docker ubuntu container network utilities
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:blog.technicalfever.com">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">CALS NOTE</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2020 Calvin Lam<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+<script>
+  var disqus_shortname = 'cals-note';
+  
+  var disqus_url = 'http://blog.technicalfever.com/2018/01/10/Docker-mem-limit-error/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

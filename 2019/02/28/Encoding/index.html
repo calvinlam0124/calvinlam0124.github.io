@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>UTF-8 Multibyte String Encoding | CALS NOTE</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Decode in php12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849# Hexadecimal## utf-8 (ASCII)# \x2a## utf-8 (2-byte)# \xC3\xa9## utf-8 (3-byte)# \xe5\x8f\x82## ut">
+<meta name="keywords" content="Cheatsheet,Encoding">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UTF-8 Multibyte String Encoding">
+<meta property="og:url" content="http://blog.technicalfever.com/2019/02/28/Encoding/index.html">
+<meta property="og:site_name" content="CALS NOTE">
+<meta property="og:description" content="Decode in php12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849# Hexadecimal## utf-8 (ASCII)# \x2a## utf-8 (2-byte)# \xC3\xa9## utf-8 (3-byte)# \xe5\x8f\x82## ut">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-09-14T06:57:56.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="UTF-8 Multibyte String Encoding">
+<meta name="twitter:description" content="Decode in php12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849# Hexadecimal## utf-8 (ASCII)# \x2a## utf-8 (2-byte)# \xC3\xa9## utf-8 (3-byte)# \xe5\x8f\x82## ut">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-112333390-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+<script>
+window['_fs_debug'] = false;
+window['_fs_host'] = 'fullstory.com';
+window['_fs_org'] = 'AAHCC';
+window['_fs_namespace'] = 'FS';
+(function(m,n,e,t,l,o,g,y){
+    if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+    g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+    o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+    y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+    g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+    y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
+    g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+    g.clearUserCookie=function(){};
+})(window,document,window['_fs_namespace'],'script','user');
+</script>
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">CALS NOTE</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li><li><a href="/Cheatsheets/">Cheatsheets</a></li><li><a href="/atom.xml">rss</a></li><li><a href="/About">About</a></li><li><a href="https://lumiere000.github.io/blog">Friends</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.technicalfever.com"></form>
+	</div>
+</header>
+    <div id="main">
+      <article id="blog-Encoding" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2019/02/28/Encoding/" class="article-date">
+  <time datetime="2019-02-28T21:18:46.000Z" itemprop="datePublished">2019-02-28</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2019/02/28/Encoding/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 class="article-title entry-title" itemprop="name">
+      UTF-8 Multibyte String Encoding
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<h3 id="Decode-in-php"><a href="#Decode-in-php" class="headerlink" title="Decode in php"></a>Decode in php</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Hexadecimal</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># utf-8 (ASCII)</span></span><br><span class="line"><span class="comment"># \x2a</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># utf-8 (2-byte)</span></span><br><span class="line"><span class="comment"># \xC3\xa9</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># utf-8 (3-byte)</span></span><br><span class="line"><span class="comment"># \xe5\x8f\x82</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># utf-8 (4-byte)</span></span><br><span class="line"><span class="comment"># \xF0\x9F\x98\x81</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># decode in php</span></span><br><span class="line"><span class="variable">$str</span> = <span class="string">"\xe5\x8f\x82"</span>;</span><br><span class="line"><span class="built_in">echo</span> mb_convert_encoding(<span class="variable">$str</span>, <span class="string">'utf-8'</span>);</span><br><span class="line"><span class="comment"># output: 参</span></span><br><span class="line"><span class="built_in">echo</span> mb_convert_encoding(<span class="variable">$str</span>, mb_detect_encoding(<span class="variable">$str</span>));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Decimal</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># \ud83d\ude01</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># decode in php</span></span><br><span class="line"><span class="variable">$str</span> = <span class="string">"\ud83d\ude01"</span>;</span><br><span class="line"><span class="built_in">echo</span> json_decode(<span class="string">'"'</span> . <span class="string">'\ud83d\ude01'</span> . <span class="string">'"'</span>);</span><br><span class="line"><span class="comment"># output: [smile]</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># HTML Entities encoding and UTF-16</span></span><br><span class="line"><span class="comment"># </span></span><br><span class="line"><span class="comment"># &amp;#xbc;</span></span><br><span class="line"><span class="comment"># \x10\x00</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># decode in php</span></span><br><span class="line"><span class="built_in">echo</span> mb_convert_encoding(<span class="string">'&amp;#xbc;'</span>, <span class="string">'UTF-8'</span>, <span class="string">'HTML-ENTITIES'</span>);</span><br><span class="line"><span class="comment"># output: ¼</span></span><br><span class="line"><span class="built_in">echo</span> mb_convert_encoding(<span class="string">"\x10\x00"</span>, <span class="string">'UTF-8'</span>, <span class="string">'UTF-16BE'</span>);</span><br><span class="line"><span class="comment"># output: က</span></span><br><span class="line">.</span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://stackoverflow.com/questions/6058394/unicode-character-in-php-string" target="_blank" rel="noopener">https://stackoverflow.com/questions/6058394/unicode-character-in-php-string</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cheatsheet/">Cheatsheet</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Encoding/">Encoding</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+    
+<nav id="article-nav">
+  
+    <a href="/2019/03/01/zsh/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          zsh, oh-my-zsh and powerlevel9k
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/02/25/IT-automation-2-Ansible-Playbook/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          IT automation 2 - Ansible Playbook
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:blog.technicalfever.com">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">CALS NOTE</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2020 Calvin Lam<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+<script>
+  var disqus_shortname = 'cals-note';
+  
+  var disqus_url = 'http://blog.technicalfever.com/2019/02/28/Encoding/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

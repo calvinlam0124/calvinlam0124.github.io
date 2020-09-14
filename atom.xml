@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>CALS NOTE</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://blog.technicalfever.com/"/>
+  <updated>2020-09-14T07:15:41.000Z</updated>
+  <id>http://blog.technicalfever.com/</id>
+  
+  <author>
+    <name>Calvin Lam</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>get GraphQl schema through Curl</title>
+    <link href="http://blog.technicalfever.com/2020/09/14/GraphQl-and-Curl/"/>
+    <id>http://blog.technicalfever.com/2020/09/14/GraphQl-and-Curl/</id>
+    <published>2020-09-14T15:10:23.000Z</published>
+    <updated>2020-09-14T07:15:41.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/images/cli.jpg&quot; alt=&quot;Cli&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Get-graphql-schema-through-curl&quot;&gt;&lt;a href=&quot;#Get-graphql-schema-through-curl&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Cli" scheme="http://blog.technicalfever.com/tags/Cli/"/>
+    
+      <category term="Curl" scheme="http://blog.technicalfever.com/tags/Curl/"/>
+    
+      <category term="GraphQL" scheme="http://blog.technicalfever.com/tags/GraphQL/"/>
+    
+      <category term="GQL" scheme="http://blog.technicalfever.com/tags/GQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Expose localhost to internet</title>
+    <link href="http://blog.technicalfever.com/2019/12/05/Expose-localhost-to-internet/"/>
+    <id>http://blog.technicalfever.com/2019/12/05/Expose-localhost-to-internet/</id>
+    <published>2019-12-05T18:23:09.000Z</published>
+    <updated>2020-09-14T06:57:56.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/images/cli.jpg&quot; alt=&quot;Cli&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Ngrok&quot;&gt;&lt;a href=&quot;#Ngrok&quot; class=&quot;headerlink&quot; title=&quot;Ngrok&quot;&gt;&lt;/a&gt;Ngrok&lt;/h3&gt;&lt;p&gt;secure
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Ssh" scheme="http://blog.technicalfever.com/tags/Ssh/"/>
+    
+      <category term="Devops" scheme="http://blog.technicalfever.com/tags/Devops/"/>
+    
+      <category term="Develop" scheme="http://blog.technicalfever.com/tags/Develop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>espeak - text to speech </title>
+    <link href="http://blog.technicalfever.com/2019/12/05/espeak-text-to-speech/"/>
+    <id>http://blog.technicalfever.com/2019/12/05/espeak-text-to-speech/</id>
+    <published>2019-12-05T18:19:41.000Z</published>
+    <updated>2020-09-14T06:57:56.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/images/cli.jpg&quot; alt=&quot;Cli&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Usage&quot;&gt;&lt;a href=&quot;#Usage&quot; class=&quot;headerlink&quot; title=&quot;Usage&quot;&gt;&lt;/a&gt;Usage&lt;/h3&gt;&lt;figure
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Cli" scheme="http://blog.technicalfever.com/tags/Cli/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How to use telnet to test your web server</title>
+    <link href="http://blog.technicalfever.com/2019/11/26/How-to-use-telnet-to-test-your-web-server/"/>
+    <id>http://blog.technicalfever.com/2019/11/26/How-to-use-telnet-to-test-your-web-server/</id>
+    <published>2019-11-26T10:59:24.000Z</published>
+    <updated>2020-09-14T06:57:56.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/images/cli.jpg&quot; alt=&quot;Cli&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Usage&quot;&gt;&lt;a href=&quot;#Usage&quot; class=&quot;headerlink&quot; title=&quot;Usage&quot;&gt;&lt;/a&gt;Usage&lt;/h3&gt;&lt;figure
+        
+      
+    
+    </summary>
+    
+    
+      <category term="DevOps" scheme="http://blog.technicalfever.com/tags/DevOps/"/>
+    
+      <category term="Telnet" scheme="http://blog.technicalfever.com/tags/Telnet/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker for PHP Laravel (Dockerfile and docker-compose.yaml)</title>
+    <link href="http://blog.technicalfever.com/2019/11/26/Dockerfile-for-PHP-Laravel/"/>
+    <id>http://blog.technicalfever.com/2019/11/26/Dockerfile-for-PHP-Laravel/</id>
+    <published>2019-11-26T10:43:00.000Z</published>
+    <updated>2020-09-14T06:57:56.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/images/php.jpg&quot; alt=&quot;Php&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Dockerfile&quot;&gt;&lt;a href=&quot;#Dockerfile&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Docker" scheme="http://blog.technicalfever.com/tags/Docker/"/>
+    
+      <category term="Php" scheme="http://blog.technicalfever.com/tags/Php/"/>
+    
+      <category term="Dockerfile" scheme="http://blog.technicalfever.com/tags/Dockerfile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Real World - Web Scraper</title>
+    <link href="http://blog.technicalfever.com/2019/03/18/Real-World-Web-Scraper/"/>
+    <id>http://blog.technicalfever.com/2019/03/18/Real-World-Web-Scraper/</id>
+    <published>2019-03-18T21:14:23.000Z</published>
+    <updated>2020-09-14T06:57:56.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/images/web.jpg&quot; alt=&quot;Web&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Real-World-Web-Scraper&quot;&gt;&lt;a href=&quot;#Real-World-Web-Scraper&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Docker" scheme="http://blog.technicalfever.com/tags/Docker/"/>
+    
+      <category term="Python" scheme="http://blog.technicalfever.com/tags/Python/"/>
+    
+      <category term="Php" scheme="http://blog.technicalfever.com/tags/Php/"/>
+    
+      <category term="Nodejs" scheme="http://blog.technicalfever.com/tags/Nodejs/"/>
+    
+      <category term="Real-world" scheme="http://blog.technicalfever.com/tags/Real-world/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PHP Blue-Green deployment tools - deployer</title>
+    <link href="http://blog.technicalfever.com/2019/03/10/PHP-deployment-tools-deployer/"/>
+    <id>http://blog.technicalfever.com/2019/03/10/PHP-deployment-tools-deployer/</id>
+    <published>2019-03-10T16:24:51.000Z</published>
+    <updated>2020-09-14T06:57:56.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/images/php.jpg&quot; alt=&quot;Php&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Requirement-of-deployment-server-production-server&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="DevOps" scheme="http://blog.technicalfever.com/tags/DevOps/"/>
+    
+      <category term="Php" scheme="http://blog.technicalfever.com/tags/Php/"/>
+    
+      <category term="BlueGreen" scheme="http://blog.technicalfever.com/tags/BlueGreen/"/>
+    
+      <category term="Deployment" scheme="http://blog.technicalfever.com/tags/Deployment/"/>
+    
+      <category term="Deployer" scheme="http://blog.technicalfever.com/tags/Deployer/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Create a private composer package repo</title>
+    <link href="http://blog.technicalfever.com/2019/03/10/Create-a-private-composer-package-repo/"/>
+    <id>http://blog.technicalfever.com/2019/03/10/Create-a-private-composer-package-repo/</id>
+    <published>2019-03-10T15:52:34.000Z</published>
+    <updated>2020-09-14T06:57:56.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/images/php.jpg&quot; alt=&quot;Php&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Source-code&quot;&gt;&lt;a href=&quot;#Source-code&quot; class=&quot;headerlink&quot; title=&quot;Source code&quot;&gt;&lt;/a&gt;Source
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Git" scheme="http://blog.technicalfever.com/tags/Git/"/>
+    
+      <category term="Php" scheme="http://blog.technicalfever.com/tags/Php/"/>
+    
+      <category term="Composer" scheme="http://blog.technicalfever.com/tags/Composer/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git usage</title>
+    <link href="http://blog.technicalfever.com/2019/03/05/git-usage/"/>
+    <id>http://blog.technicalfever.com/2019/03/05/git-usage/</id>
+    <published>2019-03-05T19:45:44.000Z</published>
+    <updated>2020-09-14T06:57:56.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;/2018/01/31/Git-Cheatsheet/&quot;&gt;part-1&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;General&quot;&gt;&lt;a href=&quot;#General&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Cheatsheet" scheme="http://blog.technicalfever.com/tags/Cheatsheet/"/>
+    
+      <category term="Git" scheme="http://blog.technicalfever.com/tags/Git/"/>
+    
+      <category term="Development" scheme="http://blog.technicalfever.com/tags/Development/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>zsh, oh-my-zsh and powerlevel9k</title>
+    <link href="http://blog.technicalfever.com/2019/03/01/zsh/"/>
+    <id>http://blog.technicalfever.com/2019/03/01/zsh/</id>
+    <published>2019-03-01T22:51:08.000Z</published>
+    <updated>2020-09-14T06:57:56.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/images/cli.jpg&quot; alt=&quot;Cli&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;installation&quot;&gt;&lt;a href=&quot;#installation&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Cli" scheme="http://blog.technicalfever.com/tags/Cli/"/>
+    
+      <category term="Zsh" scheme="http://blog.technicalfever.com/tags/Zsh/"/>
+    
+      <category term="Oh-my-zsh" scheme="http://blog.technicalfever.com/tags/Oh-my-zsh/"/>
+    
+      <category term="Powerlevel9k" scheme="http://blog.technicalfever.com/tags/Powerlevel9k/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UTF-8 Multibyte String Encoding</title>
+    <link href="http://blog.technicalfever.com/2019/02/28/Encoding/"/>
+    <id>http://blog.technicalfever.com/2019/02/28/Encoding/</id>
+    <published>2019-02-28T21:18:46.000Z</published>
+    <updated>2020-09-14T06:57:56.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Decode-in-php&quot;&gt;&lt;a href=&quot;#Decode-in-php&quot; class=&quot;headerlink&quot; title=&quot;Decode in php&quot;&gt;&lt;/a&gt;Decode in php&lt;/h3&gt;&lt;figure class=&quot;highlight
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Cheatsheet" scheme="http://blog.technicalfever.com/tags/Cheatsheet/"/>
+    
+      <category term="Encoding" scheme="http://blog.technicalfever.com/tags/Encoding/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IT automation 2 - Ansible Playbook</title>
+    <link href="http://blog.technicalfever.com/2019/02/25/IT-automation-2-Ansible-Playbook/"/>
+    <id>http://blog.technicalfever.com/2019/02/25/IT-automation-2-Ansible-Playbook/</id>
+    <published>2019-02-25T14:37:50.000Z</published>
+    <updated>2020-09-14T06:57:56.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/images/ansible.jpg&quot; alt=&quot;Ansible&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Quick-start&quot;&gt;&lt;a href=&quot;#Quick-start&quot; class=&quot;headerlink&quot; title=&quot;Quick
+        
+      
+    
+    </summary>
+    
+    
+      <category term="DevOps" scheme="http://blog.technicalfever.com/tags/DevOps/"/>
+    
+      <category term="Python" scheme="http://blog.technicalfever.com/tags/Python/"/>
+    
+      <category term="Ansible" scheme="http://blog.technicalfever.com/tags/Ansible/"/>
+    
+      <category term="Role" scheme="http://blog.technicalfever.com/tags/Role/"/>
+    
+      <category term="Playbook" scheme="http://blog.technicalfever.com/tags/Playbook/"/>
+    
+      <category term="SystemEngine" scheme="http://blog.technicalfever.com/tags/SystemEngine/"/>
+    
+      <category term="Automation" scheme="http://blog.technicalfever.com/tags/Automation/"/>
+    
+      <category term="SSH" scheme="http://blog.technicalfever.com/tags/SSH/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IT automation - Ansible</title>
+    <link href="http://blog.technicalfever.com/2019/02/22/IT-automation-Ansible/"/>
+    <id>http://blog.technicalfever.com/2019/02/22/IT-automation-Ansible/</id>
+    <published>2019-02-22T16:40:21.000Z</published>
+    <updated>2020-09-14T06:57:56.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/images/ansible.jpg&quot; alt=&quot;Ansible&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Requirement&quot;&gt;&lt;a href=&quot;#Requirement&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="DevOps" scheme="http://blog.technicalfever.com/tags/DevOps/"/>
+    
+      <category term="Python" scheme="http://blog.technicalfever.com/tags/Python/"/>
+    
+      <category term="Ansible" scheme="http://blog.technicalfever.com/tags/Ansible/"/>
+    
+      <category term="SystemEngine" scheme="http://blog.technicalfever.com/tags/SystemEngine/"/>
+    
+      <category term="Automation" scheme="http://blog.technicalfever.com/tags/Automation/"/>
+    
+      <category term="SSH" scheme="http://blog.technicalfever.com/tags/SSH/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Enable MySQL slow query log</title>
+    <link href="http://blog.technicalfever.com/2018/11/07/Enable-MySQL-slow-query-log/"/>
+    <id>http://blog.technicalfever.com/2018/11/07/Enable-MySQL-slow-query-log/</id>
+    <published>2018-11-07T18:58:59.000Z</published>
+    <updated>2020-09-14T06:57:56.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/images/mysql.jpg&quot; alt=&quot;MySQL&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Enviroment&quot;&gt;&lt;a href=&quot;#Enviroment&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="MySQL" scheme="http://blog.technicalfever.com/tags/MySQL/"/>
+    
+      <category term="Database" scheme="http://blog.technicalfever.com/tags/Database/"/>
+    
+      <category term="Logs" scheme="http://blog.technicalfever.com/tags/Logs/"/>
+    
+      <category term="Debug" scheme="http://blog.technicalfever.com/tags/Debug/"/>
+    
+      <category term="SystemAdmin" scheme="http://blog.technicalfever.com/tags/SystemAdmin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cusomte a PHP docker image</title>
+    <link href="http://blog.technicalfever.com/2018/11/06/Cusomte-a-PHP-docker-image/"/>
+    <id>http://blog.technicalfever.com/2018/11/06/Cusomte-a-PHP-docker-image/</id>
+    <published>2018-11-06T12:27:01.000Z</published>
+    <updated>2020-09-14T06:57:56.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/images/php.jpg&quot; alt=&quot;Php&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Dockerfile&quot;&gt;&lt;a href=&quot;#Dockerfile&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Docker" scheme="http://blog.technicalfever.com/tags/Docker/"/>
+    
+      <category term="Cheatsheet" scheme="http://blog.technicalfever.com/tags/Cheatsheet/"/>
+    
+      <category term="Php" scheme="http://blog.technicalfever.com/tags/Php/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Basic usage of PHP Composer docker image</title>
+    <link href="http://blog.technicalfever.com/2018/11/06/Basic-usage-of-PHP-Composer-docker-image/"/>
+    <id>http://blog.technicalfever.com/2018/11/06/Basic-usage-of-PHP-Composer-docker-image/</id>
+    <published>2018-11-06T11:57:29.000Z</published>
+    <updated>2020-09-14T06:57:56.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/images/cli.jpg&quot; alt=&quot;Cli&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Basic-usage&quot;&gt;&lt;a href=&quot;#Basic-usage&quot; class=&quot;headerlink&quot; title=&quot;Basic usage&quot;&gt;&lt;/a&gt;Basic
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Docker" scheme="http://blog.technicalfever.com/tags/Docker/"/>
+    
+      <category term="Cli" scheme="http://blog.technicalfever.com/tags/Cli/"/>
+    
+      <category term="Programming" scheme="http://blog.technicalfever.com/tags/Programming/"/>
+    
+      <category term="Php" scheme="http://blog.technicalfever.com/tags/Php/"/>
+    
+      <category term="Composer" scheme="http://blog.technicalfever.com/tags/Composer/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Apache password protect through htpasswd htaccess</title>
+    <link href="http://blog.technicalfever.com/2018/10/25/Apache-password-protect-through-htpasswd-htaccess/"/>
+    <id>http://blog.technicalfever.com/2018/10/25/Apache-password-protect-through-htpasswd-htaccess/</id>
+    <published>2018-10-25T12:06:57.000Z</published>
+    <updated>2020-09-14T06:57:56.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/images/web.jpg&quot; alt=&quot;Web&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;htaccess&quot;&gt;&lt;a href=&quot;#htaccess&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Apache" scheme="http://blog.technicalfever.com/tags/Apache/"/>
+    
+      <category term="Sysadm" scheme="http://blog.technicalfever.com/tags/Sysadm/"/>
+    
+      <category term="Password" scheme="http://blog.technicalfever.com/tags/Password/"/>
+    
+      <category term="Protect" scheme="http://blog.technicalfever.com/tags/Protect/"/>
+    
+      <category term="Htpasswd" scheme="http://blog.technicalfever.com/tags/Htpasswd/"/>
+    
+      <category term="Htaccess" scheme="http://blog.technicalfever.com/tags/Htaccess/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Run a basic web with Nginx Docker</title>
+    <link href="http://blog.technicalfever.com/2018/10/25/Run-a-basic-web-with-Nginx-Docker/"/>
+    <id>http://blog.technicalfever.com/2018/10/25/Run-a-basic-web-with-Nginx-Docker/</id>
+    <published>2018-10-25T12:01:17.000Z</published>
+    <updated>2020-09-14T06:57:56.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/images/docker.jpg&quot; alt=&quot;Docker&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Run-a-static-html&quot;&gt;&lt;a href=&quot;#Run-a-static-html&quot; class=&quot;headerlink&quot; title=&quot;Run a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Docker" scheme="http://blog.technicalfever.com/tags/Docker/"/>
+    
+      <category term="Web" scheme="http://blog.technicalfever.com/tags/Web/"/>
+    
+      <category term="Nginx" scheme="http://blog.technicalfever.com/tags/Nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Deploy your project through now.sh</title>
+    <link href="http://blog.technicalfever.com/2018/06/21/Deploy-your-project-through-now-sh/"/>
+    <id>http://blog.technicalfever.com/2018/06/21/Deploy-your-project-through-now-sh/</id>
+    <published>2018-06-21T11:10:35.000Z</published>
+    <updated>2020-09-14T06:57:56.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/images/cli.jpg&quot; alt=&quot;Cli&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Installation&quot;&gt;&lt;a href=&quot;#Installation&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="DevOps" scheme="http://blog.technicalfever.com/tags/DevOps/"/>
+    
+      <category term="Docker" scheme="http://blog.technicalfever.com/tags/Docker/"/>
+    
+      <category term="Now.sh" scheme="http://blog.technicalfever.com/tags/Now-sh/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Run a basic web with Docker (nginx and dockerfile)</title>
+    <link href="http://blog.technicalfever.com/2018/06/19/Run-a-basic-web-with-Docker/"/>
+    <id>http://blog.technicalfever.com/2018/06/19/Run-a-basic-web-with-Docker/</id>
+    <published>2018-06-19T15:59:03.000Z</published>
+    <updated>2020-09-14T06:57:56.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/images/docker.jpg&quot; alt=&quot;Docker&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Build-and-Run&quot;&gt;&lt;a href=&quot;#Build-and-Run&quot; class=&quot;headerlink&quot; title=&quot;Build and
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Docker" scheme="http://blog.technicalfever.com/tags/Docker/"/>
+    
+      <category term="Nginx" scheme="http://blog.technicalfever.com/tags/Nginx/"/>
+    
+      <category term="Devops" scheme="http://blog.technicalfever.com/tags/Devops/"/>
+    
+  </entry>
+  
+</feed>

@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>CALS NOTE</title>
+  <meta name="viewport" content="width=device-width">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="CALS NOTE">
+<meta property="og:url" content="http://blog.technicalfever.com/page/8/index.html">
+<meta property="og:site_name" content="CALS NOTE">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CALS NOTE">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-112333390-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+<script>
+window['_fs_debug'] = false;
+window['_fs_host'] = 'fullstory.com';
+window['_fs_org'] = 'AAHCC';
+window['_fs_namespace'] = 'FS';
+(function(m,n,e,t,l,o,g,y){
+    if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+    g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+    o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+    y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+    g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+    y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
+    g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+    g.clearUserCookie=function(){};
+})(window,document,window['_fs_namespace'],'script','user');
+</script>
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">CALS NOTE</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li><li><a href="/Cheatsheets/">Cheatsheets</a></li><li><a href="/atom.xml">rss</a></li><li><a href="/About">About</a></li><li><a href="https://lumiere000.github.io/blog">Friends</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.technicalfever.com"></form>
+	</div>
+</header>
+    <div id="main">
+      
+  
+    <article id="blog-Snmap-basic-example" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/04/Snmap-basic-example/" class="article-date">
+  <time datetime="2018-01-04T15:18:17.000Z" itemprop="datePublished">2018-01-04</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/04/Snmap-basic-example/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/04/Snmap-basic-example/">Nmap basic example</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/cli.jpg" alt="Cli"></p>
+<h3 id="Scan"><a href="#Scan" class="headerlink" title="Scan"></a>Scan</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 100 ports</span></span><br><span class="line">nmap --top-ports 100 192.168.1.54</span><br><span class="line"></span><br><span class="line"><span class="comment"># -sC Scan script default</span></span><br><span class="line">nmap --top-ports 100 -T4 -sC 192.168.1.54</span><br><span class="line"></span><br><span class="line"><span class="comment"># -A Enable OS detection</span></span><br><span class="line">nmap -A --top-ports 100 -sC -T4 192.168.1.54</span><br><span class="line"></span><br><span class="line"><span class="comment"># -Pn No ping</span></span><br><span class="line">nmap --top-ports 100 -T4 -Pn -sC 192.168.1.54</span><br></pre></td></tr></table></figure>
+<h3 id="Port-output"><a href="#Port-output" class="headerlink" title="Port output"></a>Port output</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Starting Nmap 7.60 ( https://nmap.org ) at 2018-01-04 15:36 HKT</span><br><span class="line">Nmap scan report <span class="keyword">for</span> cmtech-company (192.168.1.54)</span><br><span class="line">Host is up (0.047s latency).</span><br><span class="line">Not shown: 97 filtered ports</span><br><span class="line">PORT    STATE SERVICE</span><br><span class="line">22/tcp  open  ssh</span><br><span class="line">139/tcp open  netbios-ssn</span><br><span class="line">445/tcp open  microsoft-ds</span><br></pre></td></tr></table></figure>
+<h3 id="OS-detection"><a href="#OS-detection" class="headerlink" title="OS detection"></a>OS detection</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Host script results:</span><br><span class="line">|_nbstat: NetBIOS name: XXX-COMPANY, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)</span><br><span class="line">| smb-os-discovery:</span><br><span class="line">|   OS: Windows 6.1 (Samba 4.3.11-Ubuntu)</span><br><span class="line">|   Computer name: xxx-company</span><br><span class="line">|   NetBIOS computer name: XXX-COMPANY\x00</span><br><span class="line">|   Domain name: \x00</span><br><span class="line">|   FQDN: xxx-company</span><br><span class="line">|_  System time: 2018-01-04T15:37:28+08:00</span><br><span class="line">| smb-security-mode:</span><br><span class="line">|   account_used: guest</span><br><span class="line">|   authentication_level: user</span><br><span class="line">|   challenge_response: supported</span><br><span class="line">|_  message_signing: disabled (dangerous, but default)</span><br><span class="line">| smb2-security-mode:</span><br><span class="line">|   2.02:</span><br><span class="line">|_    Message signing enabled but not required</span><br><span class="line">| smb2-time:</span><br><span class="line">|   date: 2018-01-04 15:37:28</span><br><span class="line">|_  start_date: 1601-01-01 07:36:42</span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://linux.die.net/man/1/nmap" target="_blank" rel="noopener">https://linux.die.net/man/1/nmap</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cli/">Cli</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hack/">Hack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Network/">Network</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nmap/">Nmap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Port/">Port</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Security/">Security</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-GoBuster-options-example" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/04/GoBuster-options-example/" class="article-date">
+  <time datetime="2018-01-04T14:42:09.000Z" itemprop="datePublished">2018-01-04</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/04/GoBuster-options-example/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/04/GoBuster-options-example/">GoBuster basic example</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/cli.jpg" alt="Cli"></p>
+<h3 id="DIR-mode"><a href="#DIR-mode" class="headerlink" title="DIR mode"></a>DIR mode</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">gobuster -u https://mysite.com/path/to/folder -c <span class="string">'session=123456'</span> -t 50 -w common-files.txt -x .php,.html</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># -t Number of threads</span></span><br><span class="line">gobuster -u http://httpbin.org/ -w words.txt -t 10</span><br><span class="line">/index (Status: 200)</span><br><span class="line">/posts (Status: 301)</span><br><span class="line">/contact (Status: 301)</span><br><span class="line"></span><br><span class="line"><span class="comment"># -v Verbose output</span></span><br><span class="line">gobuster -u http://httpbin.org/ -w words.txt -v</span><br><span class="line">Found : /index (Status: 200)</span><br><span class="line">Missed: /derp (Status: 404)</span><br><span class="line">Found : /posts (Status: 301)</span><br><span class="line"></span><br><span class="line"><span class="comment"># -l Show content length</span></span><br><span class="line">gobuster -u http://httpbin.org/ -w words.txt -l</span><br><span class="line">/contact (Status: 301)</span><br><span class="line">/posts (Status: 301)</span><br><span class="line">/index (Status: 200) [Size: 61481]</span><br><span class="line"></span><br><span class="line"><span class="comment"># -n No status code</span></span><br><span class="line"><span class="comment"># -q Quiet output</span></span><br><span class="line"><span class="comment"># -e "grep` mode"</span></span><br><span class="line">gobuster -u http://httpbin.org/ -w words.txt -q -n -e</span><br><span class="line">http://httpbin.org/ip</span><br><span class="line">http://httpbin.org/index</span><br><span class="line">http://httpbin.org/uuid</span><br></pre></td></tr></table></figure>
+<h3 id="DNS-mode"><a href="#DNS-mode" class="headerlink" title="DNS mode"></a>DNS mode</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">gobuster -m dns -w subdomains.txt -u google.com</span><br><span class="line">Found: m.google.com</span><br><span class="line">Found: mobile.google.com</span><br><span class="line">Found: search.google.com</span><br><span class="line"></span><br><span class="line"><span class="comment"># -i Show IP</span></span><br><span class="line">gobuster -m dns -w subdomains.txt -u google.com -i</span><br><span class="line">Found: chrome.google.com [2404:6800:4006:801::200e, 216.58.220.110]</span><br><span class="line">Found: m.google.com [216.58.220.107, 2404:6800:4006:801::200b]</span><br><span class="line">Found: www.google.com [74.125.237.179, 74.125.237.177, 74.125.237.178, 74.125.237.180, 74.125.237.176, 2404:6800:4006:801::2004]</span><br><span class="line"></span><br><span class="line"><span class="comment"># -fw Force wildcard</span></span><br><span class="line">gobuster -m dns -w subdomains.txt -u google.com -fw</span><br><span class="line">[-] Wildcard DNS found. IP address(es):  123.123.123.123</span><br><span class="line">Found: email.doesntexist.com</span><br><span class="line">^C[!] Keyboard interrupt detected, terminating.</span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://github.com/OJ/gobuster" target="_blank" rel="noopener">https://github.com/OJ/gobuster</a><br><a href="https://www.owasp.org/index.php/Category:OWASP_DirBuster_Project" target="_blank" rel="noopener">https://www.owasp.org/index.php/Category:OWASP_DirBuster_Project</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gobuster/">Gobuster</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Golang/">Golang</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hack/">Hack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Security/">Security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Linux-basic-monitor-shell-script" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/04/Linux-basic-monitor-shell-script/" class="article-date">
+  <time datetime="2018-01-04T11:46:25.000Z" itemprop="datePublished">2018-01-04</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/04/Linux-basic-monitor-shell-script/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/04/Linux-basic-monitor-shell-script/">Linux basic monitor shell script</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/cli.jpg" alt="Cli"></p>
+<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><p>NO. Just download and execute.</p>
+<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># run</span></span><br><span class="line">./tecmin_monitor.sh</span><br><span class="line"></span><br><span class="line"><span class="comment"># show --version</span></span><br><span class="line">./tecmin_monitor.sh -v</span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://github.com/atarallo/TECMINT_MONITOR" target="_blank" rel="noopener">https://github.com/atarallo/TECMINT_MONITOR</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bash/">Bash</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cli/">Cli</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Monitor/">Monitor</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-Debian-NO-PUBKEY-solution" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/04/Debian-NO-PUBKEY-solution/" class="article-date">
+  <time datetime="2018-01-04T09:51:43.000Z" itemprop="datePublished">2018-01-04</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/04/Debian-NO-PUBKEY-solution/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/04/Debian-NO-PUBKEY-solution/">Ubuntu apt-get NO_PUBKEY solution</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/ubuntu.jpg" alt="Ubuntu"></p>
+<h3 id="Scenario"><a href="#Scenario" class="headerlink" title="Scenario"></a>Scenario</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># when run apt-get update or apt-get install you got below error</span></span><br><span class="line"></span><br><span class="line">W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: https://dl.yarnpkg.com/debian stable InRelease: The following signatures couldn<span class="string">'t be verified because the public key is not available: NO_PUBKEY E074D16EB6FF4DE3</span></span><br><span class="line"><span class="string">W: Failed to fetch https://dl.yarnpkg.com/debian/dists/stable/InRelease The following signatures couldn'</span>t be verified because the public key is not available: NO_PUBKEY E074D16EB6FF4DE3</span><br><span class="line">W: Some index files failed to download. They have been ignored, or old ones used instead.</span><br></pre></td></tr></table></figure>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Add the latest key that will be fixed</span></span><br><span class="line">curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">wget -qO - https://raw.githubusercontent.com/yarnpkg/releases/gh-pages/debian/pubkey.gpg | sudo apt-key add -</span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://github.com/yarnpkg/yarn/issues/4453" target="_blank" rel="noopener">https://github.com/yarnpkg/yarn/issues/4453</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Apt/">Apt</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Debian/">Debian</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gpg/">Gpg</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Verify-SHA-256-checksum" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/02/Verify-SHA-256-checksum/" class="article-date">
+  <time datetime="2018-01-02T15:44:54.000Z" itemprop="datePublished">2018-01-02</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/02/Verify-SHA-256-checksum/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/02/Verify-SHA-256-checksum/">Verify checksum file</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/cli.jpg" alt="Cli"></p>
+<h3 id="SHA-256"><a href="#SHA-256" class="headerlink" title="SHA-256"></a>SHA-256</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Create checksum file</span></span><br><span class="line">shasum -a 256 file.ext &gt; file.ext.sha256sum</span><br><span class="line"><span class="comment"># file content: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  file.ext</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Verify checksum </span></span><br><span class="line">shasum -c file.ext.sha256sum</span><br><span class="line"><span class="comment"># output: file.ext: OK</span></span><br></pre></td></tr></table></figure>
+<h3 id="SHA-1"><a href="#SHA-1" class="headerlink" title="SHA-1"></a>SHA-1</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">shasum file.ext &gt; file.ext.sha1sum</span><br><span class="line">shasum file.ext.sha1sum</span><br></pre></td></tr></table></figure>
+<h3 id="MD5"><a href="#MD5" class="headerlink" title="MD5"></a>MD5</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">md5 file.ext &gt; file.ext.md5sum</span><br><span class="line">md5 -c file.ext.md5sum</span><br></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Checksum/">Checksum</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Md5/">Md5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Security/">Security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sha/">Sha</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Sparse-file" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/02/Sparse-file/" class="article-date">
+  <time datetime="2018-01-02T13:45:52.000Z" itemprop="datePublished">2018-01-02</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/02/Sparse-file/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/02/Sparse-file/">Sparse file</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/cli.jpg" alt="Cli"></p>
+<h3 id="Creation"><a href="#Creation" class="headerlink" title="Creation"></a>Creation</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Mac OS / Unix</span></span><br><span class="line">dd of=Stone.sparse bs=10g seek=1 count=0</span><br><span class="line"></span><br><span class="line"><span class="comment"># Linux</span></span><br><span class="line">fallocate -l fallocate -l 10G Stone.sparse</span><br><span class="line"></span><br><span class="line"><span class="comment">#</span></span><br><span class="line">truncate -s 10G Stone.sparse</span><br></pre></td></tr></table></figure>
+<h3 id="Use-case"><a href="#Use-case" class="headerlink" title="Use case"></a>Use case</h3><p>You can delete a disk space holder when you disk out of space. So you should create it when you config a server.</p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h3><p><a href="http://geek.serverpit.com/2017-12-21-fallocate.html" target="_blank" rel="noopener">http://geek.serverpit.com/2017-12-21-fallocate.html</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cli/">Cli</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Filesystem/">Filesystem</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac/">Mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Spaceholder/">Spaceholder</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Stone/">Stone</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SysOps/">SysOps</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Learning-Roadmap-2018" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/02/Learning-Roadmap-2018/" class="article-date">
+  <time datetime="2018-01-02T11:35:19.000Z" itemprop="datePublished">2018-01-02</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/02/Learning-Roadmap-2018/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/02/Learning-Roadmap-2018/">Learning Roadmap 2018</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<h3 id="Its-my-expect-study-materials"><a href="#Its-my-expect-study-materials" class="headerlink" title="Its my expect study materials"></a>Its my expect study materials</h3><ul>
+<li>NoSQL</li>
+<li>NodeJS</li>
+<li>Deep learning</li>
+<li>Encryption concept</li>
+<li><a href="https://vuejs.org/v2/guide/" target="_blank" rel="noopener">Vue.js</a></li>
+<li><a href="http://graphql.org/learn/" target="_blank" rel="noopener">GraphQL</a> - must to do 2018</li>
+<li><a href="https://storybook.js.org/" target="_blank" rel="noopener">Storybook</a> - The UI Development Environment</li>
+<li><a href="https://github.com/gatsbyjs/gatsby" target="_blank" rel="noopener">Gatsby</a> - build app from Markdown to static page</li>
+<li>Mobile App <a href="https://egghead.io/courses/react-native-fundamentals" target="_blank" rel="noopener">React Native</a></li>
+<li>Desktop App <a href="https://medium.freecodecamp.org/how-to-build-your-first-app-with-electron-41ebdb796930" target="_blank" rel="noopener">Electron</a></li>
+<li><a href="http://webassembly.org/" target="_blank" rel="noopener">Web Assembly</a></li>
+<li><a href="https://developers.google.com/web/progressive-web-apps/" target="_blank" rel="noopener">Progressive Web Apps</a> - web service worker, storage, cache</li>
+</ul>
+<h2 id="Addional"><a href="#Addional" class="headerlink" title="Addional"></a>Addional</h2><ul>
+<li><a href="https://learnnextjs.com/" target="_blank" rel="noopener">Next.js</a> - for React developer</li>
+<li><a href="https://popmotion.io/learn/get-started/" target="_blank" rel="noopener">Popmotion</a> - JS Animation</li>
+<li><a href="https://github.com/prettier/prettier" target="_blank" rel="noopener">Prettier</a> - A code beaufier</li>
+</ul>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2018/">2018</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Learning/">Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Roadmap/">Roadmap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tech/">Tech</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-Cronjob" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/02/Cronjob/" class="article-date">
+  <time datetime="2018-01-02T10:46:10.000Z" itemprop="datePublished">2018-01-02</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/02/Cronjob/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/02/Cronjob/">Cronjob Cheatsheet</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"># crontab</span><br><span class="line"># min, hour, day, month, day_of_week, command</span><br><span class="line"></span><br><span class="line"># every 5 mins</span><br><span class="line">*/5 * * * * /path/to/myscript.sh</span><br><span class="line"></span><br><span class="line"># 0,2,4 mins</span><br><span class="line">0,2,4 * * * * /path/to/myscript.sh</span><br><span class="line"></span><br><span class="line"># 1-10 mins</span><br><span class="line">1-10 * * * * /path/to/myscript.sh</span><br><span class="line"></span><br><span class="line"># hourly</span><br><span class="line">@hourly /path/to/myscript.sh</span><br><span class="line">0 * * * * /path/to/myscript.sh</span><br><span class="line"></span><br><span class="line"># startup</span><br><span class="line">@reboot /path/to/myscript.sh</span><br></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cheatsheet/">Cheatsheet</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cron/">Cron</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cronjob/">Cronjob</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-OWASP-top-10-2017-A3" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/12/31/OWASP-top-10-2017-A3/" class="article-date">
+  <time datetime="2017-12-31T23:16:08.000Z" itemprop="datePublished">2017-12-31</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2017/12/31/OWASP-top-10-2017-A3/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/12/31/OWASP-top-10-2017-A3/">OWASP top 10, 2017 - A3 Sensitive Data Exposure</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/owasp.jpg" alt="OWASP"></p>
+<h3 id="Prevention"><a href="#Prevention" class="headerlink" title="Prevention"></a>Prevention</h3><ul>
+<li><strong>DONT</strong> store sensitive data unnecessarily</li>
+<li>Make sure to encrypt all sensitive dataa</li>
+<li>Enforce encryption when data transit</li>
+<li>Disable caching</li>
+<li>Strong slated hashig (Argon2, scrypt, bcrypt, PBKDF2)</li>
+</ul>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Encrypt/">Encrypt</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OWASP/">OWASP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Security/">Security</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="blog-OWASP-top-10-2017-A2-Broken-Authentication" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/12/31/OWASP-top-10-2017-A2-Broken-Authentication/" class="article-date">
+  <time datetime="2017-12-31T23:05:16.000Z" itemprop="datePublished">2017-12-31</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2017/12/31/OWASP-top-10-2017-A2-Broken-Authentication/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/12/31/OWASP-top-10-2017-A2-Broken-Authentication/">OWASP top 10, 2017 - A2 Broken Authentication</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/owasp.jpg" alt="OWSAP"></p>
+<h3 id="Scenario"><a href="#Scenario" class="headerlink" title="Scenario"></a>Scenario</h3><p>Common attack, use of <a href="https://github.com/danielmiessler/SecLists" target="_blank" rel="noopener">lists of known passwords</a>.</p>
+<h3 id="Prevention"><a href="#Prevention" class="headerlink" title="Prevention"></a>Prevention</h3><ul>
+<li>Implement weak-password checks</li>
+<li>Limit failed login attempts</li>
+</ul>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Authentication/">Authentication</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OWASP/">OWASP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Security/">Security</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/7/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/9/">Next &raquo;</a>
+    </nav>
+  
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:blog.technicalfever.com">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">CALS NOTE</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2020 Calvin Lam<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+<script>
+  var disqus_shortname = 'cals-note';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>
