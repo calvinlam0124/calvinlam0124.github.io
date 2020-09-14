@@ -74,11 +74,64 @@ window['_fs_namespace'] = 'FS';
     <div id="main">
       
   
+    <article id="blog-Run-a-basic-web-with-Docker" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/06/19/Run-a-basic-web-with-Docker/" class="article-date">
+  <time datetime="2018-06-19T07:59:03.000Z" itemprop="datePublished">2018-06-19</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/06/19/Run-a-basic-web-with-Docker/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/06/19/Run-a-basic-web-with-Docker/">Run a basic web with Docker (nginx and dockerfile)</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/docker.jpg" alt="Docker"></p>
+<h3 id="Build-and-Run"><a href="#Build-and-Run" class="headerlink" title="Build and Run"></a>Build and Run</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vim Dockerfile <span class="comment">#(expose 80 port)</span></span><br><span class="line">docker rmi --force localhost/nginx</span><br><span class="line">docker build -t localhost/nginx .</span><br><span class="line">docker run -p 8080:80 --rm localhost/nginx</span><br><span class="line">open http://localhost:8080/index.html</span><br></pre></td></tr></table></figure>
+<h3 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h3><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> nginx:latest</span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> index.html /usr/share/nginx/html</span></span><br><span class="line"><span class="bash">EXPOSE 80</span></span><br></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Devops/">Devops</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="blot-screen-cheatsheet" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/04/18/screen-cheatsheet/" class="article-date">
-  <time datetime="2018-04-18T13:30:41.000Z" itemprop="datePublished">2018-04-18</time>
+  <time datetime="2018-04-18T05:30:41.000Z" itemprop="datePublished">2018-04-18</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -131,7 +184,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/04/17/Docker-container-set-timezone/" class="article-date">
-  <time datetime="2018-04-17T16:33:33.000Z" itemprop="datePublished">2018-04-17</time>
+  <time datetime="2018-04-17T08:33:33.000Z" itemprop="datePublished">2018-04-17</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -186,7 +239,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/04/17/Basic-MySQL-status-command/" class="article-date">
-  <time datetime="2018-04-17T16:29:28.000Z" itemprop="datePublished">2018-04-17</time>
+  <time datetime="2018-04-17T08:29:28.000Z" itemprop="datePublished">2018-04-17</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -238,7 +291,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/04/16/Nginx-password-protect-through-htpasswd/" class="article-date">
-  <time datetime="2018-04-16T16:11:07.000Z" itemprop="datePublished">2018-04-16</time>
+  <time datetime="2018-04-16T08:11:07.000Z" itemprop="datePublished">2018-04-16</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -292,7 +345,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/04/16/Linux-Uncomplicated-Firewall/" class="article-date">
-  <time datetime="2018-04-16T15:21:53.000Z" itemprop="datePublished">2018-04-16</time>
+  <time datetime="2018-04-16T07:21:53.000Z" itemprop="datePublished">2018-04-16</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -345,7 +398,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/03/28/Common-javascript-linter/" class="article-date">
-  <time datetime="2018-03-28T15:51:19.000Z" itemprop="datePublished">2018-03-28</time>
+  <time datetime="2018-03-28T07:51:19.000Z" itemprop="datePublished">2018-03-28</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -427,7 +480,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/03/27/Docker-container-startup/" class="article-date">
-  <time datetime="2018-03-27T12:12:57.000Z" itemprop="datePublished">2018-03-27</time>
+  <time datetime="2018-03-27T04:12:57.000Z" itemprop="datePublished">2018-03-27</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -480,7 +533,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/03/27/Ubunt-startup-service/" class="article-date">
-  <time datetime="2018-03-27T10:32:32.000Z" itemprop="datePublished">2018-03-27</time>
+  <time datetime="2018-03-27T02:32:32.000Z" itemprop="datePublished">2018-03-27</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -532,7 +585,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/03/27/SSH-tunnel/" class="article-date">
-  <time datetime="2018-03-27T10:24:20.000Z" itemprop="datePublished">2018-03-27</time>
+  <time datetime="2018-03-27T02:24:20.000Z" itemprop="datePublished">2018-03-27</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -567,59 +620,6 @@ window['_fs_namespace'] = 'FS';
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac/">Mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mysql/">Mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ssh/">Ssh</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tunnel/">Tunnel</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="blog-Convert-jks-to-key-file-for-web-server" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2018/03/20/Convert-jks-to-key-file-for-web-server/" class="article-date">
-  <time datetime="2018-03-20T16:43:12.000Z" itemprop="datePublished">2018-03-20</time>
-</a>
-		</span>
-		<span class="meta-elements author">Calvin Lam</span>
-		<div class="commentscount">
-			
-				<a href="http://blog.technicalfever.com/2018/03/20/Convert-jks-to-key-file-for-web-server/#disqus_thread" class="article-comment-link">Comments</a>
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2018/03/20/Convert-jks-to-key-file-for-web-server/">Convert jks to key file for web server</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><img src="/images/cli.jpg" alt="Cli"></p>
-<h3 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. Convert .jks to .p12 (need password)</span></span><br><span class="line">keytool -importkeystore -srckeystore your-file.jks -destkeystore new-output.p12 -deststoretype PKCS12</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. Extract .pem from .p12 (need password)</span></span><br><span class="line">openssl pkcs12 -nokeys -<span class="keyword">in</span> new-output.p12 -out new-output.pem</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. Extract unencrypted .key from .p12 (need password)</span></span><br><span class="line">openssl pkcs12 -nocerts -nodes -<span class="keyword">in</span> new-output.p12 -out final-output.key</span><br></pre></td></tr></table></figure>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://gist.github.com/paulosalgado/d12b069498ac6c8ed0821a066d68605e" target="_blank" rel="noopener">https://gist.github.com/paulosalgado/d12b069498ac6c8ed0821a066d68605e</a></p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Apache/">Apache</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cert/">Cert</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Jks/">Jks</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Key/">Key</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ssl/">Ssl</a></li></ul>
 
 			</span>
 		</div>

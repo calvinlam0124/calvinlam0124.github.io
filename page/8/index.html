@@ -74,11 +74,64 @@ window['_fs_namespace'] = 'FS';
     <div id="main">
       
   
+    <article id="blog-SMART-hard-drive-monitoring-utility" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/01/05/SMART-hard-drive-monitoring-utility/" class="article-date">
+  <time datetime="2018-01-05T05:41:17.000Z" itemprop="datePublished">2018-01-05</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/01/05/SMART-hard-drive-monitoring-utility/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/01/05/SMART-hard-drive-monitoring-utility/">SMART hard drive monitoring utility</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/cli.jpg" alt="Cli"></p>
+<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install smartmontools</span><br></pre></td></tr></table></figure>
+<h3 id="Basic-usage"><a href="#Basic-usage" class="headerlink" title="Basic usage"></a>Basic usage</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># show details</span></span><br><span class="line">smartctl -i /dev/sda</span><br><span class="line"></span><br><span class="line"><span class="comment"># SMART overall-health self-assessment test result: PASSED</span></span><br><span class="line">smartctl -H /dev/sda</span><br><span class="line"></span><br><span class="line"><span class="comment"># do test</span></span><br><span class="line">smartctl —-<span class="built_in">test</span>=short /dev/sda</span><br><span class="line">smartctl --<span class="built_in">test</span>=long /dev/sda</span><br><span class="line"><span class="comment"># show test report</span></span><br><span class="line">smartctl -a</span><br></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cli/">Cli</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Harddisk/">Harddisk</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Smart/">Smart</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="blog-Snmap-basic-example" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/01/04/Snmap-basic-example/" class="article-date">
-  <time datetime="2018-01-04T15:18:17.000Z" itemprop="datePublished">2018-01-04</time>
+  <time datetime="2018-01-04T07:18:17.000Z" itemprop="datePublished">2018-01-04</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -133,7 +186,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/01/04/GoBuster-options-example/" class="article-date">
-  <time datetime="2018-01-04T14:42:09.000Z" itemprop="datePublished">2018-01-04</time>
+  <time datetime="2018-01-04T06:42:09.000Z" itemprop="datePublished">2018-01-04</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -187,7 +240,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/01/04/Linux-basic-monitor-shell-script/" class="article-date">
-  <time datetime="2018-01-04T11:46:25.000Z" itemprop="datePublished">2018-01-04</time>
+  <time datetime="2018-01-04T03:46:25.000Z" itemprop="datePublished">2018-01-04</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -241,7 +294,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/01/04/Debian-NO-PUBKEY-solution/" class="article-date">
-  <time datetime="2018-01-04T09:51:43.000Z" itemprop="datePublished">2018-01-04</time>
+  <time datetime="2018-01-04T01:51:43.000Z" itemprop="datePublished">2018-01-04</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -295,7 +348,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/01/02/Verify-SHA-256-checksum/" class="article-date">
-  <time datetime="2018-01-02T15:44:54.000Z" itemprop="datePublished">2018-01-02</time>
+  <time datetime="2018-01-02T07:44:54.000Z" itemprop="datePublished">2018-01-02</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -349,7 +402,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/01/02/Sparse-file/" class="article-date">
-  <time datetime="2018-01-02T13:45:52.000Z" itemprop="datePublished">2018-01-02</time>
+  <time datetime="2018-01-02T05:45:52.000Z" itemprop="datePublished">2018-01-02</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -403,7 +456,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/01/02/Learning-Roadmap-2018/" class="article-date">
-  <time datetime="2018-01-02T11:35:19.000Z" itemprop="datePublished">2018-01-02</time>
+  <time datetime="2018-01-02T03:35:19.000Z" itemprop="datePublished">2018-01-02</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -472,7 +525,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/01/02/Cronjob/" class="article-date">
-  <time datetime="2018-01-02T10:46:10.000Z" itemprop="datePublished">2018-01-02</time>
+  <time datetime="2018-01-02T02:46:10.000Z" itemprop="datePublished">2018-01-02</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -523,7 +576,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2017/12/31/OWASP-top-10-2017-A3/" class="article-date">
-  <time datetime="2017-12-31T23:16:08.000Z" itemprop="datePublished">2017-12-31</time>
+  <time datetime="2017-12-31T15:16:08.000Z" itemprop="datePublished">2017-12-31</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -564,62 +617,6 @@ window['_fs_namespace'] = 'FS';
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Encrypt/">Encrypt</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OWASP/">OWASP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Security/">Security</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="blog-OWASP-top-10-2017-A2-Broken-Authentication" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/12/31/OWASP-top-10-2017-A2-Broken-Authentication/" class="article-date">
-  <time datetime="2017-12-31T23:05:16.000Z" itemprop="datePublished">2017-12-31</time>
-</a>
-		</span>
-		<span class="meta-elements author">Calvin Lam</span>
-		<div class="commentscount">
-			
-				<a href="http://blog.technicalfever.com/2017/12/31/OWASP-top-10-2017-A2-Broken-Authentication/#disqus_thread" class="article-comment-link">Comments</a>
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/12/31/OWASP-top-10-2017-A2-Broken-Authentication/">OWASP top 10, 2017 - A2 Broken Authentication</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><img src="/images/owasp.jpg" alt="OWSAP"></p>
-<h3 id="Scenario"><a href="#Scenario" class="headerlink" title="Scenario"></a>Scenario</h3><p>Common attack, use of <a href="https://github.com/danielmiessler/SecLists" target="_blank" rel="noopener">lists of known passwords</a>.</p>
-<h3 id="Prevention"><a href="#Prevention" class="headerlink" title="Prevention"></a>Prevention</h3><ul>
-<li>Implement weak-password checks</li>
-<li>Limit failed login attempts</li>
-</ul>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Authentication/">Authentication</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OWASP/">OWASP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Security/">Security</a></li></ul>
 
 			</span>
 		</div>

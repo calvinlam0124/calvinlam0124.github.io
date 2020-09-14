@@ -74,11 +74,64 @@ window['_fs_namespace'] = 'FS';
     <div id="main">
       
   
+    <article id="blog-Convert-jks-to-key-file-for-web-server" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/03/20/Convert-jks-to-key-file-for-web-server/" class="article-date">
+  <time datetime="2018-03-20T08:43:12.000Z" itemprop="datePublished">2018-03-20</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/03/20/Convert-jks-to-key-file-for-web-server/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/03/20/Convert-jks-to-key-file-for-web-server/">Convert jks to key file for web server</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/cli.jpg" alt="Cli"></p>
+<h3 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. Convert .jks to .p12 (need password)</span></span><br><span class="line">keytool -importkeystore -srckeystore your-file.jks -destkeystore new-output.p12 -deststoretype PKCS12</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. Extract .pem from .p12 (need password)</span></span><br><span class="line">openssl pkcs12 -nokeys -<span class="keyword">in</span> new-output.p12 -out new-output.pem</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. Extract unencrypted .key from .p12 (need password)</span></span><br><span class="line">openssl pkcs12 -nocerts -nodes -<span class="keyword">in</span> new-output.p12 -out final-output.key</span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://gist.github.com/paulosalgado/d12b069498ac6c8ed0821a066d68605e" target="_blank" rel="noopener">https://gist.github.com/paulosalgado/d12b069498ac6c8ed0821a066d68605e</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Apache/">Apache</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cert/">Cert</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Jks/">Jks</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Key/">Key</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ssl/">Ssl</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="blog-Create-your-DNS-server-on-docker" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/03/20/Create-your-DNS-server-on-docker/" class="article-date">
-  <time datetime="2018-03-20T16:34:47.000Z" itemprop="datePublished">2018-03-20</time>
+  <time datetime="2018-03-20T08:34:47.000Z" itemprop="datePublished">2018-03-20</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -139,7 +192,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/03/20/Test-DNS-server/" class="article-date">
-  <time datetime="2018-03-20T16:31:09.000Z" itemprop="datePublished">2018-03-20</time>
+  <time datetime="2018-03-20T08:31:09.000Z" itemprop="datePublished">2018-03-20</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -192,7 +245,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/03/19/Javascript-bundler-webpack/" class="article-date">
-  <time datetime="2018-03-19T15:56:03.000Z" itemprop="datePublished">2018-03-19</time>
+  <time datetime="2018-03-19T07:56:03.000Z" itemprop="datePublished">2018-03-19</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -248,7 +301,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/03/19/Linux-sed/" class="article-date">
-  <time datetime="2018-03-19T14:34:22.000Z" itemprop="datePublished">2018-03-19</time>
+  <time datetime="2018-03-19T06:34:22.000Z" itemprop="datePublished">2018-03-19</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -301,7 +354,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/03/12/Setup-Gitlab-on-Docker/" class="article-date">
-  <time datetime="2018-03-12T15:33:46.000Z" itemprop="datePublished">2018-03-12</time>
+  <time datetime="2018-03-12T07:33:46.000Z" itemprop="datePublished">2018-03-12</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -355,7 +408,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/03/09/Apache-24-authz-core-error-and-solution/" class="article-date">
-  <time datetime="2018-03-09T15:48:52.000Z" itemprop="datePublished">2018-03-09</time>
+  <time datetime="2018-03-09T07:48:52.000Z" itemprop="datePublished">2018-03-09</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -409,7 +462,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/02/28/Python-sandbox-platform-jupyter/" class="article-date">
-  <time datetime="2018-02-28T10:58:30.000Z" itemprop="datePublished">2018-02-28</time>
+  <time datetime="2018-02-28T02:58:30.000Z" itemprop="datePublished">2018-02-28</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -463,7 +516,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/02/23/MacOS-install-ImageMagick/" class="article-date">
-  <time datetime="2018-02-23T09:51:27.000Z" itemprop="datePublished">2018-02-23</time>
+  <time datetime="2018-02-23T01:51:27.000Z" itemprop="datePublished">2018-02-23</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -517,7 +570,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/02/23/MacOS-Multiple-User-Run-Brew-Issue/" class="article-date">
-  <time datetime="2018-02-23T09:47:40.000Z" itemprop="datePublished">2018-02-23</time>
+  <time datetime="2018-02-23T01:47:40.000Z" itemprop="datePublished">2018-02-23</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -555,59 +608,6 @@ window['_fs_namespace'] = 'FS';
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Brew/">Brew</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac/">Mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Permission/">Permission</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="blog-Curl-test-your-http-server" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2018/02/20/Curl-test-your-http-server/" class="article-date">
-  <time datetime="2018-02-20T17:23:44.000Z" itemprop="datePublished">2018-02-20</time>
-</a>
-		</span>
-		<span class="meta-elements author">Calvin Lam</span>
-		<div class="commentscount">
-			
-				<a href="http://blog.technicalfever.com/2018/02/20/Curl-test-your-http-server/#disqus_thread" class="article-comment-link">Comments</a>
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2018/02/20/Curl-test-your-http-server/">Curl test your http server</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><img src="/images/web.jpg" alt="Web"></p>
-<h3 id="Basic-usage"><a href="#Basic-usage" class="headerlink" title="Basic usage"></a>Basic usage</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># get /index</span></span><br><span class="line">curl http://localhost</span><br><span class="line"></span><br><span class="line"><span class="comment"># Post data</span></span><br><span class="line">curl -d <span class="string">"param1=value1&amp;param2=value2"</span> -X POST http://localhost/data</span><br><span class="line"></span><br><span class="line"><span class="comment"># Post file</span></span><br><span class="line">curl -d <span class="string">"@data.txt"</span> -X POST http://localhost/data</span><br><span class="line"></span><br><span class="line"><span class="comment"># -H set header</span></span><br><span class="line">curl -d <span class="string">'&#123;"key1":"value1", "key2":"value2"&#125;'</span> -H <span class="string">"Content-Type: application/json"</span> -X POST http://localhost/data</span><br><span class="line"></span><br><span class="line"><span class="comment"># When you got error, try http1.1</span></span><br><span class="line"><span class="comment"># curl: (92) HTTP/2 stream 1 was not closed cleanly: REFUSED_STREAM (err 7)</span></span><br><span class="line">curl --http1.1 http://localhost</span><br><span class="line"></span><br><span class="line"><span class="comment"># When you got this, try -k</span></span><br><span class="line"><span class="comment"># curl: (60) SSL certificate problem: self signed certificate</span></span><br><span class="line">curl -k https://localhost</span><br><span class="line"></span><br><span class="line"><span class="comment"># login</span></span><br><span class="line">curl --http1.1 -k -d <span class="string">'&#123;"username":"abc@abc.com","password":"123456","role":"user","type":"json"&#125;'</span> -X POST -H <span class="string">"Content-Type: application/json"</span> https://localhost/auth</span><br></pre></td></tr></table></figure>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://gist.github.com/subfuzion/08c5d85437d5d4f00e58" target="_blank" rel="noopener">https://gist.github.com/subfuzion/08c5d85437d5d4f00e58</a></p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Curl/">Curl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Http/">Http</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Https/">Https</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Restful/">Restful</a></li></ul>
 
 			</span>
 		</div>

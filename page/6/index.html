@@ -74,11 +74,66 @@ window['_fs_namespace'] = 'FS';
     <div id="main">
       
   
+    <article id="blog-New-syntax-for-css-Scss-Sass" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/02/06/New-syntax-for-css-Scss-Sass/" class="article-date">
+  <time datetime="2018-02-06T14:37:33.000Z" itemprop="datePublished">2018-02-06</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/02/06/New-syntax-for-css-Scss-Sass/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/02/06/New-syntax-for-css-Scss-Sass/">New syntax for css - Scss Sass</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/sass.jpg" alt="Sass"></p>
+<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem install sass</span><br></pre></td></tr></table></figure>
+<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Compile scss to css</span></span><br><span class="line">sass input.scss output.css</span><br><span class="line"></span><br><span class="line">sass --watch input.scss output.css</span><br><span class="line"></span><br><span class="line">sass --watch src/sass:dist/css</span><br></pre></td></tr></table></figure>
+<h3 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h3><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// variable</span></span><br><span class="line"><span class="variable">$font-stack</span>: Helvetica, sans-serif;</span><br><span class="line"><span class="variable">$font-color</span>: <span class="number">#000</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">  <span class="attribute">font</span>: <span class="number">100%</span> <span class="variable">$font-stack</span></span><br><span class="line">  color: <span class="variable">$font-color</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// Mixins</span></span><br><span class="line">@<span class="keyword">mixin</span> border-radius(<span class="variable">$radius</span>) &#123;</span><br><span class="line">  -webkit-<span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</span><br><span class="line">     -moz-<span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</span><br><span class="line">      -ms-<span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</span><br><span class="line">          <span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span> &#123; @<span class="keyword">include</span> border-radius(<span class="number">10px</span>); &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="http://sass-lang.com/guide" target="_blank" rel="noopener">http://sass-lang.com/guide</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cheatsheet/">Cheatsheet</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Css/">Css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Devlopment/">Devlopment</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Frontend/">Frontend</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sass/">Sass</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Scss/">Scss</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="blog-Capture-all-of-your-http-connection-2" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/02/06/Capture-all-of-your-http-connection-2/" class="article-date">
-  <time datetime="2018-02-06T22:20:35.000Z" itemprop="datePublished">2018-02-06</time>
+  <time datetime="2018-02-06T14:20:35.000Z" itemprop="datePublished">2018-02-06</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -130,7 +185,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/02/01/Node-js-ORM-framework-quick-search/" class="article-date">
-  <time datetime="2018-02-01T17:30:05.000Z" itemprop="datePublished">2018-02-01</time>
+  <time datetime="2018-02-01T09:30:05.000Z" itemprop="datePublished">2018-02-01</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -212,7 +267,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/02/01/docker-compose-specify-file-run-as-detach-mode/" class="article-date">
-  <time datetime="2018-02-01T10:19:56.000Z" itemprop="datePublished">2018-02-01</time>
+  <time datetime="2018-02-01T02:19:56.000Z" itemprop="datePublished">2018-02-01</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -265,7 +320,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/01/31/Git-Cheatsheet/" class="article-date">
-  <time datetime="2018-01-31T13:44:06.000Z" itemprop="datePublished">2018-01-31</time>
+  <time datetime="2018-01-31T05:44:06.000Z" itemprop="datePublished">2018-01-31</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -317,7 +372,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/01/30/Chrome-Console-Cheatsheet/" class="article-date">
-  <time datetime="2018-01-30T11:02:10.000Z" itemprop="datePublished">2018-01-30</time>
+  <time datetime="2018-01-30T03:02:10.000Z" itemprop="datePublished">2018-01-30</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -369,7 +424,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/01/30/Capture-all-of-your-http-connection/" class="article-date">
-  <time datetime="2018-01-30T10:20:07.000Z" itemprop="datePublished">2018-01-30</time>
+  <time datetime="2018-01-30T02:20:07.000Z" itemprop="datePublished">2018-01-30</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -425,7 +480,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/01/26/Javascript-package-manager-from-NPM-to-YARM/" class="article-date">
-  <time datetime="2018-01-26T17:27:32.000Z" itemprop="datePublished">2018-01-26</time>
+  <time datetime="2018-01-26T09:27:32.000Z" itemprop="datePublished">2018-01-26</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -479,7 +534,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/01/26/Direct-query-a-specific-dns/" class="article-date">
-  <time datetime="2018-01-26T16:17:58.000Z" itemprop="datePublished">2018-01-26</time>
+  <time datetime="2018-01-26T08:17:58.000Z" itemprop="datePublished">2018-01-26</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -532,7 +587,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/01/26/MySQL-and-Docker-for-development/" class="article-date">
-  <time datetime="2018-01-26T13:55:35.000Z" itemprop="datePublished">2018-01-26</time>
+  <time datetime="2018-01-26T05:55:35.000Z" itemprop="datePublished">2018-01-26</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -567,59 +622,6 @@ window['_fs_namespace'] = 'FS';
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cheatsheet/">Cheatsheet</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mysql/">Mysql</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="blog-Command-line-message-of-the-day" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2018/01/24/Command-line-message-of-the-day/" class="article-date">
-  <time datetime="2018-01-24T22:52:44.000Z" itemprop="datePublished">2018-01-24</time>
-</a>
-		</span>
-		<span class="meta-elements author">Calvin Lam</span>
-		<div class="commentscount">
-			
-				<a href="http://blog.technicalfever.com/2018/01/24/Command-line-message-of-the-day/#disqus_thread" class="article-comment-link">Comments</a>
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2018/01/24/Command-line-message-of-the-day/">Command line startup message</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><img src="/images/cli.jpg" alt="Cli"></p>
-<h3 id="MOTD-message-of-the-day"><a href="#MOTD-message-of-the-day" class="headerlink" title="MOTD - message of the day"></a>MOTD - message of the day</h3><p>Its default installed and autorun on any *nix system. It will not execute any command just <code>cat</code> the file content.<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/motd</span><br><span class="line"></span><br><span class="line"><span class="comment"># re-launch you terminal</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://tools.ietf.org/html/rfc2812#page-25" target="_blank" rel="noopener">https://tools.ietf.org/html/rfc2812#page-25</a></p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cli/">Cli</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Macos/">Macos</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Motd/">Motd</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Rfc/">Rfc</a></li></ul>
 
 			</span>
 		</div>

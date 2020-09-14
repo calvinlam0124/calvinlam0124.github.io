@@ -74,11 +74,69 @@ window['_fs_namespace'] = 'FS';
     <div id="main">
       
   
+    <article id="blog-zsh" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2019/03/01/zsh/" class="article-date">
+  <time datetime="2019-03-01T14:51:08.000Z" itemprop="datePublished">2019-03-01</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2019/03/01/zsh/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2019/03/01/zsh/">zsh, oh-my-zsh and powerlevel9k</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/cli.jpg" alt="Cli"></p>
+<h3 id="installation"><a href="#installation" class="headerlink" title="installation"></a>installation</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># zsh</span></span><br><span class="line">brew install zsh zsh-completions</span><br><span class="line">chsh -s $(<span class="built_in">which</span> zsh)</span><br><span class="line"></span><br><span class="line"><span class="comment"># oh-my-zsh</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh</span><br><span class="line"></span><br><span class="line"><span class="comment"># powerlevel9k</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k</span><br><span class="line"><span class="built_in">echo</span> <span class="string">'ZSH_THEME="powerlevel9k/powerlevel9k"'</span> &gt;&gt;  ~/.zshrc</span><br></pre></td></tr></table></figure>
+<h3 id="edit-zshrc"><a href="#edit-zshrc" class="headerlink" title="edit ~/.zshrc"></a>edit ~/.zshrc</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> ZSH=<span class="variable">$HOME</span>/.oh-my-zsh</span><br><span class="line">ZSH_THEME=<span class="string">"powerlevel9k/powerlevel9k"</span></span><br><span class="line">plugins=(git)</span><br><span class="line"><span class="built_in">source</span> <span class="variable">$ZSH</span>/oh-my-zsh.sh</span><br><span class="line"><span class="built_in">source</span> /usr/<span class="built_in">local</span>/share/zsh-history-substring-search/zsh-history-substring-search.zsh</span><br><span class="line"></span><br><span class="line">POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0</span><br><span class="line">POWERLEVEL9K_COMMAND_EXECUTION_TIME_PRECISION=2</span><br><span class="line">POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time time)</span><br></pre></td></tr></table></figure>
+<h3 id="useful-plugin"><a href="#useful-plugin" class="headerlink" title="useful plugin"></a>useful plugin</h3><ul>
+<li><a href="https://github.com/zsh-users/zsh-syntax-highlighting" target="_blank" rel="noopener">zsh-syntax-highlighting</a></li>
+<li><a href="https://github.com/bhilburn/powerlevel9k#command_execution_time" target="_blank" rel="noopener">command-execution-time</a></li>
+</ul>
+<h3 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h3><p><a href="https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH" target="_blank" rel="noopener">https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH</a><br><a href="https://github.com/robbyrussell/oh-my-zsh" target="_blank" rel="noopener">https://github.com/robbyrussell/oh-my-zsh</a><br><a href="https://github.com/bhilburn/powerlevel9k/wiki/Install-Instructions" target="_blank" rel="noopener">https://github.com/bhilburn/powerlevel9k/wiki/Install-Instructions</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cli/">Cli</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Oh-my-zsh/">Oh-my-zsh</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Powerlevel9k/">Powerlevel9k</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Zsh/">Zsh</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="blog-Encoding" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2019/02/28/Encoding/" class="article-date">
-  <time datetime="2019-02-28T21:18:46.000Z" itemprop="datePublished">2019-02-28</time>
+  <time datetime="2019-02-28T13:18:46.000Z" itemprop="datePublished">2019-02-28</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -130,7 +188,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2019/02/25/IT-automation-2-Ansible-Playbook/" class="article-date">
-  <time datetime="2019-02-25T14:37:50.000Z" itemprop="datePublished">2019-02-25</time>
+  <time datetime="2019-02-25T06:37:50.000Z" itemprop="datePublished">2019-02-25</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -184,7 +242,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2019/02/22/IT-automation-Ansible/" class="article-date">
-  <time datetime="2019-02-22T16:40:21.000Z" itemprop="datePublished">2019-02-22</time>
+  <time datetime="2019-02-22T08:40:21.000Z" itemprop="datePublished">2019-02-22</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -245,7 +303,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/11/07/Enable-MySQL-slow-query-log/" class="article-date">
-  <time datetime="2018-11-07T18:58:59.000Z" itemprop="datePublished">2018-11-07</time>
+  <time datetime="2018-11-07T10:58:59.000Z" itemprop="datePublished">2018-11-07</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -302,7 +360,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/11/06/Cusomte-a-PHP-docker-image/" class="article-date">
-  <time datetime="2018-11-06T12:27:01.000Z" itemprop="datePublished">2018-11-06</time>
+  <time datetime="2018-11-06T04:27:01.000Z" itemprop="datePublished">2018-11-06</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -356,7 +414,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/11/06/Basic-usage-of-PHP-Composer-docker-image/" class="article-date">
-  <time datetime="2018-11-06T11:57:29.000Z" itemprop="datePublished">2018-11-06</time>
+  <time datetime="2018-11-06T03:57:29.000Z" itemprop="datePublished">2018-11-06</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -410,7 +468,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/10/25/Apache-password-protect-through-htpasswd-htaccess/" class="article-date">
-  <time datetime="2018-10-25T12:06:57.000Z" itemprop="datePublished">2018-10-25</time>
+  <time datetime="2018-10-25T04:06:57.000Z" itemprop="datePublished">2018-10-25</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -464,7 +522,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/10/25/Run-a-basic-web-with-Nginx-Docker/" class="article-date">
-  <time datetime="2018-10-25T12:01:17.000Z" itemprop="datePublished">2018-10-25</time>
+  <time datetime="2018-10-25T04:01:17.000Z" itemprop="datePublished">2018-10-25</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -517,7 +575,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/06/21/Deploy-your-project-through-now-sh/" class="article-date">
-  <time datetime="2018-06-21T11:10:35.000Z" itemprop="datePublished">2018-06-21</time>
+  <time datetime="2018-06-21T03:10:35.000Z" itemprop="datePublished">2018-06-21</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -554,59 +612,6 @@ window['_fs_namespace'] = 'FS';
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Now-sh/">Now.sh</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="blog-Run-a-basic-web-with-Docker" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2018/06/19/Run-a-basic-web-with-Docker/" class="article-date">
-  <time datetime="2018-06-19T15:59:03.000Z" itemprop="datePublished">2018-06-19</time>
-</a>
-		</span>
-		<span class="meta-elements author">Calvin Lam</span>
-		<div class="commentscount">
-			
-				<a href="http://blog.technicalfever.com/2018/06/19/Run-a-basic-web-with-Docker/#disqus_thread" class="article-comment-link">Comments</a>
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2018/06/19/Run-a-basic-web-with-Docker/">Run a basic web with Docker (nginx and dockerfile)</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><img src="/images/docker.jpg" alt="Docker"></p>
-<h3 id="Build-and-Run"><a href="#Build-and-Run" class="headerlink" title="Build and Run"></a>Build and Run</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vim Dockerfile <span class="comment">#(expose 80 port)</span></span><br><span class="line">docker rmi --force localhost/nginx</span><br><span class="line">docker build -t localhost/nginx .</span><br><span class="line">docker run -p 8080:80 --rm localhost/nginx</span><br><span class="line">open http://localhost:8080/index.html</span><br></pre></td></tr></table></figure>
-<h3 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h3><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> nginx:latest</span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> index.html /usr/share/nginx/html</span></span><br><span class="line"><span class="bash">EXPOSE 80</span></span><br></pre></td></tr></table></figure>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Devops/">Devops</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li></ul>
 
 			</span>
 		</div>

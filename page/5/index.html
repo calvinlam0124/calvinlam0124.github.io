@@ -74,11 +74,64 @@ window['_fs_namespace'] = 'FS';
     <div id="main">
       
   
+    <article id="blog-Curl-test-your-http-server" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/02/20/Curl-test-your-http-server/" class="article-date">
+  <time datetime="2018-02-20T09:23:44.000Z" itemprop="datePublished">2018-02-20</time>
+</a>
+		</span>
+		<span class="meta-elements author">Calvin Lam</span>
+		<div class="commentscount">
+			
+				<a href="http://blog.technicalfever.com/2018/02/20/Curl-test-your-http-server/#disqus_thread" class="article-comment-link">Comments</a>
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/02/20/Curl-test-your-http-server/">Curl test your http server</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><img src="/images/web.jpg" alt="Web"></p>
+<h3 id="Basic-usage"><a href="#Basic-usage" class="headerlink" title="Basic usage"></a>Basic usage</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># get /index</span></span><br><span class="line">curl http://localhost</span><br><span class="line"></span><br><span class="line"><span class="comment"># Post data</span></span><br><span class="line">curl -d <span class="string">"param1=value1&amp;param2=value2"</span> -X POST http://localhost/data</span><br><span class="line"></span><br><span class="line"><span class="comment"># Post file</span></span><br><span class="line">curl -d <span class="string">"@data.txt"</span> -X POST http://localhost/data</span><br><span class="line"></span><br><span class="line"><span class="comment"># -H set header</span></span><br><span class="line">curl -d <span class="string">'&#123;"key1":"value1", "key2":"value2"&#125;'</span> -H <span class="string">"Content-Type: application/json"</span> -X POST http://localhost/data</span><br><span class="line"></span><br><span class="line"><span class="comment"># When you got error, try http1.1</span></span><br><span class="line"><span class="comment"># curl: (92) HTTP/2 stream 1 was not closed cleanly: REFUSED_STREAM (err 7)</span></span><br><span class="line">curl --http1.1 http://localhost</span><br><span class="line"></span><br><span class="line"><span class="comment"># When you got this, try -k</span></span><br><span class="line"><span class="comment"># curl: (60) SSL certificate problem: self signed certificate</span></span><br><span class="line">curl -k https://localhost</span><br><span class="line"></span><br><span class="line"><span class="comment"># login</span></span><br><span class="line">curl --http1.1 -k -d <span class="string">'&#123;"username":"abc@abc.com","password":"123456","role":"user","type":"json"&#125;'</span> -X POST -H <span class="string">"Content-Type: application/json"</span> https://localhost/auth</span><br></pre></td></tr></table></figure>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="https://gist.github.com/subfuzion/08c5d85437d5d4f00e58" target="_blank" rel="noopener">https://gist.github.com/subfuzion/08c5d85437d5d4f00e58</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Curl/">Curl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Http/">Http</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Https/">Https</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Restful/">Restful</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="blog-Vue-js-devtools-quick-start" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/02/15/Vue-js-devtools-quick-start/" class="article-date">
-  <time datetime="2018-02-15T11:21:26.000Z" itemprop="datePublished">2018-02-15</time>
+  <time datetime="2018-02-15T03:21:26.000Z" itemprop="datePublished">2018-02-15</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -132,7 +185,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/02/13/Deploy-Java-WAR-file-to-docker-container/" class="article-date">
-  <time datetime="2018-02-13T15:00:51.000Z" itemprop="datePublished">2018-02-13</time>
+  <time datetime="2018-02-13T07:00:51.000Z" itemprop="datePublished">2018-02-13</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -184,7 +237,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/02/13/Google-Firebase-quick-start/" class="article-date">
-  <time datetime="2018-02-13T10:47:31.000Z" itemprop="datePublished">2018-02-13</time>
+  <time datetime="2018-02-13T02:47:31.000Z" itemprop="datePublished">2018-02-13</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -238,7 +291,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/02/09/Deploy-your-docker-container-to-AWS/" class="article-date">
-  <time datetime="2018-02-09T17:10:35.000Z" itemprop="datePublished">2018-02-09</time>
+  <time datetime="2018-02-09T09:10:35.000Z" itemprop="datePublished">2018-02-09</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -297,7 +350,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/02/09/Deploy-container-to-other-host-througt-docker-machine/" class="article-date">
-  <time datetime="2018-02-09T14:40:31.000Z" itemprop="datePublished">2018-02-09</time>
+  <time datetime="2018-02-09T06:40:31.000Z" itemprop="datePublished">2018-02-09</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -359,7 +412,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/02/09/Linux-password-less-ssh-and-sudo/" class="article-date">
-  <time datetime="2018-02-09T13:49:28.000Z" itemprop="datePublished">2018-02-09</time>
+  <time datetime="2018-02-09T05:49:28.000Z" itemprop="datePublished">2018-02-09</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -412,7 +465,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/02/08/Pug-Cli-Cheatsheet/" class="article-date">
-  <time datetime="2018-02-08T14:24:13.000Z" itemprop="datePublished">2018-02-08</time>
+  <time datetime="2018-02-08T06:24:13.000Z" itemprop="datePublished">2018-02-08</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -467,7 +520,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/02/08/Pug-template-syntax/" class="article-date">
-  <time datetime="2018-02-08T12:08:34.000Z" itemprop="datePublished">2018-02-08</time>
+  <time datetime="2018-02-08T04:08:34.000Z" itemprop="datePublished">2018-02-08</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -532,7 +585,7 @@ window['_fs_namespace'] = 'FS';
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
 			<a href="/2018/02/08/Node-js-template-engine-quick-search/" class="article-date">
-  <time datetime="2018-02-08T11:27:07.000Z" itemprop="datePublished">2018-02-08</time>
+  <time datetime="2018-02-08T03:27:07.000Z" itemprop="datePublished">2018-02-08</time>
 </a>
 		</span>
 		<span class="meta-elements author">Calvin Lam</span>
@@ -614,61 +667,6 @@ window['_fs_namespace'] = 'FS';
 			<span class="tags">
 				
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Template/">Template</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="blog-New-syntax-for-css-Scss-Sass" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2018/02/06/New-syntax-for-css-Scss-Sass/" class="article-date">
-  <time datetime="2018-02-06T22:37:33.000Z" itemprop="datePublished">2018-02-06</time>
-</a>
-		</span>
-		<span class="meta-elements author">Calvin Lam</span>
-		<div class="commentscount">
-			
-				<a href="http://blog.technicalfever.com/2018/02/06/New-syntax-for-css-Scss-Sass/#disqus_thread" class="article-comment-link">Comments</a>
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2018/02/06/New-syntax-for-css-Scss-Sass/">New syntax for css - Scss Sass</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p><img src="/images/sass.jpg" alt="Sass"></p>
-<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem install sass</span><br></pre></td></tr></table></figure>
-<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Compile scss to css</span></span><br><span class="line">sass input.scss output.css</span><br><span class="line"></span><br><span class="line">sass --watch input.scss output.css</span><br><span class="line"></span><br><span class="line">sass --watch src/sass:dist/css</span><br></pre></td></tr></table></figure>
-<h3 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h3><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// variable</span></span><br><span class="line"><span class="variable">$font-stack</span>: Helvetica, sans-serif;</span><br><span class="line"><span class="variable">$font-color</span>: <span class="number">#000</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">  <span class="attribute">font</span>: <span class="number">100%</span> <span class="variable">$font-stack</span></span><br><span class="line">  color: <span class="variable">$font-color</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// Mixins</span></span><br><span class="line">@<span class="keyword">mixin</span> border-radius(<span class="variable">$radius</span>) &#123;</span><br><span class="line">  -webkit-<span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</span><br><span class="line">     -moz-<span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</span><br><span class="line">      -ms-<span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</span><br><span class="line">          <span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span> &#123; @<span class="keyword">include</span> border-radius(<span class="number">10px</span>); &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="http://sass-lang.com/guide" target="_blank" rel="noopener">http://sass-lang.com/guide</a></p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cheatsheet/">Cheatsheet</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Css/">Css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Devlopment/">Devlopment</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Frontend/">Frontend</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sass/">Sass</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Scss/">Scss</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li></ul>
 
 			</span>
 		</div>
